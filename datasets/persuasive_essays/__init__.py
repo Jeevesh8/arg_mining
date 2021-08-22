@@ -3,6 +3,8 @@ from collections import namedtuple
 from typing import List, Dict, Tuple, Optional
 
 import tensorflow as tf
+import transformers
+from transformers import BertTokenizer
 
 from .tokenize_components import get_comp_wise_essays, get_tokenized_essay
 from .configs import config as data_config
@@ -13,9 +15,9 @@ def convert_to_named_tuple(tokenized_essays, comp_type_labels):
     return pe_data(tokenized_essays, comp_type_labels)
 
 
-def data_generator(data_file: str):
-    for essay in get_comp_wise_essays(data_file):
-        yield get_tokenized_essay(essay)
+def data_generator(data_file: str, tokenizer: transformers.PreTrainedTokenizer):
+    for essay in get_comp_wise_essays(data_file, tokenizer):
+        yield get_tokenized_essay(essay, tokenizer)
 
 
 def _create_min_max_boundaries(max_length: int,
@@ -109,10 +111,10 @@ def _batch_examples(dataset: tf.data.Dataset, batch_size: int, max_length: int, 
           window_size=None,
           window_size_func=window_size_fn)).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
 
-def get_dataset(data_file: List[str]):
+def get_dataset(data_file: List[str], tokenizer: transformers.PreTrainedTokenizer):
     def callable_gen():
         nonlocal data_file
-        for elem in data_generator(data_file):
+        for elem in data_generator(data_file, tokenizer):
             yield elem
 
     sample_wise_dataset =  tf.data.Dataset.from_generator(callable_gen,
@@ -133,13 +135,16 @@ def get_dataset(data_file: List[str]):
 
 def load_dataset(
     pe_dir: str = None,
+    tokenizer: Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-uncased'),
     as_numpy_iter: bool = True,
 ):
     """Returns a tuple of train, valid, test datasets(according to {train|test|vaild}.txt files in pe_dir)
     Args:
         pe_dir:         The directory having the persuasive essays dataset. Download data from 
                         https://github.com/UKPLab/naacl18-multitask_argument_mining/tree/master/dataSplits/fullData/essays
-
+        
+        tokenizer:      The tokenizer to be used for tokenizing the essays. Must inherit from PreTrainedTokenizer.
+        
         as_numpy_iter:  Tensorflow dataset is converted to numpy iterator, before returning.
 
     Returns:
@@ -148,7 +153,7 @@ def load_dataset(
     """
 
     try:
-        train_dataset = get_dataset(os.path.join(pe_dir, 'train.txt'))
+        train_dataset = get_dataset(os.path.join(pe_dir, 'train.txt'), tokenizer)
     except FileNotFoundError:
         train_dataset = None
     
@@ -177,7 +182,7 @@ def get_pad_mask(batch, dtype=tf.float32):
     """Returns a mask for the tokenized threads in batch 
     with 0 where there is pad token, 1 elsewhere."""
     return tf.cast(batch!=data_config["pad_for"]["tokenized_essays"], dtype=dtype)
-import sys
+
 def get_user_tokens_mask(batch, dtype=tf.float32):
     """Returns a mask for the tokenized_threads in batch
     with 1 where a user token's id is there, 0 elsewhere."""

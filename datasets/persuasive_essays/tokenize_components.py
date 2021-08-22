@@ -1,6 +1,8 @@
 from typing import List, Tuple
 
-from .configs import config, tokenizer
+import transformers
+
+from .configs import config
 
 def comp_type_from_tag(comp_tag):
     """Returns the type of component(claim/premise) from the tag 
@@ -66,7 +68,8 @@ def get_comp_wise_essays(data_file: str) -> List[List[Tuple[str, str]]]:
     
     return comp_wise_essays
 
-def get_tokenized_essay(essay: List[Tuple[str, str]]) -> Tuple[List[int], List[int]]:
+def get_tokenized_essay(essay: List[Tuple[str, str]],
+                        tokenizer: transformers.PreTrainedTokenizer) -> Tuple[List[int], List[int]]:
     """Returns a tokenized essay and the corresponding target tags.
     Args:
         essay:  A list of components of an essay. Each component is tuple consisting of 
