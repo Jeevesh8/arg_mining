@@ -9,7 +9,7 @@ config = {
     "omit_filenames": True,
 
     "arg_components": {
-        "other": 0,
+        "O": 0,
         "B-C": 1,
         "I-C": 2,
         "B-P": 3,
@@ -27,7 +27,7 @@ config["special_tokens"] = ["[STARTQ]", "[ENDQ]", "[URL]",                      
 config["pad_for"] = {
     "tokenized_thread": None,           #If None, set to tokenizer.pad_token_id when calling load_dataset()
     "comp_type_labels":
-    config["arg_components"]["other"],  # len(config['arg_components']),
+    config["arg_components"]["O"],  # len(config['arg_components']),
     "refers_to_and_type" : 0,  # len(config['dist_to_label'])+2,
 }
 

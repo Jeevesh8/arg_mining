@@ -186,7 +186,7 @@ def get_thread_with_labels(
         comp_types,
     ) = get_tokenized_thread(filename, tokenizer, mask_tokens)
 
-    comp_type_labels = [config["arg_components"]["other"]
+    comp_type_labels = [config["arg_components"]["O"]
                         ] * len(tokenized_thread)
 
     prev_end = 0
