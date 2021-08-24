@@ -8,6 +8,13 @@ config = {
     "max_comps": 128,
     "omit_filenames": True,
 
+    "arg_components": {
+        "other": 0,
+        "B-C": 1,
+        "I-C": 2,
+        "B-P": 3,
+        "I-P": 4
+    },
 }
 
 #Padding Config
@@ -20,13 +27,6 @@ config["pad_for"] = {
 
 #Data Representation Specific Config
 config.update({
-    "arg_components": {
-        "other": 0,
-        "B-C": 1,
-        "I-C": 2,
-        "B-P": 3,
-        "I-P": 4
-    },
     "relations": [
         "partial_attack",
         "agreement",
