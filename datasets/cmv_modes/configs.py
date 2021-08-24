@@ -15,7 +15,13 @@ config = {
         "B-P": 3,
         "I-P": 4
     },
+
+    "max_users" : 10,                                                                  #Extra users, above max_users, are marked as unknown user "[UNU]"
 }
+
+config["special_tokens"] = ["[STARTQ]", "[ENDQ]", "[URL]",                             #[STARTQ], [ENDQ] are put around sentences quoted from previous replies, not around anything within " "
+                            "[UNU]"]+[f"[USER{i}]" for i in range(config["max_users"])]
+
 
 #Padding Config
 config["pad_for"] = {

@@ -4,6 +4,8 @@ import re
 from bs4 import BeautifulSoup
 from typing import Optional
 
+from .configs import config
+
 footnote_regex = r"(\n\&gt;\*Hello[\S]*)"
 url_regex = r"(https?://)(\s)*(www\.)?(\s)*((\w|\s)+\.)*([\w\-\s]+/)*([\w\-]+)((\?)?[\w\s]*=\s*[\w\%&]*)*(\.html|\.htm)*"
 quote_regex = r"\&gt;(.*)\n"
@@ -40,7 +42,10 @@ def add_tags(post, user_dict):
 
     text = str(post)  # Note 2
 
-    user_tag = "[USER" + str(user_dict[post["author"]]) + "]"
+    if user_dict[post["author"]]>=config["max_users"]:
+        user_tag = "[UNU]"
+    else:
+        user_tag = "[USER" + str(user_dict[post["author"]]) + "]"
 
     for elem in [
         ("</claim>", "</claim> "),
@@ -51,8 +56,12 @@ def add_tags(post, user_dict):
         text = text.replace(*elem)
 
     text = re.sub(footnote_regex, "", text)
-    text = re.sub(url_regex, "[URL]", text)
-    text = re.sub(quote_regex, "[STARTQ]" + r"\1" + "[ENDQ] ", text)
+    
+    if "[URL]" in config["special_tokens"]:
+        text = re.sub(url_regex, "[URL]", text)
+    
+    if "[STARTQ]" in config["special_tokens"] and "[ENDQ]" in config["special_tokens"]:
+        text = re.sub(quote_regex, "[STARTQ]" + r"\1" + "[ENDQ] ", text)
 
     text = text.replace("\n", " ")
     text = text.replace("\r", " ")
