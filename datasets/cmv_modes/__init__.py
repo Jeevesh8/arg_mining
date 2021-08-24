@@ -47,9 +47,6 @@ def data_generator(file_list: List[str], tokenizer: transformers.PreTrainedToken
 
 def get_dataset(file_list: List[str], tokenizer: transformers.PreTrainedTokenizer, mask_tokens: Optional[List[str]] = None):
     
-    if data_config["pad_for"]["tokenized_thread"] is None:
-        data_config["pad_for"]["tokenized_thread"] = tokenizer.pad_token_id
-    
     def callable_gen():
         nonlocal file_list
         for elem in data_generator(file_list, tokenizer, mask_tokens):
@@ -81,7 +78,8 @@ def get_dataset(file_list: List[str], tokenizer: transformers.PreTrainedTokenize
             [data_config["max_len"]],
             [data_config["max_len"], 3],
         ),
-        padding_values=(None, data_config["pad_for"]["tokenized_thread"], 
+        padding_values=(None,(tokenizer.pad_token_id if data_config["pad_for"]["tokenized_thread"] is None
+                              else data_config["pad_for"]["tokenized_thread"]), 
                               data_config["pad_for"]["tokenized_thread"], 
                               data_config["pad_for"]["comp_type_labels"], 
                               data_config["pad_for"]["refers_to_and_type"]),
