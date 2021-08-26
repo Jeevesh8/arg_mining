@@ -21,7 +21,7 @@ def clean_text(text):
     for elem in replaces:
         text = text.replace(*elem)
 
-    for elem in [".", ",", "!", ";", ":", "*", "?", "/", '"', "(", ")", "^"]:
+    for elem in [".", ",", "!", ";", ":", "*", "?", '"', "(", ")", "^"]:
         text = text.replace(elem, " " + elem + " ")
 
     #    print("After replaces:", text)
@@ -173,7 +173,7 @@ def get_components(
         if clean_text(str(component).strip()) == "":
             print("Component reduced to empty by cleaning: ", str(component))
         yield (
-            clean_text(str(component).strip()),
+            clean_text(str(component)),
             "other" if parent_type is None else parent_type,
             parent_id,
             parent_refers,
