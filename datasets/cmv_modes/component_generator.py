@@ -23,13 +23,18 @@ def clean_text(text):
 
     for elem in [".", ",", "!", ";", ":", "*", "?", '"', "(", ")", "^"]:
         text = text.replace(elem, " " + elem + " ")
-
+    
+    text = ((" " if text[0]==" " else "") 
+            + " ".join(text.split()) 
+            + (" " if text[-1]==" " else ""))
+    
     #    print("After replaces:", text)
     return text
 
 
 def add_tags(post, user_dict):
-    """Adds user, url, and quote tags. Adds spaces around <claim>, </claim>, <premise>, </premise> tags.
+    """Adds user, url, and quote, newline tags. Adds spaces around <claim>, </claim>, <premise>, </premise> tags.
+    All the spaces to the left of these tags are all removed and a single space is provided to the right.
     Additionally tries to remove away some footnotes.
     Args:
         post:       The text of a post, having claim, premise tags as occuring in the original xml file.
@@ -47,14 +52,6 @@ def add_tags(post, user_dict):
     else:
         user_tag = "[USER" + str(user_dict[post["author"]]) + "]"
 
-    for elem in [
-        ("</claim>", "</claim> "),
-        ("<claim", " <claim"),
-        ("<premise", " <premise"),
-        ("</premise>", "</premise> "),
-    ]:
-        text = text.replace(*elem)
-
     text = re.sub(footnote_regex, "", text)
     
     if "[URL]" in config["special_tokens"]:
@@ -63,10 +60,18 @@ def add_tags(post, user_dict):
     if "[STARTQ]" in config["special_tokens"] and "[ENDQ]" in config["special_tokens"]:
         text = re.sub(quote_regex, "[STARTQ]" + r"\1" + "[ENDQ] ", text)
 
-    text = text.replace("\n", " ")
-    text = text.replace("\r", " ")
+    if "[NEWLINE]" in config["special_tokens"]:
+        text = text.replace("\n", "[NEWLINE]")
+        text = text.replace("\r", "[NEWLINE]")
 
+    text = re.sub(r"\s*</claim>([^\s])", r"</claim> \1", text)
+    text = re.sub(r"\s*</premise>([^\s])", r"</premise> \1", text)
+    text = re.sub(r"\s*<claim(.*)>([^\s])", r"<claim\1> \2", text)
+    text = re.sub(r"\s*<premise(.*)>([^\s])", r"<premise\1> \2", text)
+
+ 
     return text, user_tag
+
 
 
 def get_components(
