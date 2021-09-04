@@ -78,6 +78,7 @@ def get_dataset(file_list: List[str], tokenizer: transformers.PreTrainedTokenize
             [data_config["max_len"]],
             [data_config["max_len"], 3],
         ),
+        drop_remainder=True,
         padding_values=(None,(tokenizer.pad_token_id if data_config["pad_for"]["tokenized_thread"] is None
                               else data_config["pad_for"]["tokenized_thread"]), 
                               data_config["pad_for"]["tokenized_thread"], 
