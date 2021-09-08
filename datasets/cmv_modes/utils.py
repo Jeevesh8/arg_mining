@@ -94,8 +94,10 @@ def modified_mask_encodings(
         encoding = [tok.bos_token_id] + encoding
     if encoding[-1] != tok.eos_token_id:
         encoding = encoding + [tok.eos_token_id]
-
-    decoded_txt = tok.decode(encoding)[3:-4]
+    
+    sos_length = len(tokenizer.convert_ids_to_tokens([tokenizer.bos_token_id])[0])
+    eos_length = len(tokenizer.convert_ids_to_tokens([tokenizer.eos_token_id])[0])
+    decoded_txt = tok.decode(encoding)[sos_length:-eos_length]
     special_tokens = tok.get_added_vocab().keys()
     new_txt_parts = []
     iter_txt = decoded_txt
