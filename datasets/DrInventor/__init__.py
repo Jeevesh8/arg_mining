@@ -29,7 +29,7 @@ def data_generator(file_lis: List[Tuple[str, str]],
         refined_annotations = refine(annotations)
         new_paper_str = add_component_type_tags(paper_str, refined_annotations)
         heading_sections = break_into_sections(new_paper_str, merge_subsecs=(max_len>1024))
-        sub_parts = tokenize_paper(heading_sections, tokenizer, max_len)
+        sub_parts = tokenize_paper(heading_sections, tokenizer, max_len=max_len)
         for sub_part in sub_parts:
             yield sub_part
 
