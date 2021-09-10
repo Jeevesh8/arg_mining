@@ -22,7 +22,7 @@ def get_section_encoding(heading: str,
     
     soup = BeautifulSoup("<xml>"+whole_content+"</xml>", "xml")
     
-    tokenized_section, comp_type_labels = [tokenizer.bos_token_id], [config["arg_components"]["other"]]
+    tokenized_section, comp_type_labels = [tokenizer.bos_token_id], [config["arg_components"]["O"]]
     
     for component in soup.contents[0]:
         tokenized_component = tokenizer.encode(str(component.string))[1:-1]
@@ -36,10 +36,10 @@ def get_section_encoding(heading: str,
         elif re.fullmatch(r"<data>.*</data>", str(component)) is not None:
             comp_type_labels += [config["arg_components"]["B-D"]] + [config["arg_components"]["I-D"]]*(len(tokenized_component)-1)
         else:
-            comp_type_labels += [config["arg_components"]["other"]]*len(tokenized_component)
+            comp_type_labels += [config["arg_components"]["O"]]*len(tokenized_component)
     
     tokenized_section.append(tokenizer.eos_token_id)
-    comp_type_labels.append(config["arg_components"]["other"])
+    comp_type_labels.append(config["arg_components"]["O"])
     
     return tokenized_section, comp_type_labels
 
@@ -71,7 +71,7 @@ def tokenize_paper(heading_sections: List[Tuple[str, str]],
 
     sub_parts = []
 
-    tokenized_sub_part, sub_part_labels = [tokenizer.bos_token_id], [config["arg_components"]["other"]]
+    tokenized_sub_part, sub_part_labels = [tokenizer.bos_token_id], [config["arg_components"]["O"]]
 
     for heading, section_content in heading_sections:
         tokenized_section, comp_type_labels = get_section_encoding(heading, 
@@ -86,18 +86,18 @@ def tokenize_paper(heading_sections: List[Tuple[str, str]],
             tokenized_sub_part = tokenized_sub_part[:max_len-1]
             tokenized_sub_part.append(tokenizer.eos_token_id)
             sub_part_labels = sub_part_labels[:max_len-1]
-            sub_part_labels.append(config["arg_components"]["other"])
+            sub_part_labels.append(config["arg_components"]["O"])
             
             sub_parts.append((tokenized_sub_part, sub_part_labels))
             
-            tokenized_sub_part, sub_part_labels = [tokenizer.bos_token_id], [config["arg_components"]["other"]]
+            tokenized_sub_part, sub_part_labels = [tokenizer.bos_token_id], [config["arg_components"]["O"]]
 
         tokenized_sub_part += tokenized_section + [separator_token_id]
-        sub_part_labels += comp_type_labels + [config["arg_components"]["other"]]
+        sub_part_labels += comp_type_labels + [config["arg_components"]["O"]]
     
     if len(tokenized_sub_part)>1:
         tokenized_sub_part[:max_len-1].append(tokenizer.eos_token_id)
-        sub_part_labels[:max_len-1].append(config["arg_components"]["other"])
+        sub_part_labels[:max_len-1].append(config["arg_components"]["O"])
         sub_parts.append((tokenized_sub_part, sub_part_labels))
     
     return sub_parts

@@ -1,6 +1,6 @@
 from flax.core.frozen_dict import freeze
 
-config = {"arg_components": {"other": 0,
+config = {"arg_components": {"O": 0,
                              "B-BC" : 1,
                              "I-BC" : 2,
                              "B-OC" : 3,
@@ -11,7 +11,7 @@ config = {"arg_components": {"other": 0,
           "max_users": 10,
          }
 
-config["pad_for"] = {"arg_components" : config["arg_components"]["other"],}
+config["pad_for"] = {"arg_components" : config["arg_components"]["O"],}
 
 config["special_tokens"] = ["[NEWLINE]"]
 
