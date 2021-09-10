@@ -75,7 +75,7 @@ def load_dataset(dataset_dir: Optional[str] = None,
         max_len = tokenizer.model_max_length
     
     files = []
-    for filename in os.path.listdir(dataset_dir):
+    for filename in os.listdir(dataset_dir):
         if filename.endswith(".txt") and os.path.isfile(os.path.join(dataset_dir, filename[:-4]+".ann")):
             files.append((os.path.join(dataset_dir, filename),
                           os.path.join(dataset_dir, filename[:-4]+".ann")))
