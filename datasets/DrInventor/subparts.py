@@ -88,9 +88,10 @@ def break_into_sections(paper_str: str, merge_subsecs: bool=True,
                          re.search(r"(?s)<H\d+>(.+)</H\d+>(.+)", section).group(2))
                         for section in heading_sections]
     
-    heading_sections = filter(lambda h_n_s : (h_n_s[0].lower().find('references')==-1 and 
-                                              h_n_s[0].lower().find('bibliography')==-1), 
-                              heading_sections)
+    heading_sections = list(filter(lambda h_n_s : (h_n_s[0].lower().find('references')==-1 and 
+                                                   h_n_s[0].lower().find('bibliography')==-1), 
+                                   heading_sections)
+                           )
     if merge_subsecs:
         heading_sections = merge_subsections(heading_sections, joiner)  
         
