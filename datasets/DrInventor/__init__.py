@@ -36,7 +36,7 @@ def batched_data_gen(file_lis: List[Tuple[str, str]],
                      tokenizer: transformers.PreTrainedTokenizer,
                      batch_sz: int,
                      pad_to_max: Optional[bool]=False,
-                     max_len: Optional[int]=0,) -> Generator[Tuple[List[List[int]], List[List[int]]]]:
+                     max_len: Optional[int]=0,) -> Generator[Tuple[List[List[int]], List[List[int]]], None, None]:
     i=0
     batched_paper_parts, batched_labels = [],  []
     for tokenized_paper_part, comp_type_labels in data_generator(file_lis, tokenizer):
