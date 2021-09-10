@@ -69,7 +69,7 @@ def load_dataset(dataset_dir: Optional[str] = None,
         dataset_dir = download_data()
     
     if tokenizer is None:
-        tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', bos_token="[CLS]", eos_token="[SEP]")
+        tokenizer = BertTokenizer.from_pretrained('bert-base-cased', bos_token="[CLS]", eos_token="[SEP]")
         tokenizer.add_tokens(config["special_tokens"], special_tokens=True)
     
     if max_len is None:
