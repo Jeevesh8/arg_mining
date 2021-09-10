@@ -18,7 +18,8 @@ def download_data():
     return "./compiled_corpus/"
 
 def data_generator(file_lis: List[Tuple[str, str]], 
-                   tokenizer: transformers.PreTrainedTokenizer):
+                   tokenizer: transformers.PreTrainedTokenizer,
+                   max_len: Optional[int] = 4096):
     
     for txt_file, ann_file in file_lis:
         with open(txt_file) as g:
@@ -27,8 +28,8 @@ def data_generator(file_lis: List[Tuple[str, str]],
             annotations = g.readlines()
         refined_annotations = refine(annotations)
         new_paper_str = add_component_type_tags(paper_str, refined_annotations)
-        heading_sections = break_into_sections(new_paper_str)
-        sub_parts = tokenize_paper(heading_sections, tokenizer)
+        heading_sections = break_into_sections(new_paper_str, merge_subsecs=(max_len>1024))
+        sub_parts = tokenize_paper(heading_sections, tokenizer, max_len)
         for sub_part in sub_parts:
             yield sub_part
 
@@ -39,7 +40,7 @@ def batched_data_gen(file_lis: List[Tuple[str, str]],
                      max_len: Optional[int]=0,) -> Generator[Tuple[List[List[int]], List[List[int]]], None, None]:
     i=0
     batched_paper_parts, batched_labels = [],  []
-    for tokenized_paper_part, comp_type_labels in data_generator(file_lis, tokenizer):
+    for tokenized_paper_part, comp_type_labels in data_generator(file_lis, tokenizer, max_len):
         batched_paper_parts.append(tokenized_paper_part)
         batched_labels.append(comp_type_labels)
         i += 1
