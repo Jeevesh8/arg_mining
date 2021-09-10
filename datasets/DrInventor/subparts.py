@@ -95,4 +95,4 @@ def break_into_sections(paper_str: str, merge_subsecs: bool=True,
     if merge_subsecs:
         heading_sections = merge_subsections(heading_sections, joiner)  
         
-    return [(title, abstract)]+heading_sections
+    return [(title+"\n", abstract)]+heading_sections
