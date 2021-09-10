@@ -67,12 +67,12 @@ def load_dataset(dataset_dir: Optional[str] = None,
     if dataset_dir is None:
         dataset_dir = download_data()
     
-    if max_len is None:
-        max_len = tokenizer.model_max_length
-    
     if tokenizer is None:
         tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', bos_token="[CLS]", eos_token="[SEP]")
         tokenizer.add_tokens(config["special_tokens"], special_tokens=True)
+    
+    if max_len is None:
+        max_len = tokenizer.model_max_length
     
     files = []
     for filename in os.path.listdir(dataset_dir):
