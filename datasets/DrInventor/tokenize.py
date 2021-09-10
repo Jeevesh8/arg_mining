@@ -83,8 +83,10 @@ def tokenize_paper(heading_sections: List[Tuple[str, str]],
         if (len(tokenized_sub_part)!=1 and
             len(tokenized_sub_part)+len(tokenized_section)+2>max_len):             #+1 for eos_token, +1 for separator_token_id
             
-            tokenized_sub_part[:max_len-1].append(tokenizer.eos_token_id)
-            sub_part_labels[:max_len-1].append(config["arg_components"]["other"])
+            tokenized_sub_part = tokenized_sub_part[:max_len-1]
+            tokenized_sub_part.append(tokenizer.eos_token_id)
+            sub_part_labels = sub_part_labels[:max_len-1]
+            sub_part_labels.append(config["arg_components"]["other"])
             
             sub_parts.append((tokenized_sub_part, sub_part_labels))
             
