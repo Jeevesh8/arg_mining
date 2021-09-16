@@ -2,7 +2,7 @@ from flax.core.frozen_dict import freeze
 
 #General Config
 config = {
-    "batch_size": 8,
+    "batch_size": 2,
     "num_devices": 1,
     "max_len": 4096,
     "max_comps": 128,
@@ -44,12 +44,14 @@ config.update({
         "disagreement",
         "rebuttal",
         "support",
-        "None",
         "partial_agreement",
         "partial_disagreement",
+        "None",
     ],
+    
+    "reduce_relations" : False,
+
     "relations_map": {
-        "None": ["None"],
         "support": ["agreement", "understand", "support", "partial_agreement"],
         "against": [
             "partial_attack",
@@ -61,6 +63,7 @@ config.update({
             "rebuttal",
             "partial_disagreement",
         ],
+        "None": ["None"],
     },
 })
 
