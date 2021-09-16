@@ -71,10 +71,10 @@ config.update({
 
     "adv_relations_map" : {
         "support" : ["cont", "support"],
-        "agreement": ["agreement", "partial_agreement", "understand"],
-        "direct_attack" : ["partial_attack", "attack", "rebuttal_attack", "rebuttal"],
-        "indirect_attack": ["undercutter", "undercutter_attack"],
-        "disagreement": ["disagreement", "partial_disagreement"],
+        "agreement": ["agreement", "understand"],
+        "direct_attack" : ["attack", "rebuttal_attack", "rebuttal", "disagreement"],
+        "undercutter_attack": ["undercutter", "undercutter_attack"],
+        "partial" : ["partial_agreement", "partial_attack", "partial_disagreement"],
         "None": ["None"],
     },
 })
