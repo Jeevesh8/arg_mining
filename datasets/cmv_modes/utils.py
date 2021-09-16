@@ -171,10 +171,13 @@ def reencode_mask_tokens(encoding: List[int], tok,
 
 
 def get_rel_type_idx(relation: str) -> int:
-    if config["reduce_relations"]:
-        for i, v in enumerate(config["relations_map"].values()):
-            if relation in v:
-                return i
+    if config["reduce_relations"] :
+        for rel_group_no, rel_group in enumerate((config["adv_relations_map"] if config["use_adv_rel_map"] else 
+                               config["relations_map"]).values()):
+        
+            if relation in rel_group:
+                return rel_group_no
+        
         raise ValueError("Unknown relation type:", relation, 
                          "not found in relations map:", config["relations_map"])
     else:

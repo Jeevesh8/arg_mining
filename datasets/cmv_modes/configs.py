@@ -50,7 +50,7 @@ config.update({
         "None",
     ],
     
-    "reduce_relations" : False,
+    "reduce_relations" : True,
 
     "relations_map": {
         "support": ["cont", "agreement", "understand", "support", "partial_agreement"],
@@ -64,6 +64,17 @@ config.update({
             "rebuttal",
             "partial_disagreement",
         ],
+        "None": ["None"],
+    },
+
+    "use_adv_rel_map" : True,
+
+    "adv_relations_map" : {
+        "support" : ["cont", "support"],
+        "agreement": ["agreement", "partial_agreement", "understand"],
+        "direct_attack" : ["partial_attack", "attack", "rebuttal_attack", "rebuttal"],
+        "indirect_attack": ["undercutter", "undercutter_attack"],
+        "disagreement": ["disagreement", "partial_disagreement"],
         "None": ["None"],
     },
 })
