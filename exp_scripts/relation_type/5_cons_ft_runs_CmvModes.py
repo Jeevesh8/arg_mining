@@ -182,8 +182,8 @@ def relation_type_pred(comp_encodings: torch.Tensor,
         if to_comp==0:
             continue
             
-        logits.append(linear_layer(torch.cat([comp_encodings[from_comp-1], 
-                                              comp_encodings[to_comp-1]])))
+        logits.append(linear_layer(torch.cat([comp_encodings[from_comp], 
+                                              comp_encodings[to_comp]])))
         
     return torch.stack(logits)
 
@@ -323,7 +323,7 @@ def evaluate(dataset, metric):
 
 n_epochs = 30
 n_runs = 5
-for (tokenizer_version, model_version) in [('arg_mining/4epoch_complete/tokenizer', 'arg_mining/4epoch_complete/model/'),
+for (tokenizer_version, model_version) in [('../home/arg_mining/4epoch_complete/tokenizer', '../home/arg_mining/4epoch_complete/model/'),
                                            #('arg_mining/smlm_pretrained_iter5_0/tokenizer/', 'arg_mining/smlm_pretrained_iter5_0/model/'),
                                            #('arg_mining/smlm_pretrained_iter6_0/tokenizer/', 'arg_mining/smlm_pretrained_iter6_0/model/'),
                                            #('arg_mining/smlm_pretrained_iter7_0/tokenizer/', 'arg_mining/smlm_pretrained_iter7_0/model/'),]:
