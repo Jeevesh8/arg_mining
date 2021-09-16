@@ -138,7 +138,6 @@ def get_comp_wise_means(logits: torch.Tensor,
     while i<length:
         if comp_type_label[i]==ac_dict["O"]:
             start_idx, end_idx = detect_span(i, "O")
-            comp_means.append(torch.mean(logits[start_idx:end_idx], dim=0))
         
         elif comp_type_label[i]==ac_dict["B-C"]:
             start_idx, end_idx = detect_span(i+1, "I-C")
@@ -182,8 +181,8 @@ def relation_type_pred(comp_encodings: torch.Tensor,
         if to_comp==0:
             continue
             
-        logits.append(linear_layer(torch.cat([comp_encodings[from_comp], 
-                                              comp_encodings[to_comp]])))
+        logits.append(linear_layer(torch.cat([comp_encodings[from_comp-1], 
+                                              comp_encodings[to_comp-1]])))
         
     return torch.stack(logits)
 
