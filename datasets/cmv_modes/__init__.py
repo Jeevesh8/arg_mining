@@ -110,7 +110,9 @@ def get_op_wise_split(filelist: List[str]) -> Dict[str, List[str]]:
 def load_dataset(
     cmv_modes_dir: str = None,
     mask_tokens: Optional[List[str]] = None,
-    tokenizer : Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-uncased'),
+    tokenizer : Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-cased',
+                                                                                          bos_token="[CLS]",
+                                                                                          eos_token="[SEP]"),
     train_sz: float = 100,
     valid_sz: float = 0,
     test_sz: float = 0,
