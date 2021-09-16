@@ -34,6 +34,7 @@ config["pad_for"] = {
 #Data Representation Specific Config
 config.update({
     "relations": [
+        "cont"
         "partial_attack",
         "agreement",
         "attack",
@@ -52,7 +53,7 @@ config.update({
     "reduce_relations" : False,
 
     "relations_map": {
-        "support": ["agreement", "understand", "support", "partial_agreement"],
+        "support": ["cont", "agreement", "understand", "support", "partial_agreement"],
         "against": [
             "partial_attack",
             "attack",

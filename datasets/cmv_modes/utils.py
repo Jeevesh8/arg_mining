@@ -178,11 +178,7 @@ def get_rel_type_idx(relation: str) -> int:
         raise ValueError("Unknown relation type:", relation, 
                          "not found in relations map:", config["relations_map"])
     else:
-        rel_idx = config["relations"].index(relation)
-        if rel_idx==-1:
-            raise ValueError("Unknown relation type:", relation,
-                             "not found in relations:", config["relations"])
-        return rel_idx
+        return config["relations"].index(relation)
 
 
 """
