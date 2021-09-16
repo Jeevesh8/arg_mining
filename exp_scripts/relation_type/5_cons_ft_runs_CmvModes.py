@@ -9,16 +9,54 @@ import torch.optim as optim
 from itertools import chain
 from datasets import load_metric
 from transformers import LongformerTokenizer, LongformerModel
+from sklearn.metrics import precision_recall_fscore_support as prf_metric
 
 from arg_mining.datasets.cmv_modes import load_dataset, data_config
-
-metric = load_metric('f1')
-
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 ac_dict = data_config["arg_components"]
 rel_type_dict = {rel : i for i, rel in enumerate(data_config["adv_relations_map"].keys())}
 rel_type_dict.pop("None")
+
+class precision_recall_fscore():
+
+    def __init__(self):
+        self.preds = []
+        self.refs = []
+
+    def add_batch(self, predictions, references):
+        self.preds += predictions
+        self.refs += references
+
+    def compute(self):
+        f1_metrics = {"precision" : {}, "recall" : {},
+                      "f1": {}, "support": {}} 
+        precision, recall, f1, supp = prf_metric(self.refs, self.preds, 
+                                                 labels=list(rel_type_dict.keys()))
+
+        for i, k in enumerate(rel_type_dict.keys()):
+            f1_metrics["precision"][k] = precision[i]
+            f1_metrics["recall"][k] = recall[i]
+            f1_metrics["f1"][k] = f1[i]
+            f1_metrics["support"][k] = supp[i]
+
+        for avg in ["micro", "macro", "weighted"]:
+            precision, recall, f1, supp = prf_metric(self.refs, self.preds,
+                                                     labels=list(rel_type_dict.keys()), average=avg)
+            f1_metrics[avg+"_avg"] = {}
+            f1_metrics[avg+"_avg"]["precision"] = precision 
+            f1_metrics[avg+"_avg"]["recall"] = recall
+            f1_metrics[avg+"_avg"]["f1"] = f1
+            f1_metrics[avg+"_avg"]["support"] = supp
+
+        self.preds = []
+        self.refs = []
+
+        return f1_metrics
+		   
+        
+metric = precision_recall_fscore()
+
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 def get_tok_model(tokenizer_version, model_version):
     tokenizer = LongformerTokenizer.from_pretrained(tokenizer_version)
@@ -54,7 +92,7 @@ def get_rel_head():
     return linear_layer
 
 cross_entropy_layer = nn.CrossEntropyLoss(weight=torch.tensor([0.508, 2.027, 2.402, 2.234, 2.667], 
-                                                              device=device), reduction='none')
+                                                              device=device), reduction='sum')
 
 """### Global Attention Mask Utility for Longformer"""
 
@@ -196,14 +234,18 @@ def compute(batch: Tuple[torch.Tensor, torch.Tensor, torch.Tensor],
                             for (sample_logits, sample_comp_type_labels, sample_tokenized_thread)
                                  in zip(logits, comp_type_labels, tokenized_threads)]
     
-    rel_type_logits =  [relation_type_pred(elem1, elem2) for (elem1, elem2) in zip(comp_wise_logits, refers_to_and_type)]
-
+    rel_type_logits =  [relation_type_pred(elem1, elem2) 
+                        for elem1, elem2 in zip(comp_wise_logits, 
+                                                refers_to_and_type)]
+    
     
     if preds:
-        return [torch.max(elem, dim=-1).values for elem in rel_type_logits]
+        return [torch.max(elem, dim=-1).indices for elem in rel_type_logits]
     
-    ce_loss = sum([cross_entropy_layer(elem1, get_rel_types(elem2))
-                   for (elem1, elem2) in zip(rel_type_logits, refers_to_and_type)])
+    rel_labels = [get_rel_types(elem) for elem in refers_to_and_type]
+
+    ce_loss = sum([cross_entropy_layer(elem1, elem2)
+                   for elem1, elem2 in zip(rel_type_logits, rel_labels)])
     
     return ce_loss
 
@@ -223,7 +265,8 @@ def train(dataset):
                                          device=device)
         comp_type_labels = torch.tensor(np.squeeze(comp_type_labels, axis=0), 
                                          device=device)
-        
+        refers_to_and_type = np.squeeze(refers_to_and_type, axis=0)
+
         global_attention_mask = torch.squeeze(global_attention_mask, dim=0)
         
         loss = compute((tokenized_threads,
@@ -256,7 +299,8 @@ def evaluate(dataset, metric):
                                             device=device)
             comp_type_labels = torch.tensor(np.squeeze(comp_type_labels, axis=0),
                                             device=device)
-            
+            refers_to_and_type = np.squeeze(refers_to_and_type)
+
             global_attention_mask = torch.squeeze(global_attention_mask, dim=0)
             
             preds = compute((tokenized_threads,
@@ -265,12 +309,13 @@ def evaluate(dataset, metric):
                              global_attention_mask),
                             preds=True)
             
-            preds = [[int_to_labels[pred] for pred in seq] for seq in enumerate(preds)]
+            preds = [[int_to_labels[pred.item()] for pred in seq] for seq in preds]
+            refs =  [[int_to_labels[ref.item()] for ref in get_rel_types(elem)] 
+                     for elem in refers_to_and_type]
             
-            refs =  [[int_to_labels[ref] for ref in get_rel_types(elem)] for elem in refers_to_and_type]
-            
-            metric.add_batch(predictions=preds, 
-                             references=refs,)
+            for elem1, elem2 in zip(preds, refs):
+                metric.add_batch(predictions=elem1,
+                                 references=elem2,)
         
     print("\t\t\t\t", metric.compute())
 
@@ -278,7 +323,7 @@ def evaluate(dataset, metric):
 
 n_epochs = 30
 n_runs = 5
-for (tokenizer_version, model_version) in [#('arg_mining/4epoch_complete/tokenizer', 'arg_mining/4epoch_complete/model/')]:
+for (tokenizer_version, model_version) in [('arg_mining/4epoch_complete/tokenizer', 'arg_mining/4epoch_complete/model/'),
                                            #('arg_mining/smlm_pretrained_iter5_0/tokenizer/', 'arg_mining/smlm_pretrained_iter5_0/model/'),
                                            #('arg_mining/smlm_pretrained_iter6_0/tokenizer/', 'arg_mining/smlm_pretrained_iter6_0/model/'),
                                            #('arg_mining/smlm_pretrained_iter7_0/tokenizer/', 'arg_mining/smlm_pretrained_iter7_0/model/'),]:
@@ -307,7 +352,7 @@ for (tokenizer_version, model_version) in [#('arg_mining/4epoch_complete/tokeniz
 
             for epoch in range(n_epochs):
                 print(f"\t\t\t------------EPOCH {epoch+1}---------------")
-                train(train_dataset)
                 evaluate(test_dataset, metric)
-            
+                train(train_dataset)
+           
             del tokenizer, transformer_model, linear_layer
