@@ -151,7 +151,6 @@ def generate_prompts(tokenized_thread, comp_type_labels, refers_to_and_type):
 
     length = np.sum(tokenized_thread!=tokenizer.pad_token_id)
     spans_lis = get_spans(comp_type_labels, length)
-    print("First two spans:", spans_lis[0], spans_lis[1])
     user_token_pos = get_user_token_positions(tokenized_thread)
     for (link_from, link_to, rel_type) in refers_to_and_type:
         
@@ -160,9 +159,6 @@ def generate_prompts(tokenized_thread, comp_type_labels, refers_to_and_type):
         
         from_start_idx, from_end_idx = spans_lis[link_from-1]
         to_start_idx, to_end_idx = spans_lis[link_to-1]
-        
-        print("Link from:", tokenizer.decode(tokenized_thread[from_start_idx:from_end_idx]), from_start_idx, from_end_idx)
-        print("Link to:", tokenizer.decode(tokenized_thread[to_start_idx:to_end_idx]), to_start_idx, to_end_idx)
         
         from_user_token_id, to_user_token_id = 0, 0
         
@@ -272,14 +268,14 @@ def train(dataset):
 
     for i, (prompt_threads, rel_type_labels) in enumerate(
                                                     get_prompt_generator(dataset, 
-                                                                         batch_size=data_config["batch_size"])):
+                                                                         batch_size=data_config["batch_size"])()):
         
         global_attention_mask = torch.tensor(get_global_attention_mask(prompt_threads),
                                              device=device, dtype=torch.int32)
         
         #Cast to PyTorch tensor
-        prompt_threads = torch.tensor(prompt_threads, device=device)
-        rel_type_labels = torch.tensor(rel_type_labels, device=device)
+        prompt_threads = torch.tensor(prompt_threads, device=device, dtype=torch.long)
+        rel_type_labels = torch.tensor(rel_type_labels, device=device, dtype=torch.long)
         global_attention_mask = torch.squeeze(global_attention_mask, dim=0)
         
         loss = compute((prompt_threads,
@@ -302,14 +298,14 @@ def evaluate(dataset, metric):
 
     with torch.no_grad():
         for prompt_threads, rel_type_labels in get_prompt_generator(dataset,
-                                                                    batch_size=data_config["batch_size"]):
+                                                                    batch_size=data_config["batch_size"])():
             print("Evaluating") 
-            global_attention_mask = torch.tensor(get_global_attention_mask(tokenized_threads), 
+            global_attention_mask = torch.tensor(get_global_attention_mask(prompt_threads), 
                                                  device=device)
             
             #Cast to PyTorch tensor
-            prompt_threads = torch.tensor(prompt_threads, device=device)
-            rel_type_labels = torch.tensor(rel_type_labels, device=device)
+            prompt_threads = torch.tensor(prompt_threads, device=device, dtype=torch.long)
+            rel_type_labels = torch.tensor(rel_type_labels, device=device, dtype=torch.long)
             global_attention_mask = torch.squeeze(global_attention_mask, dim=0)
             
             preds = compute((prompt_threads,
