@@ -1,63 +1,126 @@
+<s>CMV: Most democracies are far too tolerant of extremism, especially the likes of neo-fascism, neo-nazism, radical Islamism and violent intolerance. The world has been to soft on these ideologies and they need to be eliminated whenever they appear.
 [(0, '<s>'), (1, 'CM'), (2, 'V'), (3, ':'), (4, 'ĠMost'), (5, 'Ġdemocracies'), (6, 'Ġare'), (7, 'Ġfar'), (8, 'Ġtoo'), (9, 'Ġtolerant'), (10, 'Ġof'), (11, 'Ġextremism'), (12, ','), (13, 'Ġespecially'), (14, 'Ġthe'), (15, 'Ġlikes'), (16, 'Ġof'), (17, 'Ġneo'), (18, '-'), (19, 'f'), (20, 'asc'), (21, 'ism'), (22, ','), (23, 'Ġneo'), (24, '-'), (25, 'n'), (26, 'az'), (27, 'ism'), (28, ','), (29, 'Ġradical'), (30, 'ĠIslam'), (31, 'ism'), (32, 'Ġand'), (33, 'Ġviolent'), (34, 'Ġintolerance'), (35, '.'), (36, 'ĠThe'), (37, 'Ġworld'), (38, 'Ġhas'), (39, 'Ġbeen'), (40, 'Ġto'), (41, 'Ġsoft'), (42, 'Ġon'), (43, 'Ġthese'), (44, 'Ġideologies'), (45, 'Ġand'), (46, 'Ġthey'), (47, 'Ġneed'), (48, 'Ġto'), (49, 'Ġbe'), (50, 'Ġeliminated'), (51, 'Ġwhenever'), (52, 'Ġthey'), (53, 'Ġappear'), (54, '.')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] I think some of the biggest threats to global stability comes from the political fringes. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġthink'), (3, 'Ġsome'), (4, 'Ġof'), (5, 'Ġthe'), (6, 'Ġbiggest'), (7, 'Ġthreats'), (8, 'Ġto'), (9, 'Ġglobal'), (10, 'Ġstability'), (11, 'Ġcomes'), (12, 'Ġfrom'), (13, 'Ġthe'), (14, 'Ġpolitical'), (15, 'Ġfr'), (16, 'inges'), (17, 'Ġ.'), (18, 'Ġ')]
+[NEWLINE] It's either the extreme left, or the extreme right. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, "'s"), (3, 'Ġeither'), (4, 'Ġthe'), (5, 'Ġextreme'), (6, 'Ġleft'), (7, 'Ġ,'), (8, 'Ġor'), (9, 'Ġthe'), (10, 'Ġextreme'), (11, 'Ġright'), (12, 'Ġ.'), (13, 'Ġ')]
+[NEWLINE] Radicalism almost always leads to violence, and is a plague on democratic society and governments. 
 [(0, '[NEWLINE]'), (1, 'Rad'), (2, 'ical'), (3, 'ism'), (4, 'Ġalmost'), (5, 'Ġalways'), (6, 'Ġleads'), (7, 'Ġto'), (8, 'Ġviolence'), (9, 'Ġ,'), (10, 'Ġand'), (11, 'Ġis'), (12, 'Ġa'), (13, 'Ġplague'), (14, 'Ġon'), (15, 'Ġdemocratic'), (16, 'Ġsociety'), (17, 'Ġand'), (18, 'Ġgovernments'), (19, 'Ġ.'), (20, 'Ġ')]
+[NEWLINE] Since communism has been relegated to just a handful of countries, the far-left has for the most part been dealt with.
 [(0, '[NEWLINE]'), (1, 'Since'), (2, 'Ġcommunism'), (3, 'Ġhas'), (4, 'Ġbeen'), (5, 'Ġrelegated'), (6, 'Ġto'), (7, 'Ġjust'), (8, 'Ġa'), (9, 'Ġhandful'), (10, 'Ġof'), (11, 'Ġcountries'), (12, 'Ġ,'), (13, 'Ġ'), (14, 'the'), (15, 'Ġfar'), (16, '-'), (17, 'left'), (18, 'Ġhas'), (19, 'Ġfor'), (20, 'Ġthe'), (21, 'Ġmost'), (22, 'Ġpart'), (23, 'Ġbeen'), (24, 'Ġdealt'), (25, 'Ġwith'), (26, 'Ġ.')]
+[NEWLINE] However the far-right continues to be a menace. 
 [(0, '[NEWLINE]'), (1, 'However'), (2, 'Ġthe'), (3, 'Ġfar'), (4, '-'), (5, 'right'), (6, 'Ġcontinues'), (7, 'Ġto'), (8, 'Ġbe'), (9, 'Ġa'), (10, 'Ġmenace'), (11, 'Ġ.'), (12, 'Ġ')]
+[NEWLINE] I believe fascist neo-nazi groups, the KKK, the golden dawn or any religious extremist group like radical Islamism all fall under the far-right. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġbelieve'), (3, 'Ġfascist'), (4, 'Ġneo'), (5, '-'), (6, 'n'), (7, 'azi'), (8, 'Ġgroups'), (9, 'Ġ,'), (10, 'Ġthe'), (11, 'ĠKKK'), (12, 'Ġ,'), (13, 'Ġthe'), (14, 'Ġgolden'), (15, 'Ġdawn'), (16, 'Ġor'), (17, 'Ġany'), (18, 'Ġreligious'), (19, 'Ġextremist'), (20, 'Ġgroup'), (21, 'Ġlike'), (22, 'Ġradical'), (23, 'ĠIslam'), (24, 'ism'), (25, 'Ġall'), (26, 'Ġfall'), (27, 'Ġunder'), (28, 'Ġthe'), (29, 'Ġfar'), (30, '-'), (31, 'right'), (32, 'Ġ.'), (33, 'Ġ')]
+[NEWLINE] These groups are always extreme fringes, and a handful of people make the world a much nastier place.
 [(0, '[NEWLINE]'), (1, 'These'), (2, 'Ġgroups'), (3, 'Ġare'), (4, 'Ġalways'), (5, 'Ġextreme'), (6, 'Ġfr'), (7, 'inges'), (8, 'Ġ,'), (9, 'Ġand'), (10, 'Ġ'), (11, 'a'), (12, 'Ġhandful'), (13, 'Ġof'), (14, 'Ġpeople'), (15, 'Ġmake'), (16, 'Ġthe'), (17, 'Ġworld'), (18, 'Ġa'), (19, 'Ġmuch'), (20, 'Ġn'), (21, 'ast'), (22, 'ier'), (23, 'Ġplace'), (24, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Often it is the leaders of such movements that prey on the weak-willed, using them as pawns in their ambitions of power. 
 [(0, '[NEWLINE]'), (1, 'Often'), (2, 'Ġit'), (3, 'Ġis'), (4, 'Ġthe'), (5, 'Ġleaders'), (6, 'Ġof'), (7, 'Ġsuch'), (8, 'Ġmovements'), (9, 'Ġthat'), (10, 'Ġprey'), (11, 'Ġon'), (12, 'Ġthe'), (13, 'Ġweak'), (14, '-'), (15, 'w'), (16, 'illed'), (17, 'Ġ,'), (18, 'Ġusing'), (19, 'Ġthem'), (20, 'Ġas'), (21, 'Ġpawn'), (22, 's'), (23, 'Ġin'), (24, 'Ġtheir'), (25, 'Ġambitions'), (26, 'Ġof'), (27, 'Ġpower'), (28, 'Ġ.'), (29, 'Ġ')]
+[NEWLINE] Unfortunately with the world's obsession with free speech and personal liberty, such leaders are given a free hand.
 [(0, '[NEWLINE]'), (1, 'Unfortunately'), (2, 'Ġwith'), (3, 'Ġthe'), (4, 'Ġworld'), (5, "'s"), (6, 'Ġobsession'), (7, 'Ġwith'), (8, 'Ġfree'), (9, 'Ġspeech'), (10, 'Ġand'), (11, 'Ġpersonal'), (12, 'Ġliberty'), (13, 'Ġ,'), (14, 'Ġ'), (15, 'such'), (16, 'Ġleaders'), (17, 'Ġare'), (18, 'Ġgiven'), (19, 'Ġa'), (20, 'Ġfree'), (21, 'Ġhand'), (22, 'Ġ.')]
+[NEWLINE] On websites like twitter and facebook we see ISIS recruit blind followers.
 [(0, '[NEWLINE]'), (1, 'On'), (2, 'Ġwebsites'), (3, 'Ġlike'), (4, 'Ġtwitter'), (5, 'Ġand'), (6, 'Ġfacebook'), (7, 'Ġwe'), (8, 'Ġsee'), (9, 'ĠISIS'), (10, 'Ġrecruit'), (11, 'Ġblind'), (12, 'Ġfollowers'), (13, 'Ġ.')]
+[NEWLINE] Wouldn't restricting " free speech " put brakes on this sort of recruitment? 
 [(0, '[NEWLINE]'), (1, 'Would'), (2, 'n'), (3, "'t"), (4, 'Ġrestricting'), (5, 'Ġ"'), (6, 'Ġfree'), (7, 'Ġspeech'), (8, 'Ġ"'), (9, 'Ġput'), (10, 'Ġbrakes'), (11, 'Ġon'), (12, 'Ġthis'), (13, 'Ġsort'), (14, 'Ġof'), (15, 'Ġrecruitment'), (16, 'Ġ?'), (17, 'Ġ')]
+[NEWLINE] Political parties in democracies often try to keep these groups on a leash, but do not wish to eliminate them since they serve definite political goals like polarizing the electorate.
 [(0, '[NEWLINE]'), (1, 'Political'), (2, 'Ġparties'), (3, 'Ġin'), (4, 'Ġdemocracies'), (5, 'Ġoften'), (6, 'Ġtry'), (7, 'Ġto'), (8, 'Ġkeep'), (9, 'Ġthese'), (10, 'Ġgroups'), (11, 'Ġon'), (12, 'Ġa'), (13, 'Ġleash'), (14, 'Ġ,'), (15, 'Ġbut'), (16, 'Ġ'), (17, 'do'), (18, 'Ġnot'), (19, 'Ġwish'), (20, 'Ġto'), (21, 'Ġeliminate'), (22, 'Ġthem'), (23, 'Ġsince'), (24, 'Ġthey'), (25, 'Ġserve'), (26, 'Ġdefinite'), (27, 'Ġpolitical'), (28, 'Ġgoals'), (29, 'Ġlike'), (30, 'Ġpolar'), (31, 'izing'), (32, 'Ġthe'), (33, 'Ġelectorate'), (34, 'Ġ.')]
+[NEWLINE] I see this as a major flaw in democracy. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġsee'), (3, 'Ġthis'), (4, 'Ġas'), (5, 'Ġa'), (6, 'Ġmajor'), (7, 'Ġflaw'), (8, 'Ġin'), (9, 'Ġdemocracy'), (10, 'Ġ.'), (11, 'Ġ')]
+[NEWLINE] Fear of losing votes from radical sympathizers leads to political groups appeasing extremism. 
 [(0, '[NEWLINE]'), (1, 'Fear'), (2, 'Ġof'), (3, 'Ġlosing'), (4, 'Ġvotes'), (5, 'Ġfrom'), (6, 'Ġradical'), (7, 'Ġsympath'), (8, 'izers'), (9, 'Ġleads'), (10, 'Ġto'), (11, 'Ġpolitical'), (12, 'Ġgroups'), (13, 'Ġappe'), (14, 'asing'), (15, 'Ġextremism'), (16, 'Ġ.'), (17, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Instead, I think governments should do much more and try to completely stamp out any signs of fascism.
 [(0, '[NEWLINE]'), (1, 'Instead'), (2, 'Ġ,'), (3, 'Ġ'), (4, 'I'), (5, 'Ġthink'), (6, 'Ġgovernments'), (7, 'Ġshould'), (8, 'Ġdo'), (9, 'Ġmuch'), (10, 'Ġmore'), (11, 'Ġand'), (12, 'Ġtry'), (13, 'Ġto'), (14, 'Ġcompletely'), (15, 'Ġstamp'), (16, 'Ġout'), (17, 'Ġany'), (18, 'Ġsigns'), (19, 'Ġof'), (20, 'Ġfascism'), (21, 'Ġ.')]
+[NEWLINE] After the horrors of World War 2I find it completely absurd that we still put up with their ideologies.
 [(0, '[NEWLINE]'), (1, 'After'), (2, 'Ġthe'), (3, 'Ġhorrors'), (4, 'Ġof'), (5, 'ĠWorld'), (6, 'ĠWar'), (7, 'Ġ2'), (8, 'I'), (9, 'Ġfind'), (10, 'Ġit'), (11, 'Ġcompletely'), (12, 'Ġabsurd'), (13, 'Ġthat'), (14, 'Ġwe'), (15, 'Ġstill'), (16, 'Ġput'), (17, 'Ġup'), (18, 'Ġwith'), (19, 'Ġtheir'), (20, 'Ġideologies'), (21, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Bringing socio-economic growth to communities that feel disenfranchised just isn't enough, and their will always be a few bad apples.
 [(0, '[NEWLINE]'), (1, 'Bring'), (2, 'ing'), (3, 'Ġsocio'), (4, '-'), (5, 'economic'), (6, 'Ġgrowth'), (7, 'Ġto'), (8, 'Ġcommunities'), (9, 'Ġthat'), (10, 'Ġfeel'), (11, 'Ġdisenfranch'), (12, 'ised'), (13, 'Ġjust'), (14, 'Ġisn'), (15, "'t"), (16, 'Ġenough'), (17, 'Ġ,'), (18, 'Ġand'), (19, 'Ġ'), (20, 'their'), (21, 'Ġwill'), (22, 'Ġalways'), (23, 'Ġbe'), (24, 'Ġa'), (25, 'Ġfew'), (26, 'Ġbad'), (27, 'Ġapples'), (28, 'Ġ.')]
+[NEWLINE]  These bad apples need to be weeded out.
 [(0, '[NEWLINE]'), (1, 'ĠThese'), (2, 'Ġbad'), (3, 'Ġapples'), (4, 'Ġneed'), (5, 'Ġto'), (6, 'Ġbe'), (7, 'Ġwe'), (8, 'eded'), (9, 'Ġout'), (10, 'Ġ.')]
+[NEWLINE]  Instead, we allow them to spread their rot, and infect society. 
 [(0, '[NEWLINE]'), (1, 'ĠInstead'), (2, 'Ġ,'), (3, 'Ġwe'), (4, 'Ġallow'), (5, 'Ġthem'), (6, 'Ġto'), (7, 'Ġspread'), (8, 'Ġtheir'), (9, 'Ġrot'), (10, 'Ġ,'), (11, 'Ġand'), (12, 'Ġinfect'), (13, 'Ġsociety'), (14, 'Ġ.'), (15, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] I think some of the biggest threats to global stability comes from the political fringes.
 [(0, '[STARTQ]'), (1, 'I'), (2, 'Ġthink'), (3, 'Ġsome'), (4, 'Ġof'), (5, 'Ġthe'), (6, 'Ġbiggest'), (7, 'Ġthreats'), (8, 'Ġto'), (9, 'Ġglobal'), (10, 'Ġstability'), (11, 'Ġcomes'), (12, 'Ġfrom'), (13, 'Ġthe'), (14, 'Ġpolitical'), (15, 'Ġfr'), (16, 'inges'), (17, 'Ġ.')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] The only constant is change. 
 [(0, '[NEWLINE]'), (1, 'The'), (2, 'Ġonly'), (3, 'Ġconstant'), (4, 'Ġis'), (5, 'Ġchange'), (6, 'Ġ.'), (7, 'Ġ')]
+[NEWLINE] Global stability is a myth grown out of a population that has gotten good at balancing acts. 
 [(0, '[NEWLINE]'), (1, 'Global'), (2, 'Ġstability'), (3, 'Ġis'), (4, 'Ġa'), (5, 'Ġmyth'), (6, 'Ġgrown'), (7, 'Ġout'), (8, 'Ġof'), (9, 'Ġa'), (10, 'Ġpopulation'), (11, 'Ġthat'), (12, 'Ġhas'), (13, 'Ġgotten'), (14, 'Ġgood'), (15, 'Ġat'), (16, 'Ġbalancing'), (17, 'Ġacts'), (18, 'Ġ.'), (19, 'Ġ')]
+[NEWLINE] The supports necessary for real stability simply don't exist. 
 [(0, '[NEWLINE]'), (1, 'The'), (2, 'Ġsupports'), (3, 'Ġnecessary'), (4, 'Ġfor'), (5, 'Ġreal'), (6, 'Ġstability'), (7, 'Ġsimply'), (8, 'Ġdon'), (9, "'t"), (10, 'Ġexist'), (11, 'Ġ.'), (12, 'Ġ')]
+[NEWLINE] To carry out a balancing act, you have to avoid any extreme reactions, as they only make for larger oscillations. 
 [(0, '[NEWLINE]'), (1, 'To'), (2, 'Ġcarry'), (3, 'Ġout'), (4, 'Ġa'), (5, 'Ġbalancing'), (6, 'Ġact'), (7, 'Ġ,'), (8, 'Ġyou'), (9, 'Ġhave'), (10, 'Ġto'), (11, 'Ġavoid'), (12, 'Ġany'), (13, 'Ġextreme'), (14, 'Ġreactions'), (15, 'Ġ,'), (16, 'Ġas'), (17, 'Ġthey'), (18, 'Ġonly'), (19, 'Ġmake'), (20, 'Ġfor'), (21, 'Ġlarger'), (22, 'Ġoscill'), (23, 'ations'), (24, 'Ġ.'), (25, 'Ġ')]
+[NEWLINE] Censorship is an extreme reaction to an extreme force, and here are two very good arguments for why should be seen as an extreme option :
 [(0, '[NEWLINE]'), (1, 'C'), (2, 'ens'), (3, 'orship'), (4, 'Ġis'), (5, 'Ġan'), (6, 'Ġextreme'), (7, 'Ġreaction'), (8, 'Ġto'), (9, 'Ġan'), (10, 'Ġextreme'), (11, 'Ġforce'), (12, 'Ġ,'), (13, 'Ġand'), (14, 'Ġhere'), (15, 'Ġare'), (16, 'Ġtwo'), (17, 'Ġvery'), (18, 'Ġgood'), (19, 'Ġarguments'), (20, 'Ġfor'), (21, 'Ġwhy'), (22, 'Ġshould'), (23, 'Ġbe'), (24, 'Ġseen'), (25, 'Ġas'), (26, 'Ġan'), (27, 'Ġextreme'), (28, 'Ġoption'), (29, 'Ġ:')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] 1 ) There are many things we used to consider extreme that are now fundamental principles of our society. We claim that our old positions were wrong, and have good evidence to back this up. 
 [(0, '[NEWLINE]'), (1, '1'), (2, 'Ġ)'), (3, 'Ġ'), (4, 'There'), (5, 'Ġare'), (6, 'Ġmany'), (7, 'Ġthings'), (8, 'Ġwe'), (9, 'Ġused'), (10, 'Ġto'), (11, 'Ġconsider'), (12, 'Ġextreme'), (13, 'Ġthat'), (14, 'Ġare'), (15, 'Ġnow'), (16, 'Ġfundamental'), (17, 'Ġprinciples'), (18, 'Ġof'), (19, 'Ġour'), (20, 'Ġsociety'), (21, 'Ġ.'), (22, 'Ġ'), (23, 'We'), (24, 'Ġclaim'), (25, 'Ġthat'), (26, 'Ġour'), (27, 'Ġold'), (28, 'Ġpositions'), (29, 'Ġwere'), (30, 'Ġwrong'), (31, 'Ġ,'), (32, 'Ġand'), (33, 'Ġhave'), (34, 'Ġgood'), (35, 'Ġevidence'), (36, 'Ġto'), (37, 'Ġback'), (38, 'Ġthis'), (39, 'Ġup'), (40, 'Ġ.'), (41, 'Ġ')]
+[NEWLINE] With this in mind, we are forced to acknowledge that we are probably making errors in other places, and may even have been led astray in one of the areas we have already changed. 
 [(0, '[NEWLINE]'), (1, 'With'), (2, 'Ġthis'), (3, 'Ġin'), (4, 'Ġmind'), (5, 'Ġ,'), (6, 'Ġwe'), (7, 'Ġare'), (8, 'Ġforced'), (9, 'Ġto'), (10, 'Ġacknowledge'), (11, 'Ġthat'), (12, 'Ġwe'), (13, 'Ġare'), (14, 'Ġprobably'), (15, 'Ġmaking'), (16, 'Ġerrors'), (17, 'Ġin'), (18, 'Ġother'), (19, 'Ġplaces'), (20, 'Ġ,'), (21, 'Ġand'), (22, 'Ġmay'), (23, 'Ġeven'), (24, 'Ġhave'), (25, 'Ġbeen'), (26, 'Ġled'), (27, 'Ġast'), (28, 'ray'), (29, 'Ġin'), (30, 'Ġone'), (31, 'Ġof'), (32, 'Ġthe'), (33, 'Ġareas'), (34, 'Ġwe'), (35, 'Ġhave'), (36, 'Ġalready'), (37, 'Ġchanged'), (38, 'Ġ.'), (39, 'Ġ')]
+[NEWLINE] Censorship halts this process and locks in whatever is current. 
 [(0, '[NEWLINE]'), (1, 'C'), (2, 'ens'), (3, 'orship'), (4, 'Ġhal'), (5, 'ts'), (6, 'Ġthis'), (7, 'Ġprocess'), (8, 'Ġand'), (9, 'Ġlocks'), (10, 'Ġin'), (11, 'Ġwhatever'), (12, 'Ġis'), (13, 'Ġcurrent'), (14, 'Ġ.'), (15, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] 2 ) Censorship does not eliminate the censored individual. 
 [(0, '[NEWLINE]'), (1, '2'), (2, 'Ġ)'), (3, 'Ġ'), (4, 'C'), (5, 'ens'), (6, 'orship'), (7, 'Ġdoes'), (8, 'Ġnot'), (9, 'Ġeliminate'), (10, 'Ġthe'), (11, 'Ġcensored'), (12, 'Ġindividual'), (13, 'Ġ.'), (14, 'Ġ')]
+[NEWLINE] Indeed, they will work hard to evade the censor, carrying out their activities further from the public eye. 
 [(0, '[NEWLINE]'), (1, 'Indeed'), (2, 'Ġ,'), (3, 'Ġthey'), (4, 'Ġwill'), (5, 'Ġwork'), (6, 'Ġhard'), (7, 'Ġto'), (8, 'Ġevade'), (9, 'Ġthe'), (10, 'Ġcensor'), (11, 'Ġ,'), (12, 'Ġcarrying'), (13, 'Ġout'), (14, 'Ġtheir'), (15, 'Ġactivities'), (16, 'Ġfurther'), (17, 'Ġfrom'), (18, 'Ġthe'), (19, 'Ġpublic'), (20, 'Ġeye'), (21, 'Ġ.'), (22, 'Ġ')]
+[NEWLINE] This brings their arguments out of public discourse, where a solid counter-argument is more likely to be interjected. 
 [(0, '[NEWLINE]'), (1, 'This'), (2, 'Ġbrings'), (3, 'Ġtheir'), (4, 'Ġarguments'), (5, 'Ġout'), (6, 'Ġof'), (7, 'Ġpublic'), (8, 'Ġdiscourse'), (9, 'Ġ,'), (10, 'Ġwhere'), (11, 'Ġa'), (12, 'Ġsolid'), (13, 'Ġcounter'), (14, '-'), (15, 'argument'), (16, 'Ġis'), (17, 'Ġmore'), (18, 'Ġlikely'), (19, 'Ġto'), (20, 'Ġbe'), (21, 'Ġinter'), (22, 'jected'), (23, 'Ġ.'), (24, 'Ġ')]
+[NEWLINE]  It also dooms any attempt to change their beliefs, as their opponents no longer understand those beliefs sufficiently to do this. 
 [(0, '[NEWLINE]'), (1, 'ĠIt'), (2, 'Ġalso'), (3, 'Ġdo'), (4, 'oms'), (5, 'Ġany'), (6, 'Ġattempt'), (7, 'Ġto'), (8, 'Ġchange'), (9, 'Ġtheir'), (10, 'Ġbeliefs'), (11, 'Ġ,'), (12, 'Ġas'), (13, 'Ġtheir'), (14, 'Ġopponents'), (15, 'Ġno'), (16, 'Ġlonger'), (17, 'Ġunderstand'), (18, 'Ġthose'), (19, 'Ġbeliefs'), (20, 'Ġsufficiently'), (21, 'Ġto'), (22, 'Ġdo'), (23, 'Ġthis'), (24, 'Ġ.'), (25, 'Ġ')]
+[NEWLINE]  Finally it gives them a true claim that they are being oppressed and targeted, which history suggests tends to strengthen a group. 
 [(0, '[NEWLINE]'), (1, 'ĠFinally'), (2, 'Ġit'), (3, 'Ġgives'), (4, 'Ġthem'), (5, 'Ġa'), (6, 'Ġtrue'), (7, 'Ġclaim'), (8, 'Ġthat'), (9, 'Ġthey'), (10, 'Ġare'), (11, 'Ġbeing'), (12, 'Ġoppressed'), (13, 'Ġand'), (14, 'Ġtargeted'), (15, 'Ġ,'), (16, 'Ġwhich'), (17, 'Ġhistory'), (18, 'Ġsuggests'), (19, 'Ġtends'), (20, 'Ġto'), (21, 'Ġstrengthen'), (22, 'Ġa'), (23, 'Ġgroup'), (24, 'Ġ.'), (25, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] Good arguments.
 [(0, '[NEWLINE]'), (1, 'Good'), (2, 'Ġarguments'), (3, 'Ġ.')]
+[NEWLINE] Although I may disagree somewhat, I see why censorship can be dangerous. 
 [(0, '[NEWLINE]'), (1, 'Although'), (2, 'ĠI'), (3, 'Ġmay'), (4, 'Ġdisagree'), (5, 'Ġsomewhat'), (6, 'Ġ,'), (7, 'ĠI'), (8, 'Ġsee'), (9, 'Ġwhy'), (10, 'Ġcensorship'), (11, 'Ġcan'), (12, 'Ġbe'), (13, 'Ġdangerous'), (14, 'Ġ.'), (15, 'Ġ')]
+[NEWLINE] One thing about censorship : don't you think it's a problem that the likes of ISIS some neo-nazi groups actively recruit on twitter and facebook? Should't this sort of thing be stopped? 
 [(0, '[NEWLINE]'), (1, 'One'), (2, 'Ġthing'), (3, 'Ġabout'), (4, 'Ġcensorship'), (5, 'Ġ:'), (6, 'Ġ'), (7, 'don'), (8, "'t"), (9, 'Ġyou'), (10, 'Ġthink'), (11, 'Ġit'), (12, "'s"), (13, 'Ġa'), (14, 'Ġproblem'), (15, 'Ġthat'), (16, 'Ġthe'), (17, 'Ġlikes'), (18, 'Ġof'), (19, 'ĠISIS'), (20, 'Ġsome'), (21, 'Ġneo'), (22, '-'), (23, 'n'), (24, 'azi'), (25, 'Ġgroups'), (26, 'Ġactively'), (27, 'Ġrecruit'), (28, 'Ġon'), (29, 'Ġtwitter'), (30, 'Ġand'), (31, 'Ġfacebook'), (32, 'Ġ?'), (33, 'Ġ'), (34, 'Should'), (35, "'t"), (36, 'Ġthis'), (37, 'Ġsort'), (38, 'Ġof'), (39, 'Ġthing'), (40, 'Ġbe'), (41, 'Ġstopped'), (42, 'Ġ?'), (43, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] There are many things we used to consider extreme that are now fundamental principles of our society
 [(0, '[STARTQ]'), (1, 'There'), (2, 'Ġare'), (3, 'Ġmany'), (4, 'Ġthings'), (5, 'Ġwe'), (6, 'Ġused'), (7, 'Ġto'), (8, 'Ġconsider'), (9, 'Ġextreme'), (10, 'Ġthat'), (11, 'Ġare'), (12, 'Ġnow'), (13, 'Ġfundamental'), (14, 'Ġprinciples'), (15, 'Ġof'), (16, 'Ġour'), (17, 'Ġsociety')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] While this may be true, hasn't the killing of innocents ( and murder or rape, or destruction of property ) always been considered deeply immoral ( outside of wars )? 
 [(0, '[NEWLINE]'), (1, 'While'), (2, 'Ġthis'), (3, 'Ġmay'), (4, 'Ġbe'), (5, 'Ġtrue'), (6, 'Ġ,'), (7, 'Ġhasn'), (8, "'t"), (9, 'Ġthe'), (10, 'Ġkilling'), (11, 'Ġof'), (12, 'Ġinnoc'), (13, 'ents'), (14, 'Ġ('), (15, 'Ġand'), (16, 'Ġmurder'), (17, 'Ġor'), (18, 'Ġrape'), (19, 'Ġ,'), (20, 'Ġor'), (21, 'Ġdestruction'), (22, 'Ġof'), (23, 'Ġproperty'), (24, 'Ġ)'), (25, 'Ġalways'), (26, 'Ġbeen'), (27, 'Ġconsidered'), (28, 'Ġdeeply'), (29, 'Ġimmoral'), (30, 'Ġ('), (31, 'Ġoutside'), (32, 'Ġof'), (33, 'Ġwars'), (34, 'Ġ)'), (35, 'Ġ?'), (36, 'Ġ')]
+[NEWLINE]  We already clamp down on extremism, and potential extremists are actively monitored using existing surveillance techniques. 
 [(0, '[NEWLINE]'), (1, 'ĠWe'), (2, 'Ġalready'), (3, 'Ġclamp'), (4, 'Ġdown'), (5, 'Ġon'), (6, 'Ġextremism'), (7, 'Ġ,'), (8, 'Ġand'), (9, 'Ġpotential'), (10, 'Ġextremists'), (11, 'Ġare'), (12, 'Ġactively'), (13, 'Ġmonitored'), (14, 'Ġusing'), (15, 'Ġexisting'), (16, 'Ġsurveillance'), (17, 'Ġtechniques'), (18, 'Ġ.'), (19, 'Ġ')]
+[NEWLINE]  Is it really that bad to go after them just a little bit more? 
 [(0, '[NEWLINE]'), (1, 'ĠIs'), (2, 'Ġit'), (3, 'Ġreally'), (4, 'Ġthat'), (5, 'Ġbad'), (6, 'Ġto'), (7, 'Ġgo'), (8, 'Ġafter'), (9, 'Ġthem'), (10, 'Ġjust'), (11, 'Ġa'), (12, 'Ġlittle'), (13, 'Ġbit'), (14, 'Ġmore'), (15, 'Ġ?'), (16, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Anyhow, for a well thought out response :
 [(0, '[NEWLINE]'), (1, 'Any'), (2, 'how'), (3, 'Ġ,'), (4, 'Ġfor'), (5, 'Ġa'), (6, 'Ġwell'), (7, 'Ġthought'), (8, 'Ġout'), (9, 'Ġresponse'), (10, 'Ġ:')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] [DELTA]
 [(0, '[NEWLINE]'), (1, '['), (2, 'D'), (3, 'EL'), (4, 'TA'), (5, ']')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+</s>
 [(0, '</s>')]

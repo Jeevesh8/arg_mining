@@ -1,38 +1,76 @@
+<s>CMV: EMTs, SAR, firefighters, police, etc. should receive “military discounts”.
 [(0, '<s>'), (1, 'CM'), (2, 'V'), (3, ':'), (4, 'ĠE'), (5, 'MT'), (6, 's'), (7, ','), (8, 'ĠSAR'), (9, ','), (10, 'Ġfirefighters'), (11, ','), (12, 'Ġpolice'), (13, ','), (14, 'Ġetc'), (15, '.'), (16, 'Ġshould'), (17, 'Ġreceive'), (18, 'ĠâĢ'), (19, 'ľ'), (20, 'military'), (21, 'Ġdiscounts'), (22, 'âĢ'), (23, 'Ŀ'), (24, '.')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] For those of you who donandt know, itands common ( at least in the US ) for businesses, transit agencies, etc. to give small discounts to military veterans to thank them for their service. 
 [(0, '[NEWLINE]'), (1, 'For'), (2, 'Ġthose'), (3, 'Ġof'), (4, 'Ġyou'), (5, 'Ġwho'), (6, 'Ġdon'), (7, 'and'), (8, 't'), (9, 'Ġknow'), (10, 'Ġ,'), (11, 'Ġit'), (12, 'ands'), (13, 'Ġcommon'), (14, 'Ġ('), (15, 'Ġat'), (16, 'Ġleast'), (17, 'Ġin'), (18, 'Ġthe'), (19, 'ĠUS'), (20, 'Ġ)'), (21, 'Ġfor'), (22, 'Ġbusinesses'), (23, 'Ġ,'), (24, 'Ġtransit'), (25, 'Ġagencies'), (26, 'Ġ,'), (27, 'Ġetc'), (28, 'Ġ.'), (29, 'Ġto'), (30, 'Ġgive'), (31, 'Ġsmall'), (32, 'Ġdiscounts'), (33, 'Ġto'), (34, 'Ġmilitary'), (35, 'Ġveterans'), (36, 'Ġto'), (37, 'Ġthank'), (38, 'Ġthem'), (39, 'Ġfor'), (40, 'Ġtheir'), (41, 'Ġservice'), (42, 'Ġ.'), (43, 'Ġ')]
+[NEWLINE] It seems that medical responders ( even hospital staff, actually ) and other emergency services do more good for society than soldiers and that such discounts should be given to them. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġseems'), (3, 'Ġthat'), (4, 'Ġmedical'), (5, 'Ġresponders'), (6, 'Ġ('), (7, 'Ġeven'), (8, 'Ġhospital'), (9, 'Ġstaff'), (10, 'Ġ,'), (11, 'Ġactually'), (12, 'Ġ)'), (13, 'Ġand'), (14, 'Ġother'), (15, 'Ġemergency'), (16, 'Ġservices'), (17, 'Ġdo'), (18, 'Ġmore'), (19, 'Ġgood'), (20, 'Ġfor'), (21, 'Ġsociety'), (22, 'Ġthan'), (23, 'Ġsoldiers'), (24, 'Ġand'), (25, 'Ġthat'), (26, 'Ġ'), (27, 'such'), (28, 'Ġdiscounts'), (29, 'Ġshould'), (30, 'Ġbe'), (31, 'Ġgiven'), (32, 'Ġto'), (33, 'Ġthem'), (34, 'Ġ.'), (35, 'Ġ')]
+[NEWLINE] As for the " Theyandre not risking their lives for our country. " argument, police officers do that too, and for citizens rather than the country and its interests. 
 [(0, '[NEWLINE]'), (1, 'As'), (2, 'Ġfor'), (3, 'Ġthe'), (4, 'Ġ"'), (5, 'ĠThey'), (6, 'andre'), (7, 'Ġnot'), (8, 'Ġrisking'), (9, 'Ġtheir'), (10, 'Ġlives'), (11, 'Ġfor'), (12, 'Ġour'), (13, 'Ġcountry'), (14, 'Ġ.'), (15, 'Ġ"'), (16, 'Ġargument'), (17, 'Ġ,'), (18, 'Ġpolice'), (19, 'Ġofficers'), (20, 'Ġdo'), (21, 'Ġthat'), (22, 'Ġtoo'), (23, 'Ġ,'), (24, 'Ġand'), (25, 'Ġfor'), (26, 'Ġcitizens'), (27, 'Ġrather'), (28, 'Ġthan'), (29, 'Ġthe'), (30, 'Ġcountry'), (31, 'Ġand'), (32, 'Ġits'), (33, 'Ġinterests'), (34, 'Ġ.'), (35, 'Ġ')]
+[NEWLINE] Some might argue that soldiers do the US a disservice rather than help, but thatands [usually] the fault of their leaders and therefore not relevant to the debate. 
 [(0, '[NEWLINE]'), (1, 'Some'), (2, 'Ġmight'), (3, 'Ġargue'), (4, 'Ġthat'), (5, 'Ġsoldiers'), (6, 'Ġdo'), (7, 'Ġthe'), (8, 'ĠUS'), (9, 'Ġa'), (10, 'Ġdis'), (11, 'service'), (12, 'Ġrather'), (13, 'Ġthan'), (14, 'Ġhelp'), (15, 'Ġ,'), (16, 'Ġ'), (17, 'but'), (18, 'Ġthat'), (19, 'ands'), (20, 'Ġ['), (21, 'usually'), (22, ']'), (23, 'Ġthe'), (24, 'Ġfault'), (25, 'Ġof'), (26, 'Ġtheir'), (27, 'Ġleaders'), (28, 'Ġand'), (29, 'Ġtherefore'), (30, 'Ġnot'), (31, 'Ġrelevant'), (32, 'Ġto'), (33, 'Ġthe'), (34, 'Ġdebate'), (35, 'Ġ.'), (36, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Iandm really hoping thereands a good reason behind the status quo, but weandll see.
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'and'), (3, 'm'), (4, 'Ġreally'), (5, 'Ġhoping'), (6, 'Ġthere'), (7, 'ands'), (8, 'Ġa'), (9, 'Ġgood'), (10, 'Ġreason'), (11, 'Ġbehind'), (12, 'Ġthe'), (13, 'Ġstatus'), (14, 'Ġquo'), (15, 'Ġ,'), (16, 'Ġbut'), (17, 'Ġwe'), (18, 'and'), (19, 'll'), (20, 'Ġsee'), (21, 'Ġ.')]
+[NEWLINE] [It looks like thereands even less reason behind it than I initially thought, actually. ]
 [(0, '[NEWLINE]'), (1, '['), (2, 'It'), (3, 'Ġlooks'), (4, 'Ġlike'), (5, 'Ġthere'), (6, 'ands'), (7, 'Ġeven'), (8, 'Ġless'), (9, 'Ġreason'), (10, 'Ġbehind'), (11, 'Ġit'), (12, 'Ġthan'), (13, 'ĠI'), (14, 'Ġinitially'), (15, 'Ġthought'), (16, 'Ġ,'), (17, 'Ġactually'), (18, 'Ġ.'), (19, 'Ġ]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] [edits in brackets]
 [(0, '[NEWLINE]'), (1, '['), (2, 'ed'), (3, 'its'), (4, 'Ġin'), (5, 'Ġbrackets'), (6, ']')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] [[My viewands been changed. ] (
 [(0, '[NEWLINE]'), (1, '[['), (2, 'My'), (3, 'Ġview'), (4, 'ands'), (5, 'Ġbeen'), (6, 'Ġchanged'), (7, 'Ġ.'), (8, 'Ġ]'), (9, 'Ġ(')]
+[URL] ) In summary, I think that  EMS people are just as deserving of these discounts ( and that many more people contribute enough to be placed in the same category ),  but I now believe - for the same reason - that  these discounts shouldnandt be offered at all. ]
 [(0, '[URL]'), (1, ')'), (2, 'ĠIn'), (3, 'Ġsummary'), (4, 'Ġ,'), (5, 'ĠI'), (6, 'Ġthink'), (7, 'Ġthat'), (8, 'Ġ'), (9, 'ĠEMS'), (10, 'Ġpeople'), (11, 'Ġare'), (12, 'Ġjust'), (13, 'Ġas'), (14, 'Ġdeserving'), (15, 'Ġof'), (16, 'Ġthese'), (17, 'Ġdiscounts'), (18, 'Ġ('), (19, 'Ġand'), (20, 'Ġthat'), (21, 'Ġmany'), (22, 'Ġmore'), (23, 'Ġpeople'), (24, 'Ġcontribute'), (25, 'Ġenough'), (26, 'Ġto'), (27, 'Ġbe'), (28, 'Ġplaced'), (29, 'Ġin'), (30, 'Ġthe'), (31, 'Ġsame'), (32, 'Ġcategory'), (33, 'Ġ)'), (34, 'Ġ,'), (35, 'Ġ'), (36, 'Ġbut'), (37, 'ĠI'), (38, 'Ġnow'), (39, 'Ġbelieve'), (40, 'Ġ-'), (41, 'Ġfor'), (42, 'Ġthe'), (43, 'Ġsame'), (44, 'Ġreason'), (45, 'Ġ-'), (46, 'Ġthat'), (47, 'Ġ'), (48, 'Ġthese'), (49, 'Ġdiscounts'), (50, 'Ġshouldn'), (51, 'and'), (52, 't'), (53, 'Ġbe'), (54, 'Ġoffered'), (55, 'Ġat'), (56, 'Ġall'), (57, 'Ġ.'), (58, 'Ġ]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] other emergency services do more good for society than soldiers and that such discounts should be given to them.
 [(0, '[STARTQ]'), (1, 'other'), (2, 'Ġemergency'), (3, 'Ġservices'), (4, 'Ġdo'), (5, 'Ġmore'), (6, 'Ġgood'), (7, 'Ġfor'), (8, 'Ġsociety'), (9, 'Ġthan'), (10, 'Ġsoldiers'), (11, 'Ġand'), (12, 'Ġthat'), (13, 'Ġsuch'), (14, 'Ġdiscounts'), (15, 'Ġshould'), (16, 'Ġbe'), (17, 'Ġgiven'), (18, 'Ġto'), (19, 'Ġthem'), (20, 'Ġ.')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE]  What about teachers? 
 [(0, '[NEWLINE]'), (1, 'ĠWhat'), (2, 'Ġabout'), (3, 'Ġteachers'), (4, 'Ġ?'), (5, 'Ġ')]
+[NEWLINE]  Scientists? 
 [(0, '[NEWLINE]'), (1, 'ĠScientists'), (2, 'Ġ?'), (3, 'Ġ')]
+[NEWLINE]  Doctors? 
 [(0, '[NEWLINE]'), (1, 'ĠDoctors'), (2, 'Ġ?'), (3, 'Ġ')]
+[NEWLINE]  Farmers? 
 [(0, '[NEWLINE]'), (1, 'ĠFarmers'), (2, 'Ġ?'), (3, 'Ġ')]
+[NEWLINE]  There are plenty of professions that do great things for society, but  people aren't going around thanking them with discounts. 
 [(0, '[NEWLINE]'), (1, 'ĠThere'), (2, 'Ġare'), (3, 'Ġplenty'), (4, 'Ġof'), (5, 'Ġprofessions'), (6, 'Ġthat'), (7, 'Ġdo'), (8, 'Ġgreat'), (9, 'Ġthings'), (10, 'Ġfor'), (11, 'Ġsociety'), (12, 'Ġ,'), (13, 'Ġbut'), (14, 'Ġ'), (15, 'Ġpeople'), (16, 'Ġaren'), (17, "'t"), (18, 'Ġgoing'), (19, 'Ġaround'), (20, 'Ġthanking'), (21, 'Ġthem'), (22, 'Ġwith'), (23, 'Ġdiscounts'), (24, 'Ġ.'), (25, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE]  In that case, what makes soldiers more worthy than others? 
 [(0, '[NEWLINE]'), (1, 'ĠIn'), (2, 'Ġthat'), (3, 'Ġcase'), (4, 'Ġ,'), (5, 'Ġwhat'), (6, 'Ġmakes'), (7, 'Ġsoldiers'), (8, 'Ġmore'), (9, 'Ġworthy'), (10, 'Ġthan'), (11, 'Ġothers'), (12, 'Ġ?'), (13, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE]  I don't believe I ever argued that they were.  Your premise is that these professions " do more good " than soldiers, and  I'm asking why you don't want to extend the benefits to other critical pillars of our society. 
 [(0, '[NEWLINE]'), (1, 'ĠI'), (2, 'Ġdon'), (3, "'t"), (4, 'Ġbelieve'), (5, 'ĠI'), (6, 'Ġever'), (7, 'Ġargued'), (8, 'Ġthat'), (9, 'Ġthey'), (10, 'Ġwere'), (11, 'Ġ.'), (12, 'Ġ'), (13, 'ĠYour'), (14, 'Ġpremise'), (15, 'Ġis'), (16, 'Ġthat'), (17, 'Ġthese'), (18, 'Ġprofessions'), (19, 'Ġ"'), (20, 'Ġdo'), (21, 'Ġmore'), (22, 'Ġgood'), (23, 'Ġ"'), (24, 'Ġthan'), (25, 'Ġsoldiers'), (26, 'Ġ,'), (27, 'Ġand'), (28, 'Ġ'), (29, 'ĠI'), (30, "'m"), (31, 'Ġasking'), (32, 'Ġwhy'), (33, 'Ġyou'), (34, 'Ġdon'), (35, "'t"), (36, 'Ġwant'), (37, 'Ġto'), (38, 'Ġextend'), (39, 'Ġthe'), (40, 'Ġbenefits'), (41, 'Ġto'), (42, 'Ġother'), (43, 'Ġcritical'), (44, 'Ġpillars'), (45, 'Ġof'), (46, 'Ġour'), (47, 'Ġsociety'), (48, 'Ġ.'), (49, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] I've since changed my view. Since you made the same argument that changed it, have a delta : Δ. I've edited my post to show my new view more accurately.
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'ve"), (3, 'Ġsince'), (4, 'Ġchanged'), (5, 'Ġmy'), (6, 'Ġview'), (7, 'Ġ.'), (8, 'ĠSince'), (9, 'Ġyou'), (10, 'Ġmade'), (11, 'Ġthe'), (12, 'Ġsame'), (13, 'Ġargument'), (14, 'Ġthat'), (15, 'Ġchanged'), (16, 'Ġit'), (17, 'Ġ,'), (18, 'Ġhave'), (19, 'Ġa'), (20, 'Ġdelta'), (21, 'Ġ:'), (22, 'ĠÎĶ'), (23, 'Ġ.'), (24, 'ĠI'), (25, "'ve"), (26, 'Ġedited'), (27, 'Ġmy'), (28, 'Ġpost'), (29, 'Ġto'), (30, 'Ġshow'), (31, 'Ġmy'), (32, 'Ġnew'), (33, 'Ġview'), (34, 'Ġmore'), (35, 'Ġaccurately'), (36, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+</s>
 [(0, '</s>')]

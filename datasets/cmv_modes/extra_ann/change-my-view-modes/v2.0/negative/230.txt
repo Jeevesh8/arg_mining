@@ -1,42 +1,84 @@
+<s>CMV: Any given aspect of the legal system should be short and simple enough that an average high school graduate could fully memorize it
 [(0, '<s>'), (1, 'CM'), (2, 'V'), (3, ':'), (4, 'ĠAny'), (5, 'Ġgiven'), (6, 'Ġaspect'), (7, 'Ġof'), (8, 'Ġthe'), (9, 'Ġlegal'), (10, 'Ġsystem'), (11, 'Ġshould'), (12, 'Ġbe'), (13, 'Ġshort'), (14, 'Ġand'), (15, 'Ġsimple'), (16, 'Ġenough'), (17, 'Ġthat'), (18, 'Ġan'), (19, 'Ġaverage'), (20, 'Ġhigh'), (21, 'Ġschool'), (22, 'Ġgraduate'), (23, 'Ġcould'), (24, 'Ġfully'), (25, 'Ġmemor'), (26, 'ize'), (27, 'Ġit')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] CLARIFICATIONS BASED ON ANTICIPATED CONFUSION :
 [(0, '[NEWLINE]'), (1, 'CL'), (2, 'AR'), (3, 'IFIC'), (4, 'ATIONS'), (5, 'ĠBAS'), (6, 'ED'), (7, 'ĠON'), (8, 'ĠAN'), (9, 'T'), (10, 'IC'), (11, 'IP'), (12, 'ATED'), (13, 'ĠCON'), (14, 'F'), (15, 'US'), (16, 'ION'), (17, 'Ġ:')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] ( 1. ) I'm * * not * * saying simple enough that * * all * * high school students * * should * * memorize them ; I'm sayingsimple enough that almost anyone could, if they were struck by the impulse to make that unusually large commitment, do so.
 [(0, '[NEWLINE]'), (1, '('), (2, 'Ġ1'), (3, 'Ġ.'), (4, 'Ġ)'), (5, 'ĠI'), (6, "'m"), (7, 'Ġ*'), (8, 'Ġ*'), (9, 'Ġnot'), (10, 'Ġ*'), (11, 'Ġ*'), (12, 'Ġsaying'), (13, 'Ġsimple'), (14, 'Ġenough'), (15, 'Ġthat'), (16, 'Ġ*'), (17, 'Ġ*'), (18, 'Ġall'), (19, 'Ġ*'), (20, 'Ġ*'), (21, 'Ġhigh'), (22, 'Ġschool'), (23, 'Ġstudents'), (24, 'Ġ*'), (25, 'Ġ*'), (26, 'Ġshould'), (27, 'Ġ*'), (28, 'Ġ*'), (29, 'Ġmemor'), (30, 'ize'), (31, 'Ġthem'), (32, 'Ġ;'), (33, 'ĠI'), (34, "'m"), (35, 'Ġsaying'), (36, 'simple'), (37, 'Ġenough'), (38, 'Ġthat'), (39, 'Ġalmost'), (40, 'Ġanyone'), (41, 'Ġcould'), (42, 'Ġ,'), (43, 'Ġif'), (44, 'Ġthey'), (45, 'Ġwere'), (46, 'Ġstruck'), (47, 'Ġby'), (48, 'Ġthe'), (49, 'Ġimpulse'), (50, 'Ġto'), (51, 'Ġmake'), (52, 'Ġthat'), (53, 'Ġunusually'), (54, 'Ġlarge'), (55, 'Ġcommitment'), (56, 'Ġ,'), (57, 'Ġdo'), (58, 'Ġso'), (59, 'Ġ.')]
+[NEWLINE] Like, most people don't memorize all of Romeo and Juliet. 
 [(0, '[NEWLINE]'), (1, 'Like'), (2, 'Ġ,'), (3, 'Ġmost'), (4, 'Ġpeople'), (5, 'Ġdon'), (6, "'t"), (7, 'Ġmemor'), (8, 'ize'), (9, 'Ġall'), (10, 'Ġof'), (11, 'ĠRomeo'), (12, 'Ġand'), (13, 'ĠJuliet'), (14, 'Ġ.'), (15, 'Ġ')]
+[NEWLINE] But most people, I think, if they really wanted to, * * could. * * 
 [(0, '[NEWLINE]'), (1, 'But'), (2, 'Ġmost'), (3, 'Ġpeople'), (4, 'Ġ,'), (5, 'ĠI'), (6, 'Ġthink'), (7, 'Ġ,'), (8, 'Ġif'), (9, 'Ġthey'), (10, 'Ġreally'), (11, 'Ġwanted'), (12, 'Ġto'), (13, 'Ġ,'), (14, 'Ġ*'), (15, 'Ġ*'), (16, 'Ġcould'), (17, 'Ġ.'), (18, 'Ġ*'), (19, 'Ġ*'), (20, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] ( 2. )
 [(0, '[NEWLINE]'), (1, '('), (2, 'Ġ2'), (3, 'Ġ.'), (4, 'Ġ)')]
+[NEWLINE] I'm not interested in hearing any arguments that are based in any way on what the laws are, right now, except by way of comparison.
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'m"), (3, 'Ġnot'), (4, 'Ġinterested'), (5, 'Ġin'), (6, 'Ġhearing'), (7, 'Ġany'), (8, 'Ġarguments'), (9, 'Ġthat'), (10, 'Ġare'), (11, 'Ġbased'), (12, 'Ġin'), (13, 'Ġany'), (14, 'Ġway'), (15, 'Ġon'), (16, 'Ġwhat'), (17, 'Ġthe'), (18, 'Ġlaws'), (19, 'Ġare'), (20, 'Ġ,'), (21, 'Ġright'), (22, 'Ġnow'), (23, 'Ġ,'), (24, 'Ġexcept'), (25, 'Ġby'), (26, 'Ġway'), (27, 'Ġof'), (28, 'Ġcomparison'), (29, 'Ġ.')]
+[NEWLINE] This includes the constitution.
 [(0, '[NEWLINE]'), (1, 'This'), (2, 'Ġincludes'), (3, 'Ġthe'), (4, 'Ġconstitution'), (5, 'Ġ.')]
+[NEWLINE] Seriously -- this isn't what I want to argue here, but I'm 100% on board with trashing the US constitution and starting from scratch with new documents, so appealing to the constitution is not on topic. 
 [(0, '[NEWLINE]'), (1, 'Seriously'), (2, 'Ġ--'), (3, 'Ġthis'), (4, 'Ġisn'), (5, "'t"), (6, 'Ġwhat'), (7, 'ĠI'), (8, 'Ġwant'), (9, 'Ġto'), (10, 'Ġargue'), (11, 'Ġhere'), (12, 'Ġ,'), (13, 'Ġbut'), (14, 'Ġ'), (15, 'I'), (16, "'m"), (17, 'Ġ100'), (18, '%'), (19, 'Ġon'), (20, 'Ġboard'), (21, 'Ġwith'), (22, 'Ġtr'), (23, 'ashing'), (24, 'Ġthe'), (25, 'ĠUS'), (26, 'Ġconstitution'), (27, 'Ġand'), (28, 'Ġstarting'), (29, 'Ġfrom'), (30, 'Ġscratch'), (31, 'Ġwith'), (32, 'Ġnew'), (33, 'Ġdocuments'), (34, 'Ġ,'), (35, 'Ġso'), (36, 'Ġappealing'), (37, 'Ġto'), (38, 'Ġthe'), (39, 'Ġconstitution'), (40, 'Ġis'), (41, 'Ġnot'), (42, 'Ġon'), (43, 'Ġtopic'), (44, 'Ġ.'), (45, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] I'm not a fan of extreme simplification, but I think the American legal system has gotten out of hand in complexity. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'m"), (3, 'Ġnot'), (4, 'Ġa'), (5, 'Ġfan'), (6, 'Ġof'), (7, 'Ġextreme'), (8, 'Ġsimpl'), (9, 'ification'), (10, 'Ġ,'), (11, 'Ġbut'), (12, 'Ġ'), (13, 'I'), (14, 'Ġthink'), (15, 'Ġthe'), (16, 'ĠAmerican'), (17, 'Ġlegal'), (18, 'Ġsystem'), (19, 'Ġhas'), (20, 'Ġgotten'), (21, 'Ġout'), (22, 'Ġof'), (23, 'Ġhand'), (24, 'Ġin'), (25, 'Ġcomplexity'), (26, 'Ġ.'), (27, 'Ġ')]
+[NEWLINE] I think the law should be simple enough that close to anybody could reasonably know the mechanics of all the laws likely to apply to them. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġthink'), (3, 'Ġthe'), (4, 'Ġlaw'), (5, 'Ġshould'), (6, 'Ġbe'), (7, 'Ġsimple'), (8, 'Ġenough'), (9, 'Ġthat'), (10, 'Ġclose'), (11, 'Ġto'), (12, 'Ġanybody'), (13, 'Ġcould'), (14, 'Ġreasonably'), (15, 'Ġknow'), (16, 'Ġthe'), (17, 'Ġmechanics'), (18, 'Ġof'), (19, 'Ġall'), (20, 'Ġthe'), (21, 'Ġlaws'), (22, 'Ġlikely'), (23, 'Ġto'), (24, 'Ġapply'), (25, 'Ġto'), (26, 'Ġthem'), (27, 'Ġ.'), (28, 'Ġ')]
+[NEWLINE] Ideally, it should be a relatively simple feat of memorization to learn the names of all the categories of law ; the number of laws in each category ; and the basic mechanics of the enforcement of that category's laws. 
 [(0, '[NEWLINE]'), (1, 'Ide'), (2, 'ally'), (3, 'Ġ,'), (4, 'Ġit'), (5, 'Ġshould'), (6, 'Ġbe'), (7, 'Ġa'), (8, 'Ġrelatively'), (9, 'Ġsimple'), (10, 'Ġfeat'), (11, 'Ġof'), (12, 'Ġmemor'), (13, 'ization'), (14, 'Ġto'), (15, 'Ġlearn'), (16, 'Ġthe'), (17, 'Ġnames'), (18, 'Ġof'), (19, 'Ġall'), (20, 'Ġthe'), (21, 'Ġcategories'), (22, 'Ġof'), (23, 'Ġlaw'), (24, 'Ġ;'), (25, 'Ġthe'), (26, 'Ġnumber'), (27, 'Ġof'), (28, 'Ġlaws'), (29, 'Ġin'), (30, 'Ġeach'), (31, 'Ġcategory'), (32, 'Ġ;'), (33, 'Ġand'), (34, 'Ġthe'), (35, 'Ġbasic'), (36, 'Ġmechanics'), (37, 'Ġof'), (38, 'Ġthe'), (39, 'Ġenforcement'), (40, 'Ġof'), (41, 'Ġthat'), (42, 'Ġcategory'), (43, "'s"), (44, 'Ġlaws'), (45, 'Ġ.'), (46, 'Ġ')]
+[NEWLINE]  By categories, I mean things like : criminal law ; the tax code ; any given category of regulation by profession ( medical, construction, IT, and so on ). 
 [(0, '[NEWLINE]'), (1, 'ĠBy'), (2, 'Ġcategories'), (3, 'Ġ,'), (4, 'ĠI'), (5, 'Ġmean'), (6, 'Ġthings'), (7, 'Ġlike'), (8, 'Ġ:'), (9, 'Ġcriminal'), (10, 'Ġlaw'), (11, 'Ġ;'), (12, 'Ġthe'), (13, 'Ġtax'), (14, 'Ġcode'), (15, 'Ġ;'), (16, 'Ġany'), (17, 'Ġgiven'), (18, 'Ġcategory'), (19, 'Ġof'), (20, 'Ġregulation'), (21, 'Ġby'), (22, 'Ġprofession'), (23, 'Ġ('), (24, 'Ġmedical'), (25, 'Ġ,'), (26, 'Ġconstruction'), (27, 'Ġ,'), (28, 'ĠIT'), (29, 'Ġ,'), (30, 'Ġand'), (31, 'Ġso'), (32, 'Ġon'), (33, 'Ġ)'), (34, 'Ġ.'), (35, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] I'd be fine with memorizing all the laws being a feat on par with memorizing the Bible ; but  it should be well within the average citizen's capacity to know all the laws likely to apply to them, word-for-word or close to it. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'d"), (3, 'Ġbe'), (4, 'Ġfine'), (5, 'Ġwith'), (6, 'Ġmemor'), (7, 'izing'), (8, 'Ġall'), (9, 'Ġthe'), (10, 'Ġlaws'), (11, 'Ġbeing'), (12, 'Ġa'), (13, 'Ġfeat'), (14, 'Ġon'), (15, 'Ġpar'), (16, 'Ġwith'), (17, 'Ġmemor'), (18, 'izing'), (19, 'Ġthe'), (20, 'ĠBible'), (21, 'Ġ;'), (22, 'Ġbut'), (23, 'Ġ'), (24, 'Ġit'), (25, 'Ġshould'), (26, 'Ġbe'), (27, 'Ġwell'), (28, 'Ġwithin'), (29, 'Ġthe'), (30, 'Ġaverage'), (31, 'Ġcitizen'), (32, "'s"), (33, 'Ġcapacity'), (34, 'Ġto'), (35, 'Ġknow'), (36, 'Ġall'), (37, 'Ġthe'), (38, 'Ġlaws'), (39, 'Ġlikely'), (40, 'Ġto'), (41, 'Ġapply'), (42, 'Ġto'), (43, 'Ġthem'), (44, 'Ġ,'), (45, 'Ġword'), (46, '-'), (47, 'for'), (48, '-'), (49, 'word'), (50, 'Ġor'), (51, 'Ġclose'), (52, 'Ġto'), (53, 'Ġit'), (54, 'Ġ.'), (55, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Edit 9 : 55 : CLARIFICATIONS BASED ON CONFUSION THAT HAS OCCURRED :
 [(0, '[NEWLINE]'), (1, 'Edit'), (2, 'Ġ9'), (3, 'Ġ:'), (4, 'Ġ55'), (5, 'Ġ:'), (6, 'ĠCL'), (7, 'AR'), (8, 'IFIC'), (9, 'ATIONS'), (10, 'ĠBAS'), (11, 'ED'), (12, 'ĠON'), (13, 'ĠCON'), (14, 'F'), (15, 'US'), (16, 'ION'), (17, 'ĠTHAT'), (18, 'ĠHAS'), (19, 'ĠO'), (20, 'CC'), (21, 'UR'), (22, 'RED'), (23, 'Ġ:')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] ( 1. )
 [(0, '[NEWLINE]'), (1, '('), (2, 'Ġ1'), (3, 'Ġ.'), (4, 'Ġ)')]
+[NEWLINE] I am not arguing that a shorter legal code is by definition easy to understand.
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġam'), (3, 'Ġnot'), (4, 'Ġarguing'), (5, 'Ġthat'), (6, 'Ġa'), (7, 'Ġshorter'), (8, 'Ġlegal'), (9, 'Ġcode'), (10, 'Ġis'), (11, 'Ġby'), (12, 'Ġdefinition'), (13, 'Ġeasy'), (14, 'Ġto'), (15, 'Ġunderstand'), (16, 'Ġ.')]
+[NEWLINE] I am not arguing that the average High School student should be able to achieve a lawyer's level of expertise in any given aspect.
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġam'), (3, 'Ġnot'), (4, 'Ġarguing'), (5, 'Ġthat'), (6, 'Ġthe'), (7, 'Ġaverage'), (8, 'ĠHigh'), (9, 'ĠSchool'), (10, 'Ġstudent'), (11, 'Ġshould'), (12, 'Ġbe'), (13, 'Ġable'), (14, 'Ġto'), (15, 'Ġachieve'), (16, 'Ġa'), (17, 'Ġlawyer'), (18, "'s"), (19, 'Ġlevel'), (20, 'Ġof'), (21, 'Ġexpertise'), (22, 'Ġin'), (23, 'Ġany'), (24, 'Ġgiven'), (25, 'Ġaspect'), (26, 'Ġ.')]
+[NEWLINE] I'm defending the memorization criterion as a way to limit the total length and vagueness of a set of laws.
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'m"), (3, 'Ġdefending'), (4, 'Ġthe'), (5, 'Ġmemor'), (6, 'ization'), (7, 'Ġcriterion'), (8, 'Ġas'), (9, 'Ġa'), (10, 'Ġway'), (11, 'Ġto'), (12, 'Ġlimit'), (13, 'Ġthe'), (14, 'Ġtotal'), (15, 'Ġlength'), (16, 'Ġand'), (17, 'Ġv'), (18, 'agu'), (19, 'eness'), (20, 'Ġof'), (21, 'Ġa'), (22, 'Ġset'), (23, 'Ġof'), (24, 'Ġlaws'), (25, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] EDIT 8 : 35 the following morning : Nobody last night since I went to bed made any points that I haven't already addressed more than once, so I'm done individually responding unless somebody comes up with something new. For the answers to all the posts since I went to bed : see anticipated clarifications 1 and 2, clarification based on actual confusion 1, [this comment, ] (
 [(0, '[NEWLINE]'), (1, 'EDIT'), (2, 'Ġ8'), (3, 'Ġ:'), (4, 'Ġ35'), (5, 'Ġthe'), (6, 'Ġfollowing'), (7, 'Ġmorning'), (8, 'Ġ:'), (9, 'ĠNobody'), (10, 'Ġlast'), (11, 'Ġnight'), (12, 'Ġsince'), (13, 'ĠI'), (14, 'Ġwent'), (15, 'Ġto'), (16, 'Ġbed'), (17, 'Ġmade'), (18, 'Ġany'), (19, 'Ġpoints'), (20, 'Ġthat'), (21, 'ĠI'), (22, 'Ġhaven'), (23, "'t"), (24, 'Ġalready'), (25, 'Ġaddressed'), (26, 'Ġmore'), (27, 'Ġthan'), (28, 'Ġonce'), (29, 'Ġ,'), (30, 'Ġso'), (31, 'ĠI'), (32, "'m"), (33, 'Ġdone'), (34, 'Ġindividually'), (35, 'Ġresponding'), (36, 'Ġunless'), (37, 'Ġsomebody'), (38, 'Ġcomes'), (39, 'Ġup'), (40, 'Ġwith'), (41, 'Ġsomething'), (42, 'Ġnew'), (43, 'Ġ.'), (44, 'ĠFor'), (45, 'Ġthe'), (46, 'Ġanswers'), (47, 'Ġto'), (48, 'Ġall'), (49, 'Ġthe'), (50, 'Ġposts'), (51, 'Ġsince'), (52, 'ĠI'), (53, 'Ġwent'), (54, 'Ġto'), (55, 'Ġbed'), (56, 'Ġ:'), (57, 'Ġsee'), (58, 'Ġanticipated'), (59, 'Ġclar'), (60, 'ifications'), (61, 'Ġ1'), (62, 'Ġand'), (63, 'Ġ2'), (64, 'Ġ,'), (65, 'Ġclarification'), (66, 'Ġbased'), (67, 'Ġon'), (68, 'Ġactual'), (69, 'Ġconfusion'), (70, 'Ġ1'), (71, 'Ġ,'), (72, 'Ġ['), (73, 'this'), (74, 'Ġcomment'), (75, 'Ġ,'), (76, 'Ġ]'), (77, 'Ġ(')]
+[URL] ) and literally the name of the subreddit.
 [(0, '[URL]'), (1, ')'), (2, 'Ġand'), (3, 'Ġliterally'), (4, 'Ġthe'), (5, 'Ġname'), (6, 'Ġof'), (7, 'Ġthe'), (8, 'Ġsubreddit'), (9, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE]  Many high school graduates are complete morons. 
 [(0, '[NEWLINE]'), (1, 'ĠMany'), (2, 'Ġhigh'), (3, 'Ġschool'), (4, 'Ġgraduates'), (5, 'Ġare'), (6, 'Ġcomplete'), (7, 'Ġmor'), (8, 'ons'), (9, 'Ġ.'), (10, 'Ġ')]
+[NEWLINE]  I legal system that they could understand would be archaic. 
 [(0, '[NEWLINE]'), (1, 'ĠI'), (2, 'Ġlegal'), (3, 'Ġsystem'), (4, 'Ġthat'), (5, 'Ġthey'), (6, 'Ġcould'), (7, 'Ġunderstand'), (8, 'Ġwould'), (9, 'Ġbe'), (10, 'Ġarchaic'), (11, 'Ġ.'), (12, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] MEMORIZE. 
 [(0, '[NEWLINE]'), (1, 'M'), (2, 'EM'), (3, 'OR'), (4, 'IZE'), (5, 'Ġ.'), (6, 'Ġ')]
+[NEWLINE]  Not UNDERSTAND. 
 [(0, '[NEWLINE]'), (1, 'ĠNot'), (2, 'ĠUNDER'), (3, 'ST'), (4, 'AND'), (5, 'Ġ.'), (6, 'Ġ')]
+[NEWLINE]  The point is to limit the LENGTH OF THE DOCUMENT and the VAGUENESS OF ITS BOUNDARIES. 
 [(0, '[NEWLINE]'), (1, 'ĠThe'), (2, 'Ġpoint'), (3, 'Ġis'), (4, 'Ġto'), (5, 'Ġlimit'), (6, 'Ġthe'), (7, 'ĠL'), (8, 'ENGTH'), (9, 'ĠOF'), (10, 'ĠTHE'), (11, 'ĠDOC'), (12, 'UM'), (13, 'ENT'), (14, 'Ġand'), (15, 'Ġthe'), (16, 'ĠV'), (17, 'AG'), (18, 'U'), (19, 'EN'), (20, 'ESS'), (21, 'ĠOF'), (22, 'ĠITS'), (23, 'ĠB'), (24, 'OUND'), (25, 'AR'), (26, 'IES'), (27, 'Ġ.'), (28, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+</s>
 [(0, '</s>')]

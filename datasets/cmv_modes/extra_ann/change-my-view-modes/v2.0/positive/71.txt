@@ -1,100 +1,200 @@
+<s>CMV: People who cheat on their spouses can and should, in some cases, be forgiven
 [(0, '<s>'), (1, 'CM'), (2, 'V'), (3, ':'), (4, 'ĠPeople'), (5, 'Ġwho'), (6, 'Ġcheat'), (7, 'Ġon'), (8, 'Ġtheir'), (9, 'Ġspouses'), (10, 'Ġcan'), (11, 'Ġand'), (12, 'Ġshould'), (13, ','), (14, 'Ġin'), (15, 'Ġsome'), (16, 'Ġcases'), (17, ','), (18, 'Ġbe'), (19, 'Ġforgiven')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] There seems to be a commonly held belief that people who cheat on their SO/partner should be dropped immediately with no further contact. 
 [(0, '[NEWLINE]'), (1, 'There'), (2, 'Ġseems'), (3, 'Ġto'), (4, 'Ġbe'), (5, 'Ġa'), (6, 'Ġcommonly'), (7, 'Ġheld'), (8, 'Ġbelief'), (9, 'Ġthat'), (10, 'Ġpeople'), (11, 'Ġwho'), (12, 'Ġcheat'), (13, 'Ġon'), (14, 'Ġtheir'), (15, 'ĠSO'), (16, '/'), (17, 'part'), (18, 'ner'), (19, 'Ġshould'), (20, 'Ġbe'), (21, 'Ġdropped'), (22, 'Ġimmediately'), (23, 'Ġwith'), (24, 'Ġno'), (25, 'Ġfurther'), (26, 'Ġcontact'), (27, 'Ġ.'), (28, 'Ġ')]
+[NEWLINE] I understand that physical/sexual conduct with another person can seem like a betrayal, but in some cases, there are many worse things that can happen in a relationship, which couples seem to be able to work through. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġunderstand'), (3, 'Ġthat'), (4, 'Ġphysical'), (5, '/'), (6, 'sexual'), (7, 'Ġconduct'), (8, 'Ġwith'), (9, 'Ġanother'), (10, 'Ġperson'), (11, 'Ġcan'), (12, 'Ġseem'), (13, 'Ġlike'), (14, 'Ġa'), (15, 'Ġbetrayal'), (16, 'Ġ,'), (17, 'Ġbut'), (18, 'Ġ'), (19, 'in'), (20, 'Ġsome'), (21, 'Ġcases'), (22, 'Ġ,'), (23, 'Ġthere'), (24, 'Ġare'), (25, 'Ġmany'), (26, 'Ġworse'), (27, 'Ġthings'), (28, 'Ġthat'), (29, 'Ġcan'), (30, 'Ġhappen'), (31, 'Ġin'), (32, 'Ġa'), (33, 'Ġrelationship'), (34, 'Ġ,'), (35, 'Ġwhich'), (36, 'Ġcouples'), (37, 'Ġseem'), (38, 'Ġto'), (39, 'Ġbe'), (40, 'Ġable'), (41, 'Ġto'), (42, 'Ġwork'), (43, 'Ġthrough'), (44, 'Ġ.'), (45, 'Ġ')]
+[NEWLINE] There are a few assumptions underlying the belief that " sex with another person = relationship over " that I don't think hold up. 
 [(0, '[NEWLINE]'), (1, 'There'), (2, 'Ġare'), (3, 'Ġa'), (4, 'Ġfew'), (5, 'Ġassumptions'), (6, 'Ġunderlying'), (7, 'Ġthe'), (8, 'Ġbelief'), (9, 'Ġthat'), (10, 'Ġ"'), (11, 'Ġsex'), (12, 'Ġwith'), (13, 'Ġanother'), (14, 'Ġperson'), (15, 'Ġ='), (16, 'Ġrelationship'), (17, 'Ġover'), (18, 'Ġ"'), (19, 'Ġthat'), (20, 'ĠI'), (21, 'Ġdon'), (22, "'t"), (23, 'Ġthink'), (24, 'Ġhold'), (25, 'Ġup'), (26, 'Ġ.'), (27, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] *  * * Sex is the most important part of a relationship, * * and therefore, betraying it and that agreement mean the relationship should end. 
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġ'), (3, 'Ġ*'), (4, 'Ġ*'), (5, 'ĠSex'), (6, 'Ġis'), (7, 'Ġthe'), (8, 'Ġmost'), (9, 'Ġimportant'), (10, 'Ġpart'), (11, 'Ġof'), (12, 'Ġa'), (13, 'Ġrelationship'), (14, 'Ġ,'), (15, 'Ġ*'), (16, 'Ġ*'), (17, 'Ġand'), (18, 'Ġtherefore'), (19, 'Ġ,'), (20, 'Ġbetray'), (21, 'ing'), (22, 'Ġit'), (23, 'Ġand'), (24, 'Ġthat'), (25, 'Ġagreement'), (26, 'Ġmean'), (27, 'Ġthe'), (28, 'Ġrelationship'), (29, 'Ġshould'), (30, 'Ġend'), (31, 'Ġ.'), (32, 'Ġ')]
+[NEWLINE] My belief : sex is a very important part of a relationship, but not * the * most important part. 
 [(0, '[NEWLINE]'), (1, 'My'), (2, 'Ġbelief'), (3, 'Ġ:'), (4, 'Ġsex'), (5, 'Ġis'), (6, 'Ġa'), (7, 'Ġvery'), (8, 'Ġimportant'), (9, 'Ġpart'), (10, 'Ġof'), (11, 'Ġa'), (12, 'Ġrelationship'), (13, 'Ġ,'), (14, 'Ġbut'), (15, 'Ġnot'), (16, 'Ġ*'), (17, 'Ġthe'), (18, 'Ġ*'), (19, 'Ġmost'), (20, 'Ġimportant'), (21, 'Ġpart'), (22, 'Ġ.'), (23, 'Ġ')]
+[NEWLINE] Immediately breaking up with someone because of something like this seems excessive.
 [(0, '[NEWLINE]'), (1, 'Im'), (2, 'mediately'), (3, 'Ġbreaking'), (4, 'Ġup'), (5, 'Ġwith'), (6, 'Ġsomeone'), (7, 'Ġbecause'), (8, 'Ġof'), (9, 'Ġsomething'), (10, 'Ġlike'), (11, 'Ġthis'), (12, 'Ġseems'), (13, 'Ġexcessive'), (14, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] *  * * Nobody makes mistakes ever, * * so when they do, the relationship should end. 
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġ'), (3, 'Ġ*'), (4, 'Ġ*'), (5, 'ĠNobody'), (6, 'Ġmakes'), (7, 'Ġmistakes'), (8, 'Ġever'), (9, 'Ġ,'), (10, 'Ġ*'), (11, 'Ġ*'), (12, 'Ġso'), (13, 'Ġwhen'), (14, 'Ġthey'), (15, 'Ġdo'), (16, 'Ġ,'), (17, 'Ġthe'), (18, 'Ġrelationship'), (19, 'Ġshould'), (20, 'Ġend'), (21, 'Ġ.'), (22, 'Ġ')]
+[NEWLINE] My belief : obviously this isn't true, and a cornerstone of strong relationships is the ability to work through mistakes/issues together. 
 [(0, '[NEWLINE]'), (1, 'My'), (2, 'Ġbelief'), (3, 'Ġ:'), (4, 'Ġobviously'), (5, 'Ġthis'), (6, 'Ġisn'), (7, "'t"), (8, 'Ġtrue'), (9, 'Ġ,'), (10, 'Ġand'), (11, 'Ġa'), (12, 'Ġcornerstone'), (13, 'Ġof'), (14, 'Ġstrong'), (15, 'Ġrelationships'), (16, 'Ġis'), (17, 'Ġthe'), (18, 'Ġability'), (19, 'Ġto'), (20, 'Ġwork'), (21, 'Ġthrough'), (22, 'Ġmistakes'), (23, '/'), (24, 'issues'), (25, 'Ġtogether'), (26, 'Ġ.'), (27, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] *  * * Cheaters will always cheat again, * * so better to end it now. my view : That may be true in some cases, but other than anecdotal evidence, I haven't seen anything to support this claim.  [
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġ'), (3, 'Ġ*'), (4, 'Ġ*'), (5, 'ĠChe'), (6, 'aters'), (7, 'Ġwill'), (8, 'Ġalways'), (9, 'Ġcheat'), (10, 'Ġagain'), (11, 'Ġ,'), (12, 'Ġ*'), (13, 'Ġ*'), (14, 'Ġso'), (15, 'Ġbetter'), (16, 'Ġto'), (17, 'Ġend'), (18, 'Ġit'), (19, 'Ġnow'), (20, 'Ġ.'), (21, 'Ġ'), (22, 'my'), (23, 'Ġview'), (24, 'Ġ:'), (25, 'ĠThat'), (26, 'Ġmay'), (27, 'Ġbe'), (28, 'Ġtrue'), (29, 'Ġin'), (30, 'Ġsome'), (31, 'Ġcases'), (32, 'Ġ,'), (33, 'Ġbut'), (34, 'Ġ'), (35, 'other'), (36, 'Ġthan'), (37, 'Ġanecdotal'), (38, 'Ġevidence'), (39, 'Ġ,'), (40, 'ĠI'), (41, 'Ġhaven'), (42, "'t"), (43, 'Ġseen'), (44, 'Ġanything'), (45, 'Ġto'), (46, 'Ġsupport'), (47, 'Ġthis'), (48, 'Ġclaim'), (49, 'Ġ.'), (50, 'Ġ'), (51, 'Ġ[')]
+[NEWLINE] But would be really interested in reading anything scientific about this, actually! ]
 [(0, '[NEWLINE]'), (1, 'But'), (2, 'Ġwould'), (3, 'Ġbe'), (4, 'Ġreally'), (5, 'Ġinterested'), (6, 'Ġin'), (7, 'Ġreading'), (8, 'Ġanything'), (9, 'Ġscientific'), (10, 'Ġabout'), (11, 'Ġthis'), (12, 'Ġ,'), (13, 'Ġactually'), (14, 'Ġ!'), (15, 'Ġ]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] *  * * Cheaters cheat because of underlying issues with the relationship. * * My belief : if that's true, there are a lot of possibilities - not just breaking up - that could fix the problem, such as... talking about the problem. 
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġ'), (3, 'Ġ*'), (4, 'Ġ*'), (5, 'ĠChe'), (6, 'aters'), (7, 'Ġcheat'), (8, 'Ġbecause'), (9, 'Ġof'), (10, 'Ġunderlying'), (11, 'Ġissues'), (12, 'Ġwith'), (13, 'Ġthe'), (14, 'Ġrelationship'), (15, 'Ġ.'), (16, 'Ġ*'), (17, 'Ġ*'), (18, 'Ġ'), (19, 'My'), (20, 'Ġbelief'), (21, 'Ġ:'), (22, 'Ġif'), (23, 'Ġthat'), (24, "'s"), (25, 'Ġtrue'), (26, 'Ġ,'), (27, 'Ġthere'), (28, 'Ġare'), (29, 'Ġa'), (30, 'Ġlot'), (31, 'Ġof'), (32, 'Ġpossibilities'), (33, 'Ġ-'), (34, 'Ġnot'), (35, 'Ġjust'), (36, 'Ġbreaking'), (37, 'Ġup'), (38, 'Ġ-'), (39, 'Ġthat'), (40, 'Ġcould'), (41, 'Ġfix'), (42, 'Ġthe'), (43, 'Ġproblem'), (44, 'Ġ,'), (45, 'Ġ'), (46, 'such'), (47, 'Ġas'), (48, 'Ġ.'), (49, 'Ġ.'), (50, 'Ġ.'), (51, 'Ġtalking'), (52, 'Ġabout'), (53, 'Ġthe'), (54, 'Ġproblem'), (55, 'Ġ.'), (56, 'Ġ')]
+[NEWLINE] Maybe fixing that issue will resolve the motivation to cheat. 
 [(0, '[NEWLINE]'), (1, 'Maybe'), (2, 'Ġfixing'), (3, 'Ġthat'), (4, 'Ġissue'), (5, 'Ġwill'), (6, 'Ġresolve'), (7, 'Ġthe'), (8, 'Ġmotivation'), (9, 'Ġto'), (10, 'Ġcheat'), (11, 'Ġ.'), (12, 'Ġ')]
+[NEWLINE] Caveat : sometimes, cheating happens because there are parts of the relationship that are fundamentally broken and/or the relationship is too far gone/unsalvageable and/or this is the straw the broke the camel's back etc. 
 [(0, '[NEWLINE]'), (1, 'C'), (2, 'ave'), (3, 'at'), (4, 'Ġ:'), (5, 'Ġsometimes'), (6, 'Ġ,'), (7, 'Ġcheating'), (8, 'Ġhappens'), (9, 'Ġbecause'), (10, 'Ġthere'), (11, 'Ġare'), (12, 'Ġparts'), (13, 'Ġof'), (14, 'Ġthe'), (15, 'Ġrelationship'), (16, 'Ġthat'), (17, 'Ġare'), (18, 'Ġfundamentally'), (19, 'Ġbroken'), (20, 'Ġand'), (21, '/'), (22, 'or'), (23, 'Ġthe'), (24, 'Ġrelationship'), (25, 'Ġis'), (26, 'Ġtoo'), (27, 'Ġfar'), (28, 'Ġgone'), (29, '/'), (30, 'uns'), (31, 'al'), (32, 'v'), (33, 'age'), (34, 'able'), (35, 'Ġand'), (36, '/'), (37, 'or'), (38, 'Ġthis'), (39, 'Ġis'), (40, 'Ġthe'), (41, 'Ġstraw'), (42, 'Ġthe'), (43, 'Ġbroke'), (44, 'Ġthe'), (45, 'Ġcamel'), (46, "'s"), (47, 'Ġback'), (48, 'Ġetc'), (49, 'Ġ.'), (50, 'Ġ')]
+[NEWLINE]  Cheating shouldn't always signify an immediate end to a relationship. 
 [(0, '[NEWLINE]'), (1, 'ĠChe'), (2, 'ating'), (3, 'Ġshouldn'), (4, "'t"), (5, 'Ġalways'), (6, 'Ġsignify'), (7, 'Ġan'), (8, 'Ġimmediate'), (9, 'Ġend'), (10, 'Ġto'), (11, 'Ġa'), (12, 'Ġrelationship'), (13, 'Ġ.'), (14, 'Ġ')]
+[NEWLINE]  In some cases, couples can and should choose to work through it.
 [(0, '[NEWLINE]'), (1, 'ĠIn'), (2, 'Ġsome'), (3, 'Ġcases'), (4, 'Ġ,'), (5, 'Ġcouples'), (6, 'Ġcan'), (7, 'Ġand'), (8, 'Ġshould'), (9, 'Ġchoose'), (10, 'Ġto'), (11, 'Ġwork'), (12, 'Ġthrough'), (13, 'Ġit'), (14, 'Ġ.')]
+[NEWLINE] CMV!
 [(0, '[NEWLINE]'), (1, 'CM'), (2, 'V'), (3, 'Ġ!')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE] I'l begin by saying it has never happened to me, andyou make some good points. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'"), (3, 'l'), (4, 'Ġbegin'), (5, 'Ġby'), (6, 'Ġsaying'), (7, 'Ġit'), (8, 'Ġhas'), (9, 'Ġnever'), (10, 'Ġhappened'), (11, 'Ġto'), (12, 'Ġme'), (13, 'Ġ,'), (14, 'Ġand'), (15, 'you'), (16, 'Ġmake'), (17, 'Ġsome'), (18, 'Ġgood'), (19, 'Ġpoints'), (20, 'Ġ.'), (21, 'Ġ')]
+[NEWLINE] But I'm addicted to CMV, so here we go.
 [(0, '[NEWLINE]'), (1, 'But'), (2, 'ĠI'), (3, "'m"), (4, 'Ġaddicted'), (5, 'Ġto'), (6, 'ĠCM'), (7, 'V'), (8, 'Ġ,'), (9, 'Ġso'), (10, 'Ġhere'), (11, 'Ġwe'), (12, 'Ġgo'), (13, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] sex is a very important part of a relationship, but not the most important part.
 [(0, '[STARTQ]'), (1, 'sex'), (2, 'Ġis'), (3, 'Ġa'), (4, 'Ġvery'), (5, 'Ġimportant'), (6, 'Ġpart'), (7, 'Ġof'), (8, 'Ġa'), (9, 'Ġrelationship'), (10, 'Ġ,'), (11, 'Ġbut'), (12, 'Ġnot'), (13, 'Ġthe'), (14, 'Ġmost'), (15, 'Ġimportant'), (16, 'Ġpart'), (17, 'Ġ.')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] So it is one of the most important parts.
 [(0, '[NEWLINE]'), (1, 'So'), (2, 'Ġit'), (3, 'Ġis'), (4, 'Ġone'), (5, 'Ġof'), (6, 'Ġthe'), (7, 'Ġmost'), (8, 'Ġimportant'), (9, 'Ġparts'), (10, 'Ġ.')]
+[NEWLINE] To break it would be to break one of the most important parts of a marriage.
 [(0, '[NEWLINE]'), (1, 'To'), (2, 'Ġbreak'), (3, 'Ġit'), (4, 'Ġwould'), (5, 'Ġbe'), (6, 'Ġto'), (7, 'Ġbreak'), (8, 'Ġone'), (9, 'Ġof'), (10, 'Ġthe'), (11, 'Ġmost'), (12, 'Ġimportant'), (13, 'Ġparts'), (14, 'Ġof'), (15, 'Ġa'), (16, 'Ġmarriage'), (17, 'Ġ.')]
+[NEWLINE] I'll continue.
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'ll"), (3, 'Ġcontinue'), (4, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] * edit : even if you value it not at all, cheating breaks other important parts of the relationship. 
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġedit'), (3, 'Ġ:'), (4, 'Ġ'), (5, 'even'), (6, 'Ġif'), (7, 'Ġyou'), (8, 'Ġvalue'), (9, 'Ġit'), (10, 'Ġnot'), (11, 'Ġat'), (12, 'Ġall'), (13, 'Ġ,'), (14, 'Ġcheating'), (15, 'Ġbreaks'), (16, 'Ġother'), (17, 'Ġimportant'), (18, 'Ġparts'), (19, 'Ġof'), (20, 'Ġthe'), (21, 'Ġrelationship'), (22, 'Ġ.'), (23, 'Ġ')]
+[NEWLINE] Like trust. 
 [(0, '[NEWLINE]'), (1, 'Like'), (2, 'Ġtrust'), (3, 'Ġ.'), (4, 'Ġ')]
+[NEWLINE] Loyalty. 
 [(0, '[NEWLINE]'), (1, 'L'), (2, 'oyal'), (3, 'ty'), (4, 'Ġ.'), (5, 'Ġ')]
+[NEWLINE] Companionship. 
 [(0, '[NEWLINE]'), (1, 'Compan'), (2, 'ions'), (3, 'hip'), (4, 'Ġ.'), (5, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] Nobody makes mistakes ever, so when they do, the relationship should end.
 [(0, '[STARTQ]'), (1, 'Nobody'), (2, 'Ġmakes'), (3, 'Ġmistakes'), (4, 'Ġever'), (5, 'Ġ,'), (6, 'Ġso'), (7, 'Ġwhen'), (8, 'Ġthey'), (9, 'Ġdo'), (10, 'Ġ,'), (11, 'Ġthe'), (12, 'Ġrelationship'), (13, 'Ġshould'), (14, 'Ġend'), (15, 'Ġ.')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] You are correct that this is false. 
 [(0, '[NEWLINE]'), (1, 'You'), (2, 'Ġare'), (3, 'Ġcorrect'), (4, 'Ġthat'), (5, 'Ġthis'), (6, 'Ġis'), (7, 'Ġfalse'), (8, 'Ġ.'), (9, 'Ġ')]
+[NEWLINE] However, cheating on a spouse is * pretty big mistake *. 
 [(0, '[NEWLINE]'), (1, 'However'), (2, 'Ġ,'), (3, 'Ġcheating'), (4, 'Ġon'), (5, 'Ġa'), (6, 'Ġspouse'), (7, 'Ġis'), (8, 'Ġ*'), (9, 'Ġpretty'), (10, 'Ġbig'), (11, 'Ġmistake'), (12, 'Ġ*'), (13, 'Ġ.'), (14, 'Ġ')]
+[NEWLINE] Cheating, as I define it, is a choice. 
 [(0, '[NEWLINE]'), (1, 'Che'), (2, 'ating'), (3, 'Ġ,'), (4, 'Ġas'), (5, 'ĠI'), (6, 'Ġdefine'), (7, 'Ġit'), (8, 'Ġ,'), (9, 'Ġis'), (10, 'Ġa'), (11, 'Ġchoice'), (12, 'Ġ.'), (13, 'Ġ')]
+[NEWLINE] A bad choice which breaks one of the cornerstones of marriage. 
 [(0, '[NEWLINE]'), (1, 'A'), (2, 'Ġbad'), (3, 'Ġchoice'), (4, 'Ġwhich'), (5, 'Ġbreaks'), (6, 'Ġone'), (7, 'Ġof'), (8, 'Ġthe'), (9, 'Ġcorner'), (10, 'stones'), (11, 'Ġof'), (12, 'Ġmarriage'), (13, 'Ġ.'), (14, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] Cheaters will always cheat again
 [(0, '[STARTQ]'), (1, 'Che'), (2, 'aters'), (3, 'Ġwill'), (4, 'Ġalways'), (5, 'Ġcheat'), (6, 'Ġagain')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] You are correct that this is false. 
 [(0, '[NEWLINE]'), (1, 'You'), (2, 'Ġare'), (3, 'Ġcorrect'), (4, 'Ġthat'), (5, 'Ġthis'), (6, 'Ġis'), (7, 'Ġfalse'), (8, 'Ġ.'), (9, 'Ġ')]
+[NEWLINE] However, I would say that * cheaters are more likely to cheat again *. The circumstances that resulted in cheating the first time may repeat. 
 [(0, '[NEWLINE]'), (1, 'However'), (2, 'Ġ,'), (3, 'ĠI'), (4, 'Ġwould'), (5, 'Ġsay'), (6, 'Ġthat'), (7, 'Ġ*'), (8, 'Ġche'), (9, 'aters'), (10, 'Ġare'), (11, 'Ġmore'), (12, 'Ġlikely'), (13, 'Ġto'), (14, 'Ġcheat'), (15, 'Ġagain'), (16, 'Ġ*'), (17, 'Ġ.'), (18, 'Ġ'), (19, 'The'), (20, 'Ġcircumstances'), (21, 'Ġthat'), (22, 'Ġresulted'), (23, 'Ġin'), (24, 'Ġcheating'), (25, 'Ġthe'), (26, 'Ġfirst'), (27, 'Ġtime'), (28, 'Ġmay'), (29, 'Ġrepeat'), (30, 'Ġ.'), (31, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] Cheaters cheat because of underlying issues with the relationship. My belief : if that's true, there are a lot of possibilities - not just breaking up - that could fix the problem, such as... talking about the problem.
 [(0, '[STARTQ]'), (1, 'Che'), (2, 'aters'), (3, 'Ġcheat'), (4, 'Ġbecause'), (5, 'Ġof'), (6, 'Ġunderlying'), (7, 'Ġissues'), (8, 'Ġwith'), (9, 'Ġthe'), (10, 'Ġrelationship'), (11, 'Ġ.'), (12, 'ĠMy'), (13, 'Ġbelief'), (14, 'Ġ:'), (15, 'Ġif'), (16, 'Ġthat'), (17, "'s"), (18, 'Ġtrue'), (19, 'Ġ,'), (20, 'Ġthere'), (21, 'Ġare'), (22, 'Ġa'), (23, 'Ġlot'), (24, 'Ġof'), (25, 'Ġpossibilities'), (26, 'Ġ-'), (27, 'Ġnot'), (28, 'Ġjust'), (29, 'Ġbreaking'), (30, 'Ġup'), (31, 'Ġ-'), (32, 'Ġthat'), (33, 'Ġcould'), (34, 'Ġfix'), (35, 'Ġthe'), (36, 'Ġproblem'), (37, 'Ġ,'), (38, 'Ġsuch'), (39, 'Ġas'), (40, 'Ġ.'), (41, 'Ġ.'), (42, 'Ġ.'), (43, 'Ġtalking'), (44, 'Ġabout'), (45, 'Ġthe'), (46, 'Ġproblem'), (47, 'Ġ.')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] Yes. 
 [(0, '[NEWLINE]'), (1, 'Yes'), (2, 'Ġ.'), (3, 'Ġ')]
+[NEWLINE] But " talking about the problem " is an ideal situation. 
 [(0, '[NEWLINE]'), (1, 'But'), (2, 'Ġ"'), (3, 'Ġtalking'), (4, 'Ġabout'), (5, 'Ġthe'), (6, 'Ġproblem'), (7, 'Ġ"'), (8, 'Ġis'), (9, 'Ġan'), (10, 'Ġideal'), (11, 'Ġsituation'), (12, 'Ġ.'), (13, 'Ġ')]
+[NEWLINE] It often doesn't work out so well that way. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġoften'), (3, 'Ġdoesn'), (4, "'t"), (5, 'Ġwork'), (6, 'Ġout'), (7, 'Ġso'), (8, 'Ġwell'), (9, 'Ġthat'), (10, 'Ġway'), (11, 'Ġ.'), (12, 'Ġ')]
+[NEWLINE] People get stuck in a pattern... living in the same house, married to the same person you stopped really caring about. 
 [(0, '[NEWLINE]'), (1, 'People'), (2, 'Ġget'), (3, 'Ġstuck'), (4, 'Ġin'), (5, 'Ġa'), (6, 'Ġpattern'), (7, 'Ġ.'), (8, 'Ġ.'), (9, 'Ġ.'), (10, 'Ġliving'), (11, 'Ġin'), (12, 'Ġthe'), (13, 'Ġsame'), (14, 'Ġhouse'), (15, 'Ġ,'), (16, 'Ġmarried'), (17, 'Ġto'), (18, 'Ġthe'), (19, 'Ġsame'), (20, 'Ġperson'), (21, 'Ġyou'), (22, 'Ġstopped'), (23, 'Ġreally'), (24, 'Ġcaring'), (25, 'Ġabout'), (26, 'Ġ.'), (27, 'Ġ')]
+[NEWLINE] Cheating is evidence that * something * must be wrong. 
 [(0, '[NEWLINE]'), (1, 'Che'), (2, 'ating'), (3, 'Ġis'), (4, 'Ġevidence'), (5, 'Ġthat'), (6, 'Ġ*'), (7, 'Ġsomething'), (8, 'Ġ*'), (9, 'Ġmust'), (10, 'Ġbe'), (11, 'Ġwrong'), (12, 'Ġ.'), (13, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] So, so far we can say cheating
 [(0, '[NEWLINE]'), (1, 'So'), (2, 'Ġ,'), (3, 'Ġso'), (4, 'Ġfar'), (5, 'Ġwe'), (6, 'Ġcan'), (7, 'Ġsay'), (8, 'Ġcheating')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] * is a bad choice which breaks one of the cornerstones of a relationship
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġ'), (3, 'is'), (4, 'Ġa'), (5, 'Ġbad'), (6, 'Ġchoice'), (7, 'Ġwhich'), (8, 'Ġbreaks'), (9, 'Ġone'), (10, 'Ġof'), (11, 'Ġthe'), (12, 'Ġcorner'), (13, 'stones'), (14, 'Ġof'), (15, 'Ġa'), (16, 'Ġrelationship')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] * is an indication that such a thing will happen again
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġ'), (3, 'is'), (4, 'Ġan'), (5, 'Ġindication'), (6, 'Ġthat'), (7, 'Ġsuch'), (8, 'Ġa'), (9, 'Ġthing'), (10, 'Ġwill'), (11, 'Ġhappen'), (12, 'Ġagain')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] * is an indication that there is a problem with the relationship
 [(0, '[NEWLINE]'), (1, '*'), (2, 'Ġ'), (3, 'is'), (4, 'Ġan'), (5, 'Ġindication'), (6, 'Ġthat'), (7, 'Ġthere'), (8, 'Ġis'), (9, 'Ġa'), (10, 'Ġproblem'), (11, 'Ġwith'), (12, 'Ġthe'), (13, 'Ġrelationship')]
+[NEWLINE] Are there no situations in which the cheaters should be forgiven? I'm trying to argue that if you find your spouse cheating, breaking up with them is the most logical thing to do, whatever the circumstances. 
 [(0, '[NEWLINE]'), (1, 'Are'), (2, 'Ġthere'), (3, 'Ġno'), (4, 'Ġsituations'), (5, 'Ġin'), (6, 'Ġwhich'), (7, 'Ġthe'), (8, 'Ġche'), (9, 'aters'), (10, 'Ġshould'), (11, 'Ġbe'), (12, 'Ġforgiven'), (13, 'Ġ?'), (14, 'Ġ'), (15, 'I'), (16, "'m"), (17, 'Ġtrying'), (18, 'Ġto'), (19, 'Ġargue'), (20, 'Ġthat'), (21, 'Ġif'), (22, 'Ġyou'), (23, 'Ġfind'), (24, 'Ġyour'), (25, 'Ġspouse'), (26, 'Ġcheating'), (27, 'Ġ,'), (28, 'Ġbreaking'), (29, 'Ġup'), (30, 'Ġwith'), (31, 'Ġthem'), (32, 'Ġis'), (33, 'Ġthe'), (34, 'Ġmost'), (35, 'Ġlogical'), (36, 'Ġthing'), (37, 'Ġto'), (38, 'Ġdo'), (39, 'Ġ,'), (40, 'Ġwhatever'), (41, 'Ġthe'), (42, 'Ġcircumstances'), (43, 'Ġ.'), (44, 'Ġ')]
+[NEWLINE] I point out, cheating has a profound negative emotional effect of the person cheated on. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġpoint'), (3, 'Ġout'), (4, 'Ġ,'), (5, 'Ġcheating'), (6, 'Ġhas'), (7, 'Ġa'), (8, 'Ġprofound'), (9, 'Ġnegative'), (10, 'Ġemotional'), (11, 'Ġeffect'), (12, 'Ġof'), (13, 'Ġthe'), (14, 'Ġperson'), (15, 'Ġcheated'), (16, 'Ġon'), (17, 'Ġ.'), (18, 'Ġ')]
+[NEWLINE] You have every reason to break up.
 [(0, '[NEWLINE]'), (1, 'You'), (2, 'Ġhave'), (3, 'Ġevery'), (4, 'Ġreason'), (5, 'Ġto'), (6, 'Ġbreak'), (7, 'Ġup'), (8, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] In my mind, marriage is a commitment. 
 [(0, '[NEWLINE]'), (1, 'In'), (2, 'Ġmy'), (3, 'Ġmind'), (4, 'Ġ,'), (5, 'Ġmarriage'), (6, 'Ġis'), (7, 'Ġa'), (8, 'Ġcommitment'), (9, 'Ġ.'), (10, 'Ġ')]
+[NEWLINE] If you break that commitment, the marriage is broken. 
 [(0, '[NEWLINE]'), (1, 'If'), (2, 'Ġyou'), (3, 'Ġbreak'), (4, 'Ġthat'), (5, 'Ġcommitment'), (6, 'Ġ,'), (7, 'Ġthe'), (8, 'Ġmarriage'), (9, 'Ġis'), (10, 'Ġbroken'), (11, 'Ġ.'), (12, 'Ġ')]
+[NEWLINE] One partner isn't fulfilling all of his/her obligations ( i. e. not to cheat ) So why should the other person be obligated to fill out his/hers? 
 [(0, '[NEWLINE]'), (1, 'One'), (2, 'Ġpartner'), (3, 'Ġisn'), (4, "'t"), (5, 'Ġfulfilling'), (6, 'Ġall'), (7, 'Ġof'), (8, 'Ġhis'), (9, '/'), (10, 'her'), (11, 'Ġobligations'), (12, 'Ġ('), (13, 'Ġi'), (14, 'Ġ.'), (15, 'Ġe'), (16, 'Ġ.'), (17, 'Ġnot'), (18, 'Ġto'), (19, 'Ġcheat'), (20, 'Ġ)'), (21, 'Ġ'), (22, 'So'), (23, 'Ġwhy'), (24, 'Ġshould'), (25, 'Ġthe'), (26, 'Ġother'), (27, 'Ġperson'), (28, 'Ġbe'), (29, 'Ġobligated'), (30, 'Ġto'), (31, 'Ġfill'), (32, 'Ġout'), (33, 'Ġhis'), (34, '/'), (35, 'hers'), (36, 'Ġ?'), (37, 'Ġ')]
+[NEWLINE] Why should you stay married? 
 [(0, '[NEWLINE]'), (1, 'Why'), (2, 'Ġshould'), (3, 'Ġyou'), (4, 'Ġstay'), (5, 'Ġmarried'), (6, 'Ġ?'), (7, 'Ġ')]
+[NEWLINE] It is entirely up to the person making the decision as to what they may do. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġis'), (3, 'Ġentirely'), (4, 'Ġup'), (5, 'Ġto'), (6, 'Ġthe'), (7, 'Ġperson'), (8, 'Ġmaking'), (9, 'Ġthe'), (10, 'Ġdecision'), (11, 'Ġas'), (12, 'Ġto'), (13, 'Ġwhat'), (14, 'Ġthey'), (15, 'Ġmay'), (16, 'Ġdo'), (17, 'Ġ.'), (18, 'Ġ')]
+[NEWLINE] It's an ethical question, and everyone has their different values, so it's impossible to prove definitively what you should/should not do. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, "'s"), (3, 'Ġan'), (4, 'Ġethical'), (5, 'Ġquestion'), (6, 'Ġ,'), (7, 'Ġand'), (8, 'Ġ'), (9, 'everyone'), (10, 'Ġhas'), (11, 'Ġtheir'), (12, 'Ġdifferent'), (13, 'Ġvalues'), (14, 'Ġ,'), (15, 'Ġso'), (16, 'Ġ'), (17, 'it'), (18, "'s"), (19, 'Ġimpossible'), (20, 'Ġto'), (21, 'Ġprove'), (22, 'Ġdefinitively'), (23, 'Ġwhat'), (24, 'Ġyou'), (25, 'Ġshould'), (26, '/'), (27, 'should'), (28, 'Ġnot'), (29, 'Ġdo'), (30, 'Ġ.'), (31, 'Ġ')]
+[NEWLINE] It's just a logical conclusion that breaking up is the right choice in most if not all situations. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, "'s"), (3, 'Ġjust'), (4, 'Ġa'), (5, 'Ġlogical'), (6, 'Ġconclusion'), (7, 'Ġthat'), (8, 'Ġbreaking'), (9, 'Ġup'), (10, 'Ġis'), (11, 'Ġthe'), (12, 'Ġright'), (13, 'Ġchoice'), (14, 'Ġin'), (15, 'Ġmost'), (16, 'Ġif'), (17, 'Ġnot'), (18, 'Ġall'), (19, 'Ġsituations'), (20, 'Ġ.'), (21, 'Ġ')]
+[NEWLINE] It's a choice. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, "'s"), (3, 'Ġa'), (4, 'Ġchoice'), (5, 'Ġ.'), (6, 'Ġ')]
+[NEWLINE] But if you don't break up, you are stuck with a person who doesn't value you enough to stay loyal. 
 [(0, '[NEWLINE]'), (1, 'But'), (2, 'Ġif'), (3, 'Ġyou'), (4, 'Ġdon'), (5, "'t"), (6, 'Ġbreak'), (7, 'Ġup'), (8, 'Ġ,'), (9, 'Ġyou'), (10, 'Ġare'), (11, 'Ġstuck'), (12, 'Ġwith'), (13, 'Ġa'), (14, 'Ġperson'), (15, 'Ġwho'), (16, 'Ġdoesn'), (17, "'t"), (18, 'Ġvalue'), (19, 'Ġyou'), (20, 'Ġenough'), (21, 'Ġto'), (22, 'Ġstay'), (23, 'Ġloyal'), (24, 'Ġ.'), (25, 'Ġ')]
+[NEWLINE] Why would you forfeit yourself to such a relationship? 
 [(0, '[NEWLINE]'), (1, 'Why'), (2, 'Ġwould'), (3, 'Ġyou'), (4, 'Ġforfeit'), (5, 'Ġyourself'), (6, 'Ġto'), (7, 'Ġsuch'), (8, 'Ġa'), (9, 'Ġrelationship'), (10, 'Ġ?'), (11, 'Ġ')]
+[NEWLINE] Things need change. 
 [(0, '[NEWLINE]'), (1, 'Things'), (2, 'Ġneed'), (3, 'Ġchange'), (4, 'Ġ.'), (5, 'Ġ')]
+[NEWLINE]  And the cheater is the source of the problem. 
 [(0, '[NEWLINE]'), (1, 'ĠAnd'), (2, 'Ġthe'), (3, 'Ġche'), (4, 'ater'), (5, 'Ġis'), (6, 'Ġthe'), (7, 'Ġsource'), (8, 'Ġof'), (9, 'Ġthe'), (10, 'Ġproblem'), (11, 'Ġ.'), (12, 'Ġ')]
+[NEWLINE]  Change the cheater by breaking up with him/her. 
 [(0, '[NEWLINE]'), (1, 'ĠChange'), (2, 'Ġthe'), (3, 'Ġche'), (4, 'ater'), (5, 'Ġby'), (6, 'Ġbreaking'), (7, 'Ġup'), (8, 'Ġwith'), (9, 'Ġhim'), (10, '/'), (11, 'her'), (12, 'Ġ.'), (13, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] [DELTA]
 [(0, '[NEWLINE]'), (1, '['), (2, 'D'), (3, 'EL'), (4, 'TA'), (5, ']')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] marriage is a commitment. If you break that commitment, the marriage is broken.
 [(0, '[STARTQ]'), (1, 'marriage'), (2, 'Ġis'), (3, 'Ġa'), (4, 'Ġcommitment'), (5, 'Ġ.'), (6, 'ĠIf'), (7, 'Ġyou'), (8, 'Ġbreak'), (9, 'Ġthat'), (10, 'Ġcommitment'), (11, 'Ġ,'), (12, 'Ġthe'), (13, 'Ġmarriage'), (14, 'Ġis'), (15, 'Ġbroken'), (16, 'Ġ.')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] This is the best argument I've heard so far.
 [(0, '[NEWLINE]'), (1, 'This'), (2, 'Ġis'), (3, 'Ġthe'), (4, 'Ġbest'), (5, 'Ġargument'), (6, 'ĠI'), (7, "'ve"), (8, 'Ġheard'), (9, 'Ġso'), (10, 'Ġfar'), (11, 'Ġ.')]
+[NEWLINE] Thanks!
 [(0, '[NEWLINE]'), (1, 'Thanks'), (2, 'Ġ!')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+</s>
 [(0, '</s>')]

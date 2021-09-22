@@ -1,38 +1,76 @@
+<s> CMV: Nativity scenes are antisemitic.
 [(0, '<s>'), (1, 'ĠCM'), (2, 'V'), (3, ':'), (4, 'ĠNat'), (5, 'ivity'), (6, 'Ġscenes'), (7, 'Ġare'), (8, 'Ġantis'), (9, 'em'), (10, 'itic'), (11, '.')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] This has nothing to do with the celebration of Christmas excluding religious minorities, it's because traditional nativity scenes reinforce negative stereotypes about Jews.
 [(0, '[NEWLINE]'), (1, 'This'), (2, 'Ġhas'), (3, 'Ġnothing'), (4, 'Ġto'), (5, 'Ġdo'), (6, 'Ġwith'), (7, 'Ġthe'), (8, 'Ġcelebration'), (9, 'Ġof'), (10, 'ĠChristmas'), (11, 'Ġexcluding'), (12, 'Ġreligious'), (13, 'Ġminorities'), (14, 'Ġ,'), (15, 'Ġit'), (16, "'s"), (17, 'Ġbecause'), (18, 'Ġ'), (19, 'traditional'), (20, 'Ġn'), (21, 'ativity'), (22, 'Ġscenes'), (23, 'Ġreinforce'), (24, 'Ġnegative'), (25, 'Ġstereotypes'), (26, 'Ġabout'), (27, 'ĠJews'), (28, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] As the story goes, when Jesus was about to be born his parents were travelling to Bethlehem, but when they got there the inn was full, so Mary had to give birth in the barn.
 [(0, '[NEWLINE]'), (1, 'As'), (2, 'Ġthe'), (3, 'Ġstory'), (4, 'Ġgoes'), (5, 'Ġ,'), (6, 'Ġwhen'), (7, 'ĠJesus'), (8, 'Ġwas'), (9, 'Ġabout'), (10, 'Ġto'), (11, 'Ġbe'), (12, 'Ġborn'), (13, 'Ġhis'), (14, 'Ġparents'), (15, 'Ġwere'), (16, 'Ġtravelling'), (17, 'Ġto'), (18, 'ĠBethlehem'), (19, 'Ġ,'), (20, 'Ġbut'), (21, 'Ġwhen'), (22, 'Ġthey'), (23, 'Ġgot'), (24, 'Ġthere'), (25, 'Ġthe'), (26, 'Ġinn'), (27, 'Ġwas'), (28, 'Ġfull'), (29, 'Ġ,'), (30, 'Ġso'), (31, 'ĠMary'), (32, 'Ġhad'), (33, 'Ġto'), (34, 'Ġgive'), (35, 'Ġbirth'), (36, 'Ġin'), (37, 'Ġthe'), (38, 'Ġbarn'), (39, 'Ġ.')]
+[NEWLINE] The problem is, if nativity scenes are any indication, baby Jesus was still in the manger when the three wise men came to visit and give him Christmas presents.
 [(0, '[NEWLINE]'), (1, 'The'), (2, 'Ġproblem'), (3, 'Ġis'), (4, 'Ġ,'), (5, 'Ġif'), (6, 'Ġn'), (7, 'ativity'), (8, 'Ġscenes'), (9, 'Ġare'), (10, 'Ġany'), (11, 'Ġindication'), (12, 'Ġ,'), (13, 'Ġbaby'), (14, 'ĠJesus'), (15, 'Ġwas'), (16, 'Ġstill'), (17, 'Ġin'), (18, 'Ġthe'), (19, 'Ġman'), (20, 'ger'), (21, 'Ġwhen'), (22, 'Ġthe'), (23, 'Ġthree'), (24, 'Ġwise'), (25, 'Ġmen'), (26, 'Ġcame'), (27, 'Ġto'), (28, 'Ġvisit'), (29, 'Ġand'), (30, 'Ġgive'), (31, 'Ġhim'), (32, 'ĠChristmas'), (33, 'Ġpresents'), (34, 'Ġ.')]
+[NEWLINE] Most people know Jesus was born on Christmas, but less realize that the wise men didn't show up until the Epiphany twelve days later.
 [(0, '[NEWLINE]'), (1, 'Most'), (2, 'Ġpeople'), (3, 'Ġknow'), (4, 'ĠJesus'), (5, 'Ġwas'), (6, 'Ġborn'), (7, 'Ġon'), (8, 'ĠChristmas'), (9, 'Ġ,'), (10, 'Ġbut'), (11, 'Ġless'), (12, 'Ġrealize'), (13, 'Ġthat'), (14, 'Ġthe'), (15, 'Ġwise'), (16, 'Ġmen'), (17, 'Ġdidn'), (18, "'t"), (19, 'Ġshow'), (20, 'Ġup'), (21, 'Ġuntil'), (22, 'Ġthe'), (23, 'ĠEp'), (24, 'iphany'), (25, 'Ġtwelve'), (26, 'Ġdays'), (27, 'Ġlater'), (28, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Are we honestly expected to believe that no vacancies opened up at the inn for almost two weeks? Because that would be the most unbelievable aspect of the entire story if you ask me, and it seriously strains credulity to begin with.
 [(0, '[NEWLINE]'), (1, 'Are'), (2, 'Ġwe'), (3, 'Ġhonestly'), (4, 'Ġexpected'), (5, 'Ġto'), (6, 'Ġbelieve'), (7, 'Ġthat'), (8, 'Ġno'), (9, 'Ġvacancies'), (10, 'Ġopened'), (11, 'Ġup'), (12, 'Ġat'), (13, 'Ġthe'), (14, 'Ġinn'), (15, 'Ġfor'), (16, 'Ġalmost'), (17, 'Ġtwo'), (18, 'Ġweeks'), (19, 'Ġ?'), (20, 'Ġ'), (21, 'Because'), (22, 'Ġthat'), (23, 'Ġwould'), (24, 'Ġbe'), (25, 'Ġthe'), (26, 'Ġmost'), (27, 'Ġunbelievable'), (28, 'Ġaspect'), (29, 'Ġof'), (30, 'Ġthe'), (31, 'Ġentire'), (32, 'Ġstory'), (33, 'Ġif'), (34, 'Ġyou'), (35, 'Ġask'), (36, 'Ġme'), (37, 'Ġ,'), (38, 'Ġand'), (39, 'Ġ'), (40, 'it'), (41, 'Ġseriously'), (42, 'Ġstrains'), (43, 'Ġcred'), (44, 'ul'), (45, 'ity'), (46, 'Ġto'), (47, 'Ġbegin'), (48, 'Ġwith'), (49, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Even miracles make more sense in the context of the birth of the Son of God.
 [(0, '[NEWLINE]'), (1, 'Even'), (2, 'Ġmiracles'), (3, 'Ġmake'), (4, 'Ġmore'), (5, 'Ġsense'), (6, 'Ġin'), (7, 'Ġthe'), (8, 'Ġcontext'), (9, 'Ġof'), (10, 'Ġthe'), (11, 'Ġbirth'), (12, 'Ġof'), (13, 'Ġthe'), (14, 'ĠSon'), (15, 'Ġof'), (16, 'ĠGod'), (17, 'Ġ.')]
+[NEWLINE] Maybe a virgin really could give birth to a deity, or a new star could magically appear over the birthplace, but there's no reason for the inn to miraculously have no rooms come open for nearly two weeks.
 [(0, '[NEWLINE]'), (1, 'Maybe'), (2, 'Ġa'), (3, 'Ġvirgin'), (4, 'Ġreally'), (5, 'Ġcould'), (6, 'Ġgive'), (7, 'Ġbirth'), (8, 'Ġto'), (9, 'Ġa'), (10, 'Ġdeity'), (11, 'Ġ,'), (12, 'Ġor'), (13, 'Ġa'), (14, 'Ġnew'), (15, 'Ġstar'), (16, 'Ġcould'), (17, 'Ġmagically'), (18, 'Ġappear'), (19, 'Ġover'), (20, 'Ġthe'), (21, 'Ġbirthplace'), (22, 'Ġ,'), (23, 'Ġbut'), (24, 'Ġ'), (25, 'there'), (26, "'s"), (27, 'Ġno'), (28, 'Ġreason'), (29, 'Ġfor'), (30, 'Ġthe'), (31, 'Ġinn'), (32, 'Ġto'), (33, 'Ġmirac'), (34, 'ulously'), (35, 'Ġhave'), (36, 'Ġno'), (37, 'Ġrooms'), (38, 'Ġcome'), (39, 'Ġopen'), (40, 'Ġfor'), (41, 'Ġnearly'), (42, 'Ġtwo'), (43, 'Ġweeks'), (44, 'Ġ.')]
+[NEWLINE] Plus Mary and Joseph would be the first to know when something came available since they were basically squatting in the garage and would surely notice when patrons came to get their ox or camel or whatever before leaving.
 [(0, '[NEWLINE]'), (1, 'Plus'), (2, 'ĠMary'), (3, 'Ġand'), (4, 'ĠJoseph'), (5, 'Ġwould'), (6, 'Ġbe'), (7, 'Ġthe'), (8, 'Ġfirst'), (9, 'Ġto'), (10, 'Ġknow'), (11, 'Ġwhen'), (12, 'Ġsomething'), (13, 'Ġcame'), (14, 'Ġavailable'), (15, 'Ġsince'), (16, 'Ġthey'), (17, 'Ġwere'), (18, 'Ġbasically'), (19, 'Ġsquat'), (20, 'ting'), (21, 'Ġin'), (22, 'Ġthe'), (23, 'Ġgarage'), (24, 'Ġand'), (25, 'Ġwould'), (26, 'Ġsurely'), (27, 'Ġnotice'), (28, 'Ġwhen'), (29, 'Ġpatrons'), (30, 'Ġcame'), (31, 'Ġto'), (32, 'Ġget'), (33, 'Ġtheir'), (34, 'Ġox'), (35, 'Ġor'), (36, 'Ġcamel'), (37, 'Ġor'), (38, 'Ġwhatever'), (39, 'Ġbefore'), (40, 'Ġleaving'), (41, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] The obvious implication is that Jesus' chintzy Jewish stepdad was such a tightwad that he was willing to let his pubescent wife and her newborn baby sleep in donkey slop if it would save him a few shekels.
 [(0, '[NEWLINE]'), (1, 'The'), (2, 'Ġobvious'), (3, 'Ġimplication'), (4, 'Ġis'), (5, 'Ġthat'), (6, 'ĠJesus'), (7, "'"), (8, 'Ġch'), (9, 'int'), (10, 'zy'), (11, 'ĠJewish'), (12, 'Ġstep'), (13, 'dad'), (14, 'Ġwas'), (15, 'Ġsuch'), (16, 'Ġa'), (17, 'Ġtight'), (18, 'w'), (19, 'ad'), (20, 'Ġthat'), (21, 'Ġhe'), (22, 'Ġwas'), (23, 'Ġwilling'), (24, 'Ġto'), (25, 'Ġlet'), (26, 'Ġhis'), (27, 'Ġpub'), (28, 'escent'), (29, 'Ġwife'), (30, 'Ġand'), (31, 'Ġher'), (32, 'Ġnewborn'), (33, 'Ġbaby'), (34, 'Ġsleep'), (35, 'Ġin'), (36, 'Ġdonkey'), (37, 'Ġsl'), (38, 'op'), (39, 'Ġif'), (40, 'Ġit'), (41, 'Ġwould'), (42, 'Ġsave'), (43, 'Ġhim'), (44, 'Ġa'), (45, 'Ġfew'), (46, 'Ġshe'), (47, 'ke'), (48, 'ls'), (49, 'Ġ.')]
+[NEWLINE] Joseph probably would have made that barn the family's permanent rent-free residence if the wise men hadn't showed up bearing enough cash and prizes to go live it up in Egypt.
 [(0, '[NEWLINE]'), (1, 'Joseph'), (2, 'Ġprobably'), (3, 'Ġwould'), (4, 'Ġhave'), (5, 'Ġmade'), (6, 'Ġthat'), (7, 'Ġbarn'), (8, 'Ġthe'), (9, 'Ġfamily'), (10, "'s"), (11, 'Ġpermanent'), (12, 'Ġrent'), (13, '-'), (14, 'free'), (15, 'Ġresidence'), (16, 'Ġif'), (17, 'Ġthe'), (18, 'Ġwise'), (19, 'Ġmen'), (20, 'Ġhadn'), (21, "'t"), (22, 'Ġshowed'), (23, 'Ġup'), (24, 'Ġbearing'), (25, 'Ġenough'), (26, 'Ġcash'), (27, 'Ġand'), (28, 'Ġprizes'), (29, 'Ġto'), (30, 'Ġgo'), (31, 'Ġlive'), (32, 'Ġit'), (33, 'Ġup'), (34, 'Ġin'), (35, 'ĠEgypt'), (36, 'Ġ.')]
+[NEWLINE] After all, why did they stay so long anyway? 
 [(0, '[NEWLINE]'), (1, 'After'), (2, 'Ġall'), (3, 'Ġ,'), (4, 'Ġ'), (5, 'why'), (6, 'Ġdid'), (7, 'Ġthey'), (8, 'Ġstay'), (9, 'Ġso'), (10, 'Ġlong'), (11, 'Ġanyway'), (12, 'Ġ?'), (13, 'Ġ')]
+[NEWLINE] It's not like Mary needed the time to recuperate.
 [(0, '[NEWLINE]'), (1, 'It'), (2, "'s"), (3, 'Ġnot'), (4, 'Ġlike'), (5, 'ĠMary'), (6, 'Ġneeded'), (7, 'Ġthe'), (8, 'Ġtime'), (9, 'Ġto'), (10, 'Ġrec'), (11, 'u'), (12, 'perate'), (13, 'Ġ.')]
+[NEWLINE]  Thanks to baby Jesus' healing powers even her hymen immediately regenerated, kind of like the redhead vampire from True Blood or the cheerleader from Heroes.
 [(0, '[NEWLINE]'), (1, 'ĠThanks'), (2, 'Ġto'), (3, 'Ġbaby'), (4, 'ĠJesus'), (5, "'"), (6, 'Ġhealing'), (7, 'Ġpowers'), (8, 'Ġeven'), (9, 'Ġher'), (10, 'Ġhy'), (11, 'men'), (12, 'Ġimmediately'), (13, 'Ġregener'), (14, 'ated'), (15, 'Ġ,'), (16, 'Ġkind'), (17, 'Ġof'), (18, 'Ġlike'), (19, 'Ġthe'), (20, 'Ġred'), (21, 'head'), (22, 'Ġvampire'), (23, 'Ġfrom'), (24, 'ĠTrue'), (25, 'ĠBlood'), (26, 'Ġor'), (27, 'Ġthe'), (28, 'Ġcheer'), (29, 'leader'), (30, 'Ġfrom'), (31, 'ĠHeroes'), (32, 'Ġ.')]
+[NEWLINE] (  Not the real life Hayden Panettiere though, you know those gigantic Klitschkos split that wide open.  )
 [(0, '[NEWLINE]'), (1, '('), (2, 'Ġ'), (3, 'ĠNot'), (4, 'Ġthe'), (5, 'Ġreal'), (6, 'Ġlife'), (7, 'ĠHayden'), (8, 'ĠPan'), (9, 'ett'), (10, 'iere'), (11, 'Ġthough'), (12, 'Ġ,'), (13, 'Ġyou'), (14, 'Ġknow'), (15, 'Ġthose'), (16, 'Ġgigantic'), (17, 'ĠKl'), (18, 'itsch'), (19, 'kos'), (20, 'Ġsplit'), (21, 'Ġthat'), (22, 'Ġwide'), (23, 'Ġopen'), (24, 'Ġ.'), (25, 'Ġ'), (26, 'Ġ)')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] MERRY CHRISTMAS!
 [(0, '[NEWLINE]'), (1, 'MER'), (2, 'RY'), (3, 'ĠCHRIST'), (4, 'MAS'), (5, 'Ġ!')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE] Actually, most commentators think they didn't show up for a year or two.
 [(0, '[NEWLINE]'), (1, 'Actually'), (2, 'Ġ,'), (3, 'Ġmost'), (4, 'Ġcommentators'), (5, 'Ġthink'), (6, 'Ġthey'), (7, 'Ġdidn'), (8, "'t"), (9, 'Ġshow'), (10, 'Ġup'), (11, 'Ġfor'), (12, 'Ġa'), (13, 'Ġyear'), (14, 'Ġor'), (15, 'Ġtwo'), (16, 'Ġ.')]
+[NEWLINE] Also,  " inn " is arguably a poor translation.
 [(0, '[NEWLINE]'), (1, 'Also'), (2, 'Ġ,'), (3, 'Ġ'), (4, 'Ġ"'), (5, 'Ġinn'), (6, 'Ġ"'), (7, 'Ġis'), (8, 'Ġarguably'), (9, 'Ġa'), (10, 'Ġpoor'), (11, 'Ġtranslation'), (12, 'Ġ.')]
+[NEWLINE] It wasn't a hotel that didn't have room for them.
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġwasn'), (3, "'t"), (4, 'Ġa'), (5, 'Ġhotel'), (6, 'Ġthat'), (7, 'Ġdidn'), (8, "'t"), (9, 'Ġhave'), (10, 'Ġroom'), (11, 'Ġfor'), (12, 'Ġthem'), (13, 'Ġ.')]
+[NEWLINE] It was that extended family didn't have a guest room for Joseph's family (  perhaps because of the scandalous nature of Mary's pregnancy?  ).
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġwas'), (3, 'Ġthat'), (4, 'Ġextended'), (5, 'Ġfamily'), (6, 'Ġdidn'), (7, "'t"), (8, 'Ġhave'), (9, 'Ġa'), (10, 'Ġguest'), (11, 'Ġroom'), (12, 'Ġfor'), (13, 'ĠJoseph'), (14, "'s"), (15, 'Ġfamily'), (16, 'Ġ('), (17, 'Ġ'), (18, 'Ġperhaps'), (19, 'Ġbecause'), (20, 'Ġof'), (21, 'Ġthe'), (22, 'Ġscandal'), (23, 'ous'), (24, 'Ġnature'), (25, 'Ġof'), (26, 'ĠMary'), (27, "'s"), (28, 'Ġpregnancy'), (29, 'Ġ?'), (30, 'Ġ'), (31, 'Ġ)'), (32, 'Ġ.')]
+[NEWLINE]  Them being stuck in a barn has nothing to do with Joseph being cheap and everything to do with his family having poor hospitality.
 [(0, '[NEWLINE]'), (1, 'ĠThem'), (2, 'Ġbeing'), (3, 'Ġstuck'), (4, 'Ġin'), (5, 'Ġa'), (6, 'Ġbarn'), (7, 'Ġhas'), (8, 'Ġnothing'), (9, 'Ġto'), (10, 'Ġdo'), (11, 'Ġwith'), (12, 'ĠJoseph'), (13, 'Ġbeing'), (14, 'Ġcheap'), (15, 'Ġand'), (16, 'Ġeverything'), (17, 'Ġto'), (18, 'Ġdo'), (19, 'Ġwith'), (20, 'Ġhis'), (21, 'Ġfamily'), (22, 'Ġhaving'), (23, 'Ġpoor'), (24, 'Ġhospitality'), (25, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] [DELTA]Interesting, I was not aware of this perspective, and  certainly a lot can be lost in translation, especially multiple translations over centuries.
 [(0, '[NEWLINE]'), (1, '['), (2, 'D'), (3, 'EL'), (4, 'TA'), (5, ']'), (6, 'Interest'), (7, 'ing'), (8, 'Ġ,'), (9, 'ĠI'), (10, 'Ġwas'), (11, 'Ġnot'), (12, 'Ġaware'), (13, 'Ġof'), (14, 'Ġthis'), (15, 'Ġperspective'), (16, 'Ġ,'), (17, 'Ġand'), (18, 'Ġ'), (19, 'Ġcertainly'), (20, 'Ġa'), (21, 'Ġlot'), (22, 'Ġcan'), (23, 'Ġbe'), (24, 'Ġlost'), (25, 'Ġin'), (26, 'Ġtranslation'), (27, 'Ġ,'), (28, 'Ġespecially'), (29, 'Ġmultiple'), (30, 'Ġtranslations'), (31, 'Ġover'), (32, 'Ġcenturies'), (33, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+</s>
 [(0, '</s>')]

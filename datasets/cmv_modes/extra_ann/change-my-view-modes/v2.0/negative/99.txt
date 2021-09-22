@@ -1,63 +1,126 @@
+<s>CMV: I believe that regularly browsing 4chan will make you into a worse person
 [(0, '<s>'), (1, 'CM'), (2, 'V'), (3, ':'), (4, 'ĠI'), (5, 'Ġbelieve'), (6, 'Ġthat'), (7, 'Ġregularly'), (8, 'Ġbrowsing'), (9, 'Ġ4'), (10, 'chan'), (11, 'Ġwill'), (12, 'Ġmake'), (13, 'Ġyou'), (14, 'Ġinto'), (15, 'Ġa'), (16, 'Ġworse'), (17, 'Ġperson')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] Because of the anonymity on 4chan people are more prone to not think through, care about what they post and are quicker to throw out insults. 
 [(0, '[NEWLINE]'), (1, 'Because'), (2, 'Ġof'), (3, 'Ġthe'), (4, 'Ġanonymity'), (5, 'Ġon'), (6, 'Ġ4'), (7, 'chan'), (8, 'Ġpeople'), (9, 'Ġare'), (10, 'Ġmore'), (11, 'Ġprone'), (12, 'Ġto'), (13, 'Ġnot'), (14, 'Ġthink'), (15, 'Ġthrough'), (16, 'Ġ,'), (17, 'Ġcare'), (18, 'Ġabout'), (19, 'Ġwhat'), (20, 'Ġthey'), (21, 'Ġpost'), (22, 'Ġand'), (23, 'Ġare'), (24, 'Ġquicker'), (25, 'Ġto'), (26, 'Ġthrow'), (27, 'Ġout'), (28, 'Ġinsults'), (29, 'Ġ.'), (30, 'Ġ')]
+[NEWLINE] They will care about how people respond to them, but since it's largely negative they will stoop down to the same level rather than go to any high ground since they are not linked to an identity.
 [(0, '[NEWLINE]'), (1, 'They'), (2, 'Ġwill'), (3, 'Ġcare'), (4, 'Ġabout'), (5, 'Ġhow'), (6, 'Ġpeople'), (7, 'Ġrespond'), (8, 'Ġto'), (9, 'Ġthem'), (10, 'Ġ,'), (11, 'Ġbut'), (12, 'Ġ'), (13, 'since'), (14, 'Ġit'), (15, "'s"), (16, 'Ġlargely'), (17, 'Ġnegative'), (18, 'Ġthey'), (19, 'Ġwill'), (20, 'Ġsto'), (21, 'op'), (22, 'Ġdown'), (23, 'Ġto'), (24, 'Ġthe'), (25, 'Ġsame'), (26, 'Ġlevel'), (27, 'Ġrather'), (28, 'Ġthan'), (29, 'Ġgo'), (30, 'Ġto'), (31, 'Ġany'), (32, 'Ġhigh'), (33, 'Ġground'), (34, 'Ġsince'), (35, 'Ġthey'), (36, 'Ġare'), (37, 'Ġnot'), (38, 'Ġlinked'), (39, 'Ġto'), (40, 'Ġan'), (41, 'Ġidentity'), (42, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Surrounding the entire site there's a general pessimistic group mentality, and people are subconsciously encouraged to take part of it in order to feel like they are a part of the group.
 [(0, '[NEWLINE]'), (1, 'Sur'), (2, 'round'), (3, 'ing'), (4, 'Ġthe'), (5, 'Ġentire'), (6, 'Ġsite'), (7, 'Ġthere'), (8, "'s"), (9, 'Ġa'), (10, 'Ġgeneral'), (11, 'Ġpessimistic'), (12, 'Ġgroup'), (13, 'Ġmentality'), (14, 'Ġ,'), (15, 'Ġand'), (16, 'Ġ'), (17, 'people'), (18, 'Ġare'), (19, 'Ġsubconscious'), (20, 'ly'), (21, 'Ġencouraged'), (22, 'Ġto'), (23, 'Ġtake'), (24, 'Ġpart'), (25, 'Ġof'), (26, 'Ġit'), (27, 'Ġin'), (28, 'Ġorder'), (29, 'Ġto'), (30, 'Ġfeel'), (31, 'Ġlike'), (32, 'Ġthey'), (33, 'Ġare'), (34, 'Ġa'), (35, 'Ġpart'), (36, 'Ġof'), (37, 'Ġthe'), (38, 'Ġgroup'), (39, 'Ġ.')]
+[NEWLINE] Some boards will have specific groups of people who they are encouraged to hate, women, SJWs, casual gamers, Jews, and any reasonable argument against a poster can be made redundant by saying or thinking they are a part of these agendas or groups.
 [(0, '[NEWLINE]'), (1, 'Some'), (2, 'Ġboards'), (3, 'Ġwill'), (4, 'Ġhave'), (5, 'Ġspecific'), (6, 'Ġgroups'), (7, 'Ġof'), (8, 'Ġpeople'), (9, 'Ġwho'), (10, 'Ġthey'), (11, 'Ġare'), (12, 'Ġencouraged'), (13, 'Ġto'), (14, 'Ġhate'), (15, 'Ġ,'), (16, 'Ġwomen'), (17, 'Ġ,'), (18, 'ĠSJ'), (19, 'Ws'), (20, 'Ġ,'), (21, 'Ġcasual'), (22, 'Ġgamers'), (23, 'Ġ,'), (24, 'ĠJews'), (25, 'Ġ,'), (26, 'Ġand'), (27, 'Ġ'), (28, 'any'), (29, 'Ġreasonable'), (30, 'Ġargument'), (31, 'Ġagainst'), (32, 'Ġa'), (33, 'Ġposter'), (34, 'Ġcan'), (35, 'Ġbe'), (36, 'Ġmade'), (37, 'Ġredundant'), (38, 'Ġby'), (39, 'Ġsaying'), (40, 'Ġor'), (41, 'Ġthinking'), (42, 'Ġthey'), (43, 'Ġare'), (44, 'Ġa'), (45, 'Ġpart'), (46, 'Ġof'), (47, 'Ġthese'), (48, 'Ġagendas'), (49, 'Ġor'), (50, 'Ġgroups'), (51, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] On boards you will find echo chambers where people are more prone to believe rumors than proof.
 [(0, '[NEWLINE]'), (1, 'On'), (2, 'Ġboards'), (3, 'Ġyou'), (4, 'Ġwill'), (5, 'Ġfind'), (6, 'Ġecho'), (7, 'Ġchambers'), (8, 'Ġwhere'), (9, 'Ġpeople'), (10, 'Ġare'), (11, 'Ġmore'), (12, 'Ġprone'), (13, 'Ġto'), (14, 'Ġbelieve'), (15, 'Ġrumors'), (16, 'Ġthan'), (17, 'Ġproof'), (18, 'Ġ.')]
+[NEWLINE] Things about e-celebrities will start as rumors, ideas about them or things will get taken out of context and it will be posted continually until it's taken as fact.
 [(0, '[NEWLINE]'), (1, 'Things'), (2, 'Ġabout'), (3, 'Ġe'), (4, '-'), (5, 'cele'), (6, 'b'), (7, 'rities'), (8, 'Ġwill'), (9, 'Ġstart'), (10, 'Ġas'), (11, 'Ġrumors'), (12, 'Ġ,'), (13, 'Ġ'), (14, 'ide'), (15, 'as'), (16, 'Ġabout'), (17, 'Ġthem'), (18, 'Ġor'), (19, 'Ġthings'), (20, 'Ġwill'), (21, 'Ġget'), (22, 'Ġtaken'), (23, 'Ġout'), (24, 'Ġof'), (25, 'Ġcontext'), (26, 'Ġand'), (27, 'Ġit'), (28, 'Ġwill'), (29, 'Ġbe'), (30, 'Ġposted'), (31, 'Ġcontinually'), (32, 'Ġuntil'), (33, 'Ġit'), (34, "'s"), (35, 'Ġtaken'), (36, 'Ġas'), (37, 'Ġfact'), (38, 'Ġ.')]
+[NEWLINE] It will reach conspiracy theory levels of " proof " where people will simply believe it because they feel as if they are a part of a group-effort that's uncovering something. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġwill'), (3, 'Ġreach'), (4, 'Ġconspiracy'), (5, 'Ġtheory'), (6, 'Ġlevels'), (7, 'Ġof'), (8, 'Ġ"'), (9, 'Ġproof'), (10, 'Ġ"'), (11, 'Ġwhere'), (12, 'Ġpeople'), (13, 'Ġwill'), (14, 'Ġsimply'), (15, 'Ġbelieve'), (16, 'Ġit'), (17, 'Ġbecause'), (18, 'Ġthey'), (19, 'Ġfeel'), (20, 'Ġas'), (21, 'Ġif'), (22, 'Ġthey'), (23, 'Ġare'), (24, 'Ġa'), (25, 'Ġpart'), (26, 'Ġof'), (27, 'Ġa'), (28, 'Ġgroup'), (29, '-'), (30, 'eff'), (31, 'ort'), (32, 'Ġthat'), (33, "'s"), (34, 'Ġuncover'), (35, 'ing'), (36, 'Ġsomething'), (37, 'Ġ.'), (38, 'Ġ')]
+[NEWLINE] Surrounding yourself with this will in general make you into a more pessimistic, negative and possibly depressive person. 
 [(0, '[NEWLINE]'), (1, 'Sur'), (2, 'round'), (3, 'ing'), (4, 'Ġyourself'), (5, 'Ġwith'), (6, 'Ġthis'), (7, 'Ġwill'), (8, 'Ġin'), (9, 'Ġgeneral'), (10, 'Ġmake'), (11, 'Ġyou'), (12, 'Ġinto'), (13, 'Ġa'), (14, 'Ġmore'), (15, 'Ġpessimistic'), (16, 'Ġ,'), (17, 'Ġnegative'), (18, 'Ġand'), (19, 'Ġpossibly'), (20, 'Ġdepressive'), (21, 'Ġperson'), (22, 'Ġ.'), (23, 'Ġ')]
+[NEWLINE] I'm not saying that every person who browses 4chan is depressed or negative, but  that the majority of them are affected negatively by browsing the site.
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'m"), (3, 'Ġnot'), (4, 'Ġsaying'), (5, 'Ġthat'), (6, 'Ġevery'), (7, 'Ġperson'), (8, 'Ġwho'), (9, 'Ġbrow'), (10, 'ses'), (11, 'Ġ4'), (12, 'chan'), (13, 'Ġis'), (14, 'Ġdepressed'), (15, 'Ġor'), (16, 'Ġnegative'), (17, 'Ġ,'), (18, 'Ġbut'), (19, 'Ġ'), (20, 'Ġthat'), (21, 'Ġthe'), (22, 'Ġmajority'), (23, 'Ġof'), (24, 'Ġthem'), (25, 'Ġare'), (26, 'Ġaffected'), (27, 'Ġnegatively'), (28, 'Ġby'), (29, 'Ġbrowsing'), (30, 'Ġthe'), (31, 'Ġsite'), (32, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]  Thinking that you are unaffected by this doesn't necessarily mean you are, but instead means that you are unaware of how much it affects you. 
 [(0, '[NEWLINE]'), (1, 'ĠThinking'), (2, 'Ġthat'), (3, 'Ġyou'), (4, 'Ġare'), (5, 'Ġunaffected'), (6, 'Ġby'), (7, 'Ġthis'), (8, 'Ġdoesn'), (9, "'t"), (10, 'Ġnecessarily'), (11, 'Ġmean'), (12, 'Ġyou'), (13, 'Ġare'), (14, 'Ġ,'), (15, 'Ġbut'), (16, 'Ġinstead'), (17, 'Ġmeans'), (18, 'Ġthat'), (19, 'Ġyou'), (20, 'Ġare'), (21, 'Ġunaware'), (22, 'Ġof'), (23, 'Ġhow'), (24, 'Ġmuch'), (25, 'Ġit'), (26, 'Ġaffects'), (27, 'Ġyou'), (28, 'Ġ.'), (29, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] EDIT : [Awarded Delta] (
 [(0, '[NEWLINE]'), (1, 'EDIT'), (2, 'Ġ:'), (3, 'Ġ['), (4, 'A'), (5, 'ward'), (6, 'ed'), (7, 'ĠDelta'), (8, ']'), (9, 'Ġ(')]
+[URL] )
 [(0, '[URL]'), (1, ')')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE] It will certainly make you a colder person. 
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġwill'), (3, 'Ġcertainly'), (4, 'Ġmake'), (5, 'Ġyou'), (6, 'Ġa'), (7, 'Ġcolder'), (8, 'Ġperson'), (9, 'Ġ.'), (10, 'Ġ')]
+[NEWLINE] Or let's say, a " less sensitive " person.
 [(0, '[NEWLINE]'), (1, 'Or'), (2, 'Ġ'), (3, 'let'), (4, "'s"), (5, 'Ġsay'), (6, 'Ġ,'), (7, 'Ġa'), (8, 'Ġ"'), (9, 'Ġless'), (10, 'Ġsensitive'), (11, 'Ġ"'), (12, 'Ġperson'), (13, 'Ġ.')]
+[NEWLINE] But I'm not conviced that this is always a bad thing. 
 [(0, '[NEWLINE]'), (1, 'But'), (2, 'Ġ'), (3, 'I'), (4, "'m"), (5, 'Ġnot'), (6, 'Ġconv'), (7, 'iced'), (8, 'Ġthat'), (9, 'Ġthis'), (10, 'Ġis'), (11, 'Ġalways'), (12, 'Ġa'), (13, 'Ġbad'), (14, 'Ġthing'), (15, 'Ġ.'), (16, 'Ġ')]
+[NEWLINE] After all the gore I witnessed on 4chan, I'm able to jump in an accident scene and actually keep my cool while most other people around are freaking out like crazed apes, yelling and really doing nothing to help at all. 
 [(0, '[NEWLINE]'), (1, 'After'), (2, 'Ġall'), (3, 'Ġthe'), (4, 'Ġgore'), (5, 'ĠI'), (6, 'Ġwitnessed'), (7, 'Ġon'), (8, 'Ġ4'), (9, 'chan'), (10, 'Ġ,'), (11, 'ĠI'), (12, "'m"), (13, 'Ġable'), (14, 'Ġto'), (15, 'Ġjump'), (16, 'Ġin'), (17, 'Ġan'), (18, 'Ġaccident'), (19, 'Ġscene'), (20, 'Ġand'), (21, 'Ġactually'), (22, 'Ġkeep'), (23, 'Ġmy'), (24, 'Ġcool'), (25, 'Ġwhile'), (26, 'Ġmost'), (27, 'Ġother'), (28, 'Ġpeople'), (29, 'Ġaround'), (30, 'Ġare'), (31, 'Ġfreaking'), (32, 'Ġout'), (33, 'Ġlike'), (34, 'Ġcraz'), (35, 'ed'), (36, 'Ġapes'), (37, 'Ġ,'), (38, 'Ġyelling'), (39, 'Ġand'), (40, 'Ġreally'), (41, 'Ġdoing'), (42, 'Ġnothing'), (43, 'Ġto'), (44, 'Ġhelp'), (45, 'Ġat'), (46, 'Ġall'), (47, 'Ġ.'), (48, 'Ġ')]
+[NEWLINE] After all the freak sexualities i was exposed to in 4chan, I find it hard to judge anyone about anything they do with their bodies and partners. 
 [(0, '[NEWLINE]'), (1, 'After'), (2, 'Ġall'), (3, 'Ġthe'), (4, 'Ġfreak'), (5, 'Ġsexual'), (6, 'ities'), (7, 'Ġi'), (8, 'Ġwas'), (9, 'Ġexposed'), (10, 'Ġto'), (11, 'Ġin'), (12, 'Ġ4'), (13, 'chan'), (14, 'Ġ,'), (15, 'ĠI'), (16, 'Ġfind'), (17, 'Ġit'), (18, 'Ġhard'), (19, 'Ġto'), (20, 'Ġjudge'), (21, 'Ġanyone'), (22, 'Ġabout'), (23, 'Ġanything'), (24, 'Ġthey'), (25, 'Ġdo'), (26, 'Ġwith'), (27, 'Ġtheir'), (28, 'Ġbodies'), (29, 'Ġand'), (30, 'Ġpartners'), (31, 'Ġ.'), (32, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] And so on.
 [(0, '[NEWLINE]'), (1, 'And'), (2, 'Ġso'), (3, 'Ġon'), (4, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] I'd say 4chan will open your eyes and show you Reality on many topics. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, "'d"), (3, 'Ġsay'), (4, 'Ġ4'), (5, 'chan'), (6, 'Ġwill'), (7, 'Ġopen'), (8, 'Ġyour'), (9, 'Ġeyes'), (10, 'Ġand'), (11, 'Ġshow'), (12, 'Ġyou'), (13, 'ĠReality'), (14, 'Ġon'), (15, 'Ġmany'), (16, 'Ġtopics'), (17, 'Ġ.'), (18, 'Ġ')]
+[NEWLINE] It can have a bad influence with all the racism etc tho but this, you have to keep in check yourself.
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġcan'), (3, 'Ġhave'), (4, 'Ġa'), (5, 'Ġbad'), (6, 'Ġinfluence'), (7, 'Ġwith'), (8, 'Ġall'), (9, 'Ġthe'), (10, 'Ġracism'), (11, 'Ġetc'), (12, 'Ġtho'), (13, 'Ġbut'), (14, 'Ġ'), (15, 'this'), (16, 'Ġ,'), (17, 'Ġyou'), (18, 'Ġhave'), (19, 'Ġto'), (20, 'Ġkeep'), (21, 'Ġin'), (22, 'Ġcheck'), (23, 'Ġyourself'), (24, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] About " pessimism ".. well yeah...  some people may answer to you that there is not much to be optimistic about in this world and that maybe you are delusional/uninformed to think otherwise.
 [(0, '[NEWLINE]'), (1, 'About'), (2, 'Ġ"'), (3, 'Ġpessim'), (4, 'ism'), (5, 'Ġ"'), (6, 'Ġ.'), (7, 'Ġ.'), (8, 'Ġwell'), (9, 'Ġyeah'), (10, 'Ġ.'), (11, 'Ġ.'), (12, 'Ġ.'), (13, 'Ġ'), (14, 'Ġsome'), (15, 'Ġpeople'), (16, 'Ġmay'), (17, 'Ġanswer'), (18, 'Ġto'), (19, 'Ġyou'), (20, 'Ġthat'), (21, 'Ġthere'), (22, 'Ġis'), (23, 'Ġnot'), (24, 'Ġmuch'), (25, 'Ġto'), (26, 'Ġbe'), (27, 'Ġoptimistic'), (28, 'Ġabout'), (29, 'Ġin'), (30, 'Ġthis'), (31, 'Ġworld'), (32, 'Ġand'), (33, 'Ġthat'), (34, 'Ġmaybe'), (35, 'Ġyou'), (36, 'Ġare'), (37, 'Ġdelusional'), (38, '/'), (39, 'un'), (40, 'informed'), (41, 'Ġto'), (42, 'Ġthink'), (43, 'Ġotherwise'), (44, 'Ġ.')]
+[NEWLINE] Are they right?
 [(0, '[NEWLINE]'), (1, 'Are'), (2, 'Ġthey'), (3, 'Ġright'), (4, 'Ġ?')]
+[NEWLINE] Are they wrong?
 [(0, '[NEWLINE]'), (1, 'Are'), (2, 'Ġthey'), (3, 'Ġwrong'), (4, 'Ġ?')]
+[NEWLINE]  Hard to tell.
 [(0, '[NEWLINE]'), (1, 'ĠHard'), (2, 'Ġto'), (3, 'Ġtell'), (4, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[STARTQ] After all the gore I witnessed on 4chan, I'm able to jump in an accident scene and actually keep my cool
 [(0, '[STARTQ]'), (1, 'After'), (2, 'Ġall'), (3, 'Ġthe'), (4, 'Ġgore'), (5, 'ĠI'), (6, 'Ġwitnessed'), (7, 'Ġon'), (8, 'Ġ4'), (9, 'chan'), (10, 'Ġ,'), (11, 'ĠI'), (12, "'m"), (13, 'Ġable'), (14, 'Ġto'), (15, 'Ġjump'), (16, 'Ġin'), (17, 'Ġan'), (18, 'Ġaccident'), (19, 'Ġscene'), (20, 'Ġand'), (21, 'Ġactually'), (22, 'Ġkeep'), (23, 'Ġmy'), (24, 'Ġcool')]
+[ENDQ]
 [(0, '[ENDQ]')]
+[NEWLINE] Is this something that has actually happened?
 [(0, '[NEWLINE]'), (1, 'Is'), (2, 'Ġthis'), (3, 'Ġsomething'), (4, 'Ġthat'), (5, 'Ġhas'), (6, 'Ġactually'), (7, 'Ġhappened'), (8, 'Ġ?')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE] Yes and no.
 [(0, '[NEWLINE]'), (1, 'Yes'), (2, 'Ġand'), (3, 'Ġ'), (4, 'no'), (5, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] a little girl was swept by a car in Paris, she was lying unconscious with a bit of blood from her nose, people were hysterical, I kept the mother in check cause she was trying to move her, then had to keep the people around in check cause they were physically trying to restrain her to prevent the mother to only touch her and she was getting totally mad...
 [(0, '[NEWLINE]'), (1, 'a'), (2, 'Ġlittle'), (3, 'Ġgirl'), (4, 'Ġwas'), (5, 'Ġswept'), (6, 'Ġby'), (7, 'Ġa'), (8, 'Ġcar'), (9, 'Ġin'), (10, 'ĠParis'), (11, 'Ġ,'), (12, 'Ġ'), (13, 'she'), (14, 'Ġwas'), (15, 'Ġlying'), (16, 'Ġunconscious'), (17, 'Ġwith'), (18, 'Ġa'), (19, 'Ġbit'), (20, 'Ġof'), (21, 'Ġblood'), (22, 'Ġfrom'), (23, 'Ġher'), (24, 'Ġnose'), (25, 'Ġ,'), (26, 'Ġ'), (27, 'people'), (28, 'Ġwere'), (29, 'Ġhysterical'), (30, 'Ġ,'), (31, 'Ġ'), (32, 'I'), (33, 'Ġkept'), (34, 'Ġthe'), (35, 'Ġmother'), (36, 'Ġin'), (37, 'Ġcheck'), (38, 'Ġcause'), (39, 'Ġshe'), (40, 'Ġwas'), (41, 'Ġtrying'), (42, 'Ġto'), (43, 'Ġmove'), (44, 'Ġher'), (45, 'Ġ,'), (46, 'Ġ'), (47, 'then'), (48, 'Ġhad'), (49, 'Ġto'), (50, 'Ġkeep'), (51, 'Ġthe'), (52, 'Ġpeople'), (53, 'Ġaround'), (54, 'Ġin'), (55, 'Ġcheck'), (56, 'Ġcause'), (57, 'Ġthey'), (58, 'Ġwere'), (59, 'Ġphysically'), (60, 'Ġtrying'), (61, 'Ġto'), (62, 'Ġrestrain'), (63, 'Ġher'), (64, 'Ġto'), (65, 'Ġprevent'), (66, 'Ġthe'), (67, 'Ġmother'), (68, 'Ġto'), (69, 'Ġonly'), (70, 'Ġtouch'), (71, 'Ġher'), (72, 'Ġand'), (73, 'Ġ'), (74, 'she'), (75, 'Ġwas'), (76, 'Ġgetting'), (77, 'Ġtotally'), (78, 'Ġmad'), (79, 'Ġ.'), (80, 'Ġ.'), (81, 'Ġ.')]
+[NEWLINE] All while calling the ER and taking a picture of the car's licence plate cause the driver kept near his open door all the time ( while he was being harassed and yelled at by like 10 persons ) . I've had no follow up on this incident.
 [(0, '[NEWLINE]'), (1, 'All'), (2, 'Ġwhile'), (3, 'Ġcalling'), (4, 'Ġthe'), (5, 'ĠER'), (6, 'Ġand'), (7, 'Ġtaking'), (8, 'Ġa'), (9, 'Ġpicture'), (10, 'Ġof'), (11, 'Ġthe'), (12, 'Ġcar'), (13, "'s"), (14, 'Ġlicence'), (15, 'Ġplate'), (16, 'Ġcause'), (17, 'Ġthe'), (18, 'Ġdriver'), (19, 'Ġkept'), (20, 'Ġnear'), (21, 'Ġhis'), (22, 'Ġopen'), (23, 'Ġdoor'), (24, 'Ġall'), (25, 'Ġthe'), (26, 'Ġtime'), (27, 'Ġ('), (28, 'Ġwhile'), (29, 'Ġhe'), (30, 'Ġwas'), (31, 'Ġbeing'), (32, 'Ġharassed'), (33, 'Ġand'), (34, 'Ġyelled'), (35, 'Ġat'), (36, 'Ġby'), (37, 'Ġlike'), (38, 'Ġ10'), (39, 'Ġpersons'), (40, 'Ġ)'), (41, 'Ġ'), (42, 'Ġ.'), (43, 'ĠI'), (44, "'ve"), (45, 'Ġhad'), (46, 'Ġno'), (47, 'Ġfollow'), (48, 'Ġup'), (49, 'Ġon'), (50, 'Ġthis'), (51, 'Ġincident'), (52, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Just 2 weeks ago, heard and felt a crash very close to my house, a drunken teen had just smashed his car full force into another's property wall after missing the turn, neighbors went out but no one had the head to keep the guy in check, cause he was walking near his ruined car, not understanding what just happened told him to stay put and sit and just generally speak to him so he doesn't freak out.
 [(0, '[NEWLINE]'), (1, 'Just'), (2, 'Ġ2'), (3, 'Ġweeks'), (4, 'Ġago'), (5, 'Ġ,'), (6, 'Ġheard'), (7, 'Ġand'), (8, 'Ġfelt'), (9, 'Ġa'), (10, 'Ġcrash'), (11, 'Ġvery'), (12, 'Ġclose'), (13, 'Ġto'), (14, 'Ġmy'), (15, 'Ġhouse'), (16, 'Ġ,'), (17, 'Ġ'), (18, 'a'), (19, 'Ġdrunken'), (20, 'Ġteen'), (21, 'Ġhad'), (22, 'Ġjust'), (23, 'Ġsmashed'), (24, 'Ġhis'), (25, 'Ġcar'), (26, 'Ġfull'), (27, 'Ġforce'), (28, 'Ġinto'), (29, 'Ġanother'), (30, "'s"), (31, 'Ġproperty'), (32, 'Ġwall'), (33, 'Ġafter'), (34, 'Ġmissing'), (35, 'Ġthe'), (36, 'Ġturn'), (37, 'Ġ,'), (38, 'Ġ'), (39, 'ne'), (40, 'igh'), (41, 'bors'), (42, 'Ġwent'), (43, 'Ġout'), (44, 'Ġbut'), (45, 'Ġno'), (46, 'Ġone'), (47, 'Ġhad'), (48, 'Ġthe'), (49, 'Ġhead'), (50, 'Ġto'), (51, 'Ġkeep'), (52, 'Ġthe'), (53, 'Ġguy'), (54, 'Ġin'), (55, 'Ġcheck'), (56, 'Ġ,'), (57, 'Ġcause'), (58, 'Ġhe'), (59, 'Ġwas'), (60, 'Ġwalking'), (61, 'Ġnear'), (62, 'Ġhis'), (63, 'Ġruined'), (64, 'Ġcar'), (65, 'Ġ,'), (66, 'Ġnot'), (67, 'Ġunderstanding'), (68, 'Ġwhat'), (69, 'Ġjust'), (70, 'Ġhappened'), (71, 'Ġtold'), (72, 'Ġhim'), (73, 'Ġto'), (74, 'Ġstay'), (75, 'Ġput'), (76, 'Ġand'), (77, 'Ġsit'), (78, 'Ġand'), (79, 'Ġjust'), (80, 'Ġgenerally'), (81, 'Ġspeak'), (82, 'Ġto'), (83, 'Ġhim'), (84, 'Ġso'), (85, 'Ġhe'), (86, 'Ġdoesn'), (87, "'t"), (88, 'Ġfreak'), (89, 'Ġout'), (90, 'Ġ.')]
+[NEWLINE] People were looking from a few meters, not doing anything.
 [(0, '[NEWLINE]'), (1, 'People'), (2, 'Ġwere'), (3, 'Ġlooking'), (4, 'Ġfrom'), (5, 'Ġa'), (6, 'Ġfew'), (7, 'Ġmeters'), (8, 'Ġ,'), (9, 'Ġnot'), (10, 'Ġdoing'), (11, 'Ġanything'), (12, 'Ġ.')]
+[NEWLINE] I called the ER, the guy stood up and tried to restart his car, had to take his keys from him, spent 20 minutes, making small talk, reassuring him and just generally checking if he wasn't internally hurt/losing consciousness/ had blood coming out from the mouth ears or nose.
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'Ġcalled'), (3, 'Ġthe'), (4, 'ĠER'), (5, 'Ġ,'), (6, 'Ġ'), (7, 'the'), (8, 'Ġguy'), (9, 'Ġstood'), (10, 'Ġup'), (11, 'Ġand'), (12, 'Ġtried'), (13, 'Ġto'), (14, 'Ġrestart'), (15, 'Ġhis'), (16, 'Ġcar'), (17, 'Ġ,'), (18, 'Ġ'), (19, 'had'), (20, 'Ġto'), (21, 'Ġtake'), (22, 'Ġhis'), (23, 'Ġkeys'), (24, 'Ġfrom'), (25, 'Ġhim'), (26, 'Ġ,'), (27, 'Ġspent'), (28, 'Ġ20'), (29, 'Ġminutes'), (30, 'Ġ,'), (31, 'Ġmaking'), (32, 'Ġsmall'), (33, 'Ġtalk'), (34, 'Ġ,'), (35, 'Ġreassuring'), (36, 'Ġhim'), (37, 'Ġand'), (38, 'Ġjust'), (39, 'Ġgenerally'), (40, 'Ġchecking'), (41, 'Ġif'), (42, 'Ġhe'), (43, 'Ġwasn'), (44, "'t"), (45, 'Ġinternally'), (46, 'Ġhurt'), (47, '/'), (48, 'l'), (49, 'osing'), (50, 'Ġconsciousness'), (51, '/'), (52, 'Ġhad'), (53, 'Ġblood'), (54, 'Ġcoming'), (55, 'Ġout'), (56, 'Ġfrom'), (57, 'Ġthe'), (58, 'Ġmouth'), (59, 'Ġears'), (60, 'Ġor'), (61, 'Ġnose'), (62, 'Ġ.')]
+[NEWLINE] He seemed ok appart from the shock and high level drunkenness. 
 [(0, '[NEWLINE]'), (1, 'He'), (2, 'Ġseemed'), (3, 'Ġok'), (4, 'Ġapp'), (5, 'art'), (6, 'Ġfrom'), (7, 'Ġthe'), (8, 'Ġshock'), (9, 'Ġand'), (10, 'Ġhigh'), (11, 'Ġlevel'), (12, 'Ġdrunken'), (13, 'ness'), (14, 'Ġ.'), (15, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Aaand... I work in a surgery unit and  the kind of gore I witness there doesn't shock me at all.
 [(0, '[NEWLINE]'), (1, 'A'), (2, 'a'), (3, 'and'), (4, 'Ġ.'), (5, 'Ġ.'), (6, 'Ġ.'), (7, 'Ġ'), (8, 'I'), (9, 'Ġwork'), (10, 'Ġin'), (11, 'Ġa'), (12, 'Ġsurgery'), (13, 'Ġunit'), (14, 'Ġand'), (15, 'Ġ'), (16, 'Ġthe'), (17, 'Ġkind'), (18, 'Ġof'), (19, 'Ġgore'), (20, 'ĠI'), (21, 'Ġwitness'), (22, 'Ġthere'), (23, 'Ġdoesn'), (24, "'t"), (25, 'Ġshock'), (26, 'Ġme'), (27, 'Ġat'), (28, 'Ġall'), (29, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] So yeah. It wasn't a person cut in half or whatever gore you can see on 4chan but  I think a bit of desensitization can help keep a leveled head in stressful situations.
 [(0, '[NEWLINE]'), (1, 'So'), (2, 'Ġyeah'), (3, 'Ġ.'), (4, 'ĠIt'), (5, 'Ġwasn'), (6, "'t"), (7, 'Ġa'), (8, 'Ġperson'), (9, 'Ġcut'), (10, 'Ġin'), (11, 'Ġhalf'), (12, 'Ġor'), (13, 'Ġwhatever'), (14, 'Ġgore'), (15, 'Ġyou'), (16, 'Ġcan'), (17, 'Ġsee'), (18, 'Ġon'), (19, 'Ġ4'), (20, 'chan'), (21, 'Ġbut'), (22, 'Ġ'), (23, 'ĠI'), (24, 'Ġthink'), (25, 'Ġa'), (26, 'Ġbit'), (27, 'Ġof'), (28, 'Ġdes'), (29, 'ens'), (30, 'it'), (31, 'ization'), (32, 'Ġcan'), (33, 'Ġhelp'), (34, 'Ġkeep'), (35, 'Ġa'), (36, 'Ġleveled'), (37, 'Ġhead'), (38, 'Ġin'), (39, 'Ġstressful'), (40, 'Ġsituations'), (41, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+</s>
 [(0, '</s>')]

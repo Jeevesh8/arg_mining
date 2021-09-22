@@ -1,40 +1,80 @@
+<s>CMV: EMTs, SAR, firefighters, police, etc. should receive “military discounts”.
 [(0, '<s>'), (1, 'CM'), (2, 'V'), (3, ':'), (4, 'ĠE'), (5, 'MT'), (6, 's'), (7, ','), (8, 'ĠSAR'), (9, ','), (10, 'Ġfirefighters'), (11, ','), (12, 'Ġpolice'), (13, ','), (14, 'Ġetc'), (15, '.'), (16, 'Ġshould'), (17, 'Ġreceive'), (18, 'ĠâĢ'), (19, 'ľ'), (20, 'military'), (21, 'Ġdiscounts'), (22, 'âĢ'), (23, 'Ŀ'), (24, '.')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] For those of you who donandt know, itands common ( at least in the US ) for businesses, transit agencies, etc. to give small discounts to military veterans to thank them for their service. 
 [(0, '[NEWLINE]'), (1, 'For'), (2, 'Ġthose'), (3, 'Ġof'), (4, 'Ġyou'), (5, 'Ġwho'), (6, 'Ġdon'), (7, 'and'), (8, 't'), (9, 'Ġknow'), (10, 'Ġ,'), (11, 'Ġit'), (12, 'ands'), (13, 'Ġcommon'), (14, 'Ġ('), (15, 'Ġat'), (16, 'Ġleast'), (17, 'Ġin'), (18, 'Ġthe'), (19, 'ĠUS'), (20, 'Ġ)'), (21, 'Ġfor'), (22, 'Ġbusinesses'), (23, 'Ġ,'), (24, 'Ġtransit'), (25, 'Ġagencies'), (26, 'Ġ,'), (27, 'Ġetc'), (28, 'Ġ.'), (29, 'Ġto'), (30, 'Ġgive'), (31, 'Ġsmall'), (32, 'Ġdiscounts'), (33, 'Ġto'), (34, 'Ġmilitary'), (35, 'Ġveterans'), (36, 'Ġto'), (37, 'Ġthank'), (38, 'Ġthem'), (39, 'Ġfor'), (40, 'Ġtheir'), (41, 'Ġservice'), (42, 'Ġ.'), (43, 'Ġ')]
+[NEWLINE] It seems that medical responders ( even hospital staff, actually ) and other emergency services do more good for society than soldiers and that such discounts should be given to them.
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġseems'), (3, 'Ġthat'), (4, 'Ġmedical'), (5, 'Ġresponders'), (6, 'Ġ('), (7, 'Ġeven'), (8, 'Ġhospital'), (9, 'Ġstaff'), (10, 'Ġ,'), (11, 'Ġactually'), (12, 'Ġ)'), (13, 'Ġand'), (14, 'Ġother'), (15, 'Ġemergency'), (16, 'Ġservices'), (17, 'Ġdo'), (18, 'Ġmore'), (19, 'Ġgood'), (20, 'Ġfor'), (21, 'Ġsociety'), (22, 'Ġthan'), (23, 'Ġsoldiers'), (24, 'Ġand'), (25, 'Ġthat'), (26, 'Ġ'), (27, 'such'), (28, 'Ġdiscounts'), (29, 'Ġshould'), (30, 'Ġbe'), (31, 'Ġgiven'), (32, 'Ġto'), (33, 'Ġthem'), (34, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] As for the " Theyandre not risking their lives for our country. " argument, police officers do that too, and for citizens rather than the country and its interests.
 [(0, '[NEWLINE]'), (1, 'As'), (2, 'Ġfor'), (3, 'Ġthe'), (4, 'Ġ"'), (5, 'ĠThey'), (6, 'andre'), (7, 'Ġnot'), (8, 'Ġrisking'), (9, 'Ġtheir'), (10, 'Ġlives'), (11, 'Ġfor'), (12, 'Ġour'), (13, 'Ġcountry'), (14, 'Ġ.'), (15, 'Ġ"'), (16, 'Ġargument'), (17, 'Ġ,'), (18, 'Ġpolice'), (19, 'Ġofficers'), (20, 'Ġdo'), (21, 'Ġthat'), (22, 'Ġtoo'), (23, 'Ġ,'), (24, 'Ġand'), (25, 'Ġfor'), (26, 'Ġcitizens'), (27, 'Ġrather'), (28, 'Ġthan'), (29, 'Ġthe'), (30, 'Ġcountry'), (31, 'Ġand'), (32, 'Ġits'), (33, 'Ġinterests'), (34, 'Ġ.')]
+[NEWLINE] Some might argue that soldiers do the US a disservice rather than help, but thatands [usually] the fault of their leaders and therefore not relevant to the debate.
 [(0, '[NEWLINE]'), (1, 'Some'), (2, 'Ġmight'), (3, 'Ġargue'), (4, 'Ġthat'), (5, 'Ġsoldiers'), (6, 'Ġdo'), (7, 'Ġthe'), (8, 'ĠUS'), (9, 'Ġa'), (10, 'Ġdis'), (11, 'service'), (12, 'Ġrather'), (13, 'Ġthan'), (14, 'Ġhelp'), (15, 'Ġ,'), (16, 'Ġbut'), (17, 'Ġ'), (18, 'that'), (19, 'ands'), (20, 'Ġ['), (21, 'usually'), (22, ']'), (23, 'Ġthe'), (24, 'Ġfault'), (25, 'Ġof'), (26, 'Ġtheir'), (27, 'Ġleaders'), (28, 'Ġand'), (29, 'Ġtherefore'), (30, 'Ġnot'), (31, 'Ġrelevant'), (32, 'Ġto'), (33, 'Ġthe'), (34, 'Ġdebate'), (35, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Iandm really hoping thereands a good reason behind the status quo, but weandll see.
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'and'), (3, 'm'), (4, 'Ġreally'), (5, 'Ġhoping'), (6, 'Ġthere'), (7, 'ands'), (8, 'Ġa'), (9, 'Ġgood'), (10, 'Ġreason'), (11, 'Ġbehind'), (12, 'Ġthe'), (13, 'Ġstatus'), (14, 'Ġquo'), (15, 'Ġ,'), (16, 'Ġbut'), (17, 'Ġwe'), (18, 'and'), (19, 'll'), (20, 'Ġsee'), (21, 'Ġ.')]
+[NEWLINE] [It looks like thereands even less reason behind it than I initially thought, actually. ]
 [(0, '[NEWLINE]'), (1, '['), (2, 'It'), (3, 'Ġlooks'), (4, 'Ġlike'), (5, 'Ġthere'), (6, 'ands'), (7, 'Ġeven'), (8, 'Ġless'), (9, 'Ġreason'), (10, 'Ġbehind'), (11, 'Ġit'), (12, 'Ġthan'), (13, 'ĠI'), (14, 'Ġinitially'), (15, 'Ġthought'), (16, 'Ġ,'), (17, 'Ġactually'), (18, 'Ġ.'), (19, 'Ġ]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] [edits in brackets]
 [(0, '[NEWLINE]'), (1, '['), (2, 'ed'), (3, 'its'), (4, 'Ġin'), (5, 'Ġbrackets'), (6, ']')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] [[My viewands been changed. ] (
 [(0, '[NEWLINE]'), (1, '[['), (2, 'My'), (3, 'Ġview'), (4, 'ands'), (5, 'Ġbeen'), (6, 'Ġchanged'), (7, 'Ġ.'), (8, 'Ġ]'), (9, 'Ġ(')]
+[URL] ) In summary, I think that  EMS people are just as deserving of these discounts ( and that many more people contribute enough to be placed in the same category ) , but I now believe - for the same reason - that  these discounts shouldnandt be offered at all. ]
 [(0, '[URL]'), (1, ')'), (2, 'ĠIn'), (3, 'Ġsummary'), (4, 'Ġ,'), (5, 'ĠI'), (6, 'Ġthink'), (7, 'Ġthat'), (8, 'Ġ'), (9, 'ĠEMS'), (10, 'Ġpeople'), (11, 'Ġare'), (12, 'Ġjust'), (13, 'Ġas'), (14, 'Ġdeserving'), (15, 'Ġof'), (16, 'Ġthese'), (17, 'Ġdiscounts'), (18, 'Ġ('), (19, 'Ġand'), (20, 'Ġthat'), (21, 'Ġmany'), (22, 'Ġmore'), (23, 'Ġpeople'), (24, 'Ġcontribute'), (25, 'Ġenough'), (26, 'Ġto'), (27, 'Ġbe'), (28, 'Ġplaced'), (29, 'Ġin'), (30, 'Ġthe'), (31, 'Ġsame'), (32, 'Ġcategory'), (33, 'Ġ)'), (34, 'Ġ'), (35, 'Ġ,'), (36, 'Ġbut'), (37, 'ĠI'), (38, 'Ġnow'), (39, 'Ġbelieve'), (40, 'Ġ-'), (41, 'Ġfor'), (42, 'Ġthe'), (43, 'Ġsame'), (44, 'Ġreason'), (45, 'Ġ-'), (46, 'Ġthat'), (47, 'Ġ'), (48, 'Ġthese'), (49, 'Ġdiscounts'), (50, 'Ġshouldn'), (51, 'and'), (52, 't'), (53, 'Ġbe'), (54, 'Ġoffered'), (55, 'Ġat'), (56, 'Ġall'), (57, 'Ġ.'), (58, 'Ġ]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE] No they should not. 
 [(0, '[NEWLINE]'), (1, 'No'), (2, 'Ġthey'), (3, 'Ġshould'), (4, 'Ġnot'), (5, 'Ġ.'), (6, 'Ġ')]
+[NEWLINE] Those people are civilians with full civil rights and in the case of police, are in a privileged position with regard to the law. 
 [(0, '[NEWLINE]'), (1, 'Those'), (2, 'Ġpeople'), (3, 'Ġare'), (4, 'Ġcivilians'), (5, 'Ġwith'), (6, 'Ġfull'), (7, 'Ġcivil'), (8, 'Ġrights'), (9, 'Ġand'), (10, 'Ġ'), (11, 'in'), (12, 'Ġthe'), (13, 'Ġcase'), (14, 'Ġof'), (15, 'Ġpolice'), (16, 'Ġ,'), (17, 'Ġare'), (18, 'Ġin'), (19, 'Ġa'), (20, 'Ġprivileged'), (21, 'Ġposition'), (22, 'Ġwith'), (23, 'Ġregard'), (24, 'Ġto'), (25, 'Ġthe'), (26, 'Ġlaw'), (27, 'Ġ.'), (28, 'Ġ')]
+[NEWLINE] Military personnel make substantial sacrifices and frequently live in poor conditions. 
 [(0, '[NEWLINE]'), (1, 'Military'), (2, 'Ġpersonnel'), (3, 'Ġmake'), (4, 'Ġsubstantial'), (5, 'Ġsacrifices'), (6, 'Ġand'), (7, 'Ġfrequently'), (8, 'Ġlive'), (9, 'Ġin'), (10, 'Ġpoor'), (11, 'Ġconditions'), (12, 'Ġ.'), (13, 'Ġ')]
+[NEWLINE] While I disagree with the hero fetish that is popular these days,  I understand and support discounts for military personnel. 
 [(0, '[NEWLINE]'), (1, 'While'), (2, 'ĠI'), (3, 'Ġdisagree'), (4, 'Ġwith'), (5, 'Ġthe'), (6, 'Ġhero'), (7, 'Ġfetish'), (8, 'Ġthat'), (9, 'Ġis'), (10, 'Ġpopular'), (11, 'Ġthese'), (12, 'Ġdays'), (13, 'Ġ,'), (14, 'Ġ'), (15, 'ĠI'), (16, 'Ġunderstand'), (17, 'Ġand'), (18, 'Ġsupport'), (19, 'Ġdiscounts'), (20, 'Ġfor'), (21, 'Ġmilitary'), (22, 'Ġpersonnel'), (23, 'Ġ.'), (24, 'Ġ')]
+[NEWLINE]  Also, note that EMS personnel are frequently employes of private corporations. 
 [(0, '[NEWLINE]'), (1, 'ĠAlso'), (2, 'Ġ,'), (3, 'Ġnote'), (4, 'Ġthat'), (5, 'ĠEMS'), (6, 'Ġpersonnel'), (7, 'Ġare'), (8, 'Ġfrequently'), (9, 'Ġemploy'), (10, 'es'), (11, 'Ġof'), (12, 'Ġprivate'), (13, 'Ġcorporations'), (14, 'Ġ.'), (15, 'Ġ')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE] Iandm not sure how sacrificing rights makes them more deserving of such discounts. 
 [(0, '[NEWLINE]'), (1, 'I'), (2, 'and'), (3, 'm'), (4, 'Ġnot'), (5, 'Ġsure'), (6, 'Ġhow'), (7, 'Ġsacrificing'), (8, 'Ġrights'), (9, 'Ġmakes'), (10, 'Ġthem'), (11, 'Ġmore'), (12, 'Ġdeserving'), (13, 'Ġof'), (14, 'Ġsuch'), (15, 'Ġdiscounts'), (16, 'Ġ.'), (17, 'Ġ')]
+[NEWLINE]  After all, rewarding people for suffering rather than production is what the commies do[! ]
 [(0, '[NEWLINE]'), (1, 'ĠAfter'), (2, 'Ġall'), (3, 'Ġ,'), (4, 'Ġrewarding'), (5, 'Ġpeople'), (6, 'Ġfor'), (7, 'Ġsuffering'), (8, 'Ġrather'), (9, 'Ġthan'), (10, 'Ġproduction'), (11, 'Ġis'), (12, 'Ġwhat'), (13, 'Ġthe'), (14, 'Ġcomm'), (15, 'ies'), (16, 'Ġdo'), (17, '['), (18, 'Ġ!'), (19, 'Ġ]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER1]
 [(0, '[USER1]')]
+[NEWLINE] War for oil sustains our economy. 
 [(0, '[NEWLINE]'), (1, 'War'), (2, 'Ġfor'), (3, 'Ġoil'), (4, 'Ġsust'), (5, 'ains'), (6, 'Ġour'), (7, 'Ġeconomy'), (8, 'Ġ.'), (9, 'Ġ')]
+[NEWLINE]  Not sure where you got your idea of communism, but ok.
 [(0, '[NEWLINE]'), (1, 'ĠNot'), (2, 'Ġsure'), (3, 'Ġwhere'), (4, 'Ġyou'), (5, 'Ġgot'), (6, 'Ġyour'), (7, 'Ġidea'), (8, 'Ġof'), (9, 'Ġcommunism'), (10, 'Ġ,'), (11, 'Ġbut'), (12, 'Ġok'), (13, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[USER0]
 [(0, '[USER0]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE] Note the irony punctuation.
 [(0, '[NEWLINE]'), (1, 'Note'), (2, 'Ġthe'), (3, 'Ġirony'), (4, 'Ġpunct'), (5, 'uation'), (6, 'Ġ.')]
+[NEWLINE] It was a joke based on Randands criticism of loving people for their flaws ( I havenandt seen this happen outside of * Atlas Shrugged *. ) and the stereotype of the militaristic, commie-hatinand andMurican.
 [(0, '[NEWLINE]'), (1, 'It'), (2, 'Ġwas'), (3, 'Ġa'), (4, 'Ġjoke'), (5, 'Ġbased'), (6, 'Ġon'), (7, 'ĠRand'), (8, 'ands'), (9, 'Ġcriticism'), (10, 'Ġof'), (11, 'Ġloving'), (12, 'Ġpeople'), (13, 'Ġfor'), (14, 'Ġtheir'), (15, 'Ġflaws'), (16, 'Ġ('), (17, 'ĠI'), (18, 'Ġhaven'), (19, 'and'), (20, 't'), (21, 'Ġseen'), (22, 'Ġthis'), (23, 'Ġhappen'), (24, 'Ġoutside'), (25, 'Ġof'), (26, 'Ġ*'), (27, 'ĠAtlas'), (28, 'ĠSh'), (29, 'rugged'), (30, 'Ġ*'), (31, 'Ġ.'), (32, 'Ġ)'), (33, 'Ġand'), (34, 'Ġthe'), (35, 'Ġstereotype'), (36, 'Ġof'), (37, 'Ġthe'), (38, 'Ġmilitar'), (39, 'istic'), (40, 'Ġ,'), (41, 'Ġcomm'), (42, 'ie'), (43, '-'), (44, 'hat'), (45, 'in'), (46, 'and'), (47, 'Ġand'), (48, 'Mur'), (49, 'ican'), (50, 'Ġ.')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+[NEWLINE]
 [(0, '[NEWLINE]')]
+</s>
 [(0, '</s>')]
