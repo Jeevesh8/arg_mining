@@ -1,5 +1,4 @@
 from flax.core.frozen_dict import freeze
-from ..configs import tokenizer
 
 config = {'arg_components': 
           {"other": 0,
@@ -11,7 +10,7 @@ config = {'arg_components':
           "batch_size": 512*8}
 
 config["pad_for"] = {
-    "tokenized_essays": tokenizer.pad_token_id,
+    "tokenized_essays": None,                               #Set to tokenizer.pad_token_id if None
     "comp_type_labels": config["arg_components"]["other"],
 }
 

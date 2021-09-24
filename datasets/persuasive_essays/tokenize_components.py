@@ -49,11 +49,11 @@ def get_comp_wise_essays(data_file: str) -> List[List[Tuple[str, str]]]:
                 if prev_comp_type=='O':
                     comp += word+' '
                 else:
-                    comp_wise_essay.append((comp.strip().lower(), comp_type_from_tag(prev_comp_type)))
+                    comp_wise_essay.append((comp.strip(), comp_type_from_tag(prev_comp_type)))
                     comp = word + ' '
             
             elif comp_type.startswith('B'):
-                comp_wise_essay.append((comp.strip().lower(), comp_type_from_tag(prev_comp_type)))
+                comp_wise_essay.append((comp.strip(), comp_type_from_tag(prev_comp_type)))
                 comp = word + ' '
             
             elif comp_type.startswith('I'):

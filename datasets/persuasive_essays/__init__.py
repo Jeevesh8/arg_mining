@@ -1,10 +1,11 @@
-import os
+import os, subprocess, shlex
 from collections import namedtuple
 from typing import List, Dict, Tuple, Optional
 
 import tensorflow as tf
 import transformers
 from transformers import BertTokenizer
+from flax.core.frozen_dict import freeze, unfreeze
 
 from .tokenize_components import get_comp_wise_essays, get_tokenized_essay
 from .configs import config as data_config
@@ -135,13 +136,16 @@ def get_dataset(data_file: List[str], tokenizer: transformers.PreTrainedTokenize
 
 def load_dataset(
     pe_dir: str = None,
-    tokenizer: Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-cased'),
+    tokenizer: Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-cased',
+                                                                                          bos_token = "[CLS]",
+                                                                                          eos_token = "[SEP]"),
     as_numpy_iter: bool = True,
 ):
     """Returns a tuple of train, valid, test datasets(according to {train|test|vaild}.txt files in pe_dir)
     Args:
         pe_dir:         The directory having the persuasive essays dataset. Download data from 
-                        https://github.com/UKPLab/naacl18-multitask_argument_mining/tree/master/dataSplits/fullData/essays
+                        https://github.com/UKPLab/naacl18-multitask_argument_mining/tree/master/dataSplits/fullData/essays.
+                        Automatically downloaded, if None.
         
         tokenizer:      The tokenizer to be used for tokenizing the essays. Must inherit from PreTrainedTokenizer.
         
@@ -151,7 +155,16 @@ def load_dataset(
         Tuple of 3 tensorflow datasets, corresponding to train, valid and test data. None is returned for the datasets
         for which no file is present in pe_dir.
     """
-
+    if pe_dir is None:
+        subprocess.call(shlex.split("git clone https://github.com/UKPLab/naacl18-multitask_argument_mining/"))
+        pe_dir = os.path.join(os.getcwd(), "naacl18-multitask_argument_mining/dataSplits/fullData/essays")
+    
+    if data_config["pad_for"]["tokenized_essasys"] is None:
+        global data_config
+        data_config = unfreeze(data_config)
+        data_config["pad_for"]["tokenized_essays"] = tokenizer.pad_token_id
+        data_config = freeze(data_config)
+    
     try:
         train_dataset = get_dataset(os.path.join(pe_dir, 'train.txt'), tokenizer)
     except FileNotFoundError:
