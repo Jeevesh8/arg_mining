@@ -135,7 +135,7 @@ def get_dataset(data_file: List[str], tokenizer: transformers.PreTrainedTokenize
 
 def load_dataset(
     pe_dir: str = None,
-    tokenizer: Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-uncased'),
+    tokenizer: Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-cased'),
     as_numpy_iter: bool = True,
 ):
     """Returns a tuple of train, valid, test datasets(according to {train|test|vaild}.txt files in pe_dir)
