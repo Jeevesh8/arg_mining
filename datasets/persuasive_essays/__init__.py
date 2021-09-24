@@ -105,12 +105,11 @@ def _batch_examples(dataset: tf.data.Dataset, batch_size: int, max_length: int, 
         return grouped_dataset.padded_batch(bucket_batch_size,
                                             padded_shapes=([None],[None]),
                                             padding_values=tuple(data_config["pad_for"].values()))
-    return dataset.apply(
-        tf.data.experimental.group_by_window(
+    return dataset.group_by_window(
           key_func=example_to_bucket_id,
           reduce_func=batching_fn,
           window_size=None,
-          window_size_func=window_size_fn)).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+          window_size_func=window_size_fn)
 
 def get_dataset(data_file: List[str], tokenizer: transformers.PreTrainedTokenizer):
     def callable_gen():
