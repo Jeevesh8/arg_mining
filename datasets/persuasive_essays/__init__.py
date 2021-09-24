@@ -17,7 +17,7 @@ def convert_to_named_tuple(tokenized_essays, comp_type_labels):
 
 
 def data_generator(data_file: str, tokenizer: transformers.PreTrainedTokenizer):
-    for essay in get_comp_wise_essays(data_file, tokenizer):
+    for essay in get_comp_wise_essays(data_file):
         yield get_tokenized_essay(essay, tokenizer)
 
 
@@ -147,9 +147,8 @@ def load_dataset(
                         https://github.com/UKPLab/naacl18-multitask_argument_mining/tree/master/dataSplits/fullData/essays.
                         Automatically downloaded, if None.
         
-        tokenizer:      The tokenizer to be used for tokenizing the essays. Must inherit from PreTrainedTokenizer.
-        
-        as_numpy_iter:  Tensorflow dataset is converted to numpy iterator, before returning.
+        tokenizer:        The tokenizer to be used for tokenizing the essays. Must inherit from PreTrainedTokenizer.
+        as_numpy_iter:    Tensorflow dataset is converted to numpy iterator, before returning.
 
     Returns:
         Tuple of 3 tensorflow datasets, corresponding to train, valid and test data. None is returned for the datasets
@@ -159,8 +158,8 @@ def load_dataset(
         subprocess.call(shlex.split("git clone https://github.com/UKPLab/naacl18-multitask_argument_mining/"))
         pe_dir = os.path.join(os.getcwd(), "naacl18-multitask_argument_mining/dataSplits/fullData/essays")
     
-    if data_config["pad_for"]["tokenized_essasys"] is None:
-        global data_config
+    global data_config
+    if data_config["pad_for"]["tokenized_esasys"] is None:
         data_config = unfreeze(data_config)
         data_config["pad_for"]["tokenized_essays"] = tokenizer.pad_token_id
         data_config = freeze(data_config)
@@ -171,12 +170,12 @@ def load_dataset(
         train_dataset = None
     
     try:
-        valid_dataset = get_dataset(os.path.join(pe_dir, 'dev.txt'))
+        valid_dataset = get_dataset(os.path.join(pe_dir, 'dev.txt'), tokenizer)
     except FileNotFoundError:
         valid_dataset = None
     
     try:
-        test_dataset = get_dataset(os.path.join(pe_dir, 'test.txt'))
+        test_dataset = get_dataset(os.path.join(pe_dir, 'test.txt'), tokenizer)
     except FileNotFoundError:
         test_dataset = None
     
