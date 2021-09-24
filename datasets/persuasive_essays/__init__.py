@@ -127,7 +127,7 @@ def get_dataset(data_file: List[str], tokenizer: transformers.PreTrainedTokenize
                                                                         name="comp_type_labels"),
                                                           ))
     
-    dataset = _batch_examples(sample_wise_dataset, 8194, 4096)
+    dataset = _batch_examples(sample_wise_dataset, data_config["batch_size"], data_config["max_len"])
     dataset = dataset.map(convert_to_named_tuple)
     
     return dataset

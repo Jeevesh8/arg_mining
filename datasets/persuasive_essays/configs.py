@@ -7,7 +7,8 @@ config = {'arg_components':
            "I-C": 2,
            "B-P": 3,
            "I-P": 4},
-          "max_len": 4096}
+          "max_len": 512,
+          "batch_size": 512*8}
 
 config["pad_for"] = {
     "tokenized_essays": tokenizer.pad_token_id,
