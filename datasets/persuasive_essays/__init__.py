@@ -159,7 +159,7 @@ def load_dataset(
         pe_dir = os.path.join(os.getcwd(), "naacl18-multitask_argument_mining/dataSplits/fullData/essays")
     
     global data_config
-    if data_config["pad_for"]["tokenized_esasys"] is None:
+    if data_config["pad_for"]["tokenized_essays"] is None:
         data_config = unfreeze(data_config)
         data_config["pad_for"]["tokenized_essays"] = tokenizer.pad_token_id
         data_config = freeze(data_config)
