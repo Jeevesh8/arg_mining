@@ -76,12 +76,12 @@ def get_tokenized_essay(essay: List[Tuple[str, str]],
                 the text of component and the type of component(O/C/P)
     Returns:
         tokenized_essay:    A list of ints corresponding to tokenization of each word of essay.
-        comp_type_tags:     Int corres. to the tag ["other", "B-C", "I-C", "B-P", "I-P"] of each token in 
+        comp_type_tags:     Int corres. to the tag ["O", "B-C", "I-C", "B-P", "I-P"] of each token in 
                             tokenized_essay.
     """
     
     tokenized_essay = [tokenizer.bos_token_id]
-    comp_type_tags = [config["arg_components"]["other"]]
+    comp_type_tags = [config["arg_components"]["O"]]
 
     for comp_text, comp_type in essay:
         tokenized_comp = tokenizer.encode(comp_text)[1:-1]
@@ -92,12 +92,12 @@ def get_tokenized_essay(essay: List[Tuple[str, str]],
         tokenized_essay += tokenized_comp
 
         if comp_type=='O':
-            comp_type_tags += [config["arg_components"]["other"]]*len(tokenized_comp)
+            comp_type_tags += [config["arg_components"]["O"]]*len(tokenized_comp)
         else:
             comp_type_tags += [config["arg_components"]["B-"+comp_type]] + [config["arg_components"]["I-"+comp_type]]*(len(tokenized_comp)-1)
     
     tokenized_essay.append(tokenizer.eos_token_id)
-    comp_type_tags.append(config["arg_components"]["other"])
+    comp_type_tags.append(config["arg_components"]["O"])
 
     return tokenized_essay, comp_type_tags
 
