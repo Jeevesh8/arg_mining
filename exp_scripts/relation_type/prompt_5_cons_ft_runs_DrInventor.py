@@ -67,20 +67,14 @@ def get_tok_model(tokenizer_version, model_version):
         transformer_model.resize_token_embeddings(len(tokenizer))
     return tokenizer, transformer_model
 
-"""#### Load in discourse markers"""
-
-with open('./Discourse_Markers.txt') as f:
-    discourse_markers = [dm.strip() for dm in f.readlines()]
-
 """#### Function to get train, test data (50/50 split currently)"""
 
 def get_datasets(train_sz=100, test_sz=0):
     train_dataset, valid_dataset, test_dataset = load_dataset(tokenizer=tokenizer,
-                                                              max_len=4096-341,
+                                                              max_len=4096-337-12,
                                                               train_sz=train_sz,
                                                               test_sz=test_sz,
-                                                              shuffle=True,
-                                                              mask_tokens=discourse_markers)
+                                                              shuffle=True,)
     return train_dataset, valid_dataset, test_dataset
 
 """### Define linear layer for a relation type prediction"""
@@ -99,7 +93,7 @@ def get_global_attention_mask(tokenized_threads: np.ndarray) -> np.ndarray:
     """
     mask = np.zeros_like(tokenized_threads)
     for token_id in [tokenizer.sep_token_id, tokenizer.cls_token_id,
-                     tokenizer.bos_token_id, tokenizer.eos_token_id]:
+                     tokenizer.bos_token_id, tokenizer.eos_token_id,]:
         mask = np.where(tokenized_threads==token_id, 1, mask)
     return np.array(mask, dtype=bool)
 
@@ -107,7 +101,7 @@ def get_spans(comp_type_labels, length):
     
     def detect_span(start_idx: int, span_t: str):
         j = start_idx
-        while comp_type_labels[j]==ac_dict[span_t] and j<length:
+        while j<length and comp_type_labels[j]==ac_dict[span_t]:
             j += 1
         end_idx = j
         return start_idx, end_idx
@@ -157,17 +151,20 @@ def generate_prompts(tokenized_thread, comp_type_labels, refers_to_and_type):
         to_start_idx, to_end_idx = spans_lis[link_to-1]
         
         prompt = np.concatenate([tokenized_thread[:length],
-                                 np.array(tokenizer.encode(" We said: \"")),
+                                 np.array(tokenizer.encode("Explaination: We said: \""))[1:-1],
                                  tokenized_thread[from_start_idx:from_end_idx],
+                                 np.array(tokenizer.encode("\""))[1:-1],
                                  np.array([tokenizer.mask_token_id]*num_mask_pos),
-                                 tokenized_thread[to_start_idx:to_end_idx],])
+                                 np.array(tokenizer.encode("\""))[1:-1],
+                                 tokenized_thread[to_start_idx:to_end_idx],
+                                 np.array(tokenizer.encode("\""))[1:-1],])
         
-        if tokenizer.max_token_length<prompt.shape[0]:
+        if tokenizer.model_max_length<prompt.shape[0]:
             raise AssertionError("Please set max_len in load_dataset so that the sequence length:", length,
-                                 "doesn't execeed the maximum length:", tokenizer.max_token_length, 
+                                 "doesn't execeed the maximum length:", tokenizer.model_max_length, 
                                  "after adding prompt of length:", prompt.shape[0]-length)
         
-        yield (prompt, rel_type)
+        yield (prompt, int(rel_type))
 
 def get_prompt_generator(dataset, batch_size, shuffle=True):
     prompt_dataset = []
@@ -198,7 +195,7 @@ def get_prompt_generator(dataset, batch_size, shuffle=True):
                 max_len = max([prompt.shape[0] for prompt in batch_of_prompts])
                 batch_of_prompts = [np.concatenate([prompt, np.array([tokenizer.pad_token_id]*(max_len-prompt.shape[0]))])
                                     for prompt in batch_of_prompts]
-                yield batch_of_prompts, rel_type_labels
+                yield np.array(batch_of_prompts, dtype=np.int32), np.array(rel_type_labels, dtype=np.int32)
                 batch_of_prompts, rel_type_labels = [], []
     
     return prompt_dataset_gen
@@ -224,7 +221,6 @@ def compute(batch: Tuple[torch.Tensor, torch.Tensor, torch.Tensor],
         summed over all samples of the batch (if preds is False).
     """
     prompt_threads, rel_type_labels, global_attention_mask = batch
-    
     pad_mask = torch.where(prompt_threads!=tokenizer.pad_token_id, 1, 0)
     
     hidden_state = transformer_model(input_ids=prompt_threads,
@@ -279,11 +275,10 @@ def train(dataset):
 def evaluate(dataset, metric):
     
     int_to_labels = {v:k for k, v in rel_type_dict.items()}
-
+    print("Evaluating")
     with torch.no_grad():
         for prompt_threads, rel_type_labels in get_prompt_generator(dataset,
-                                                                    batch_size=data_config["batch_size"])():
-            print("Evaluating") 
+                                                                    batch_size=2)():
             global_attention_mask = torch.tensor(get_global_attention_mask(prompt_threads), 
                                                  device=device)
             
@@ -310,7 +305,7 @@ def evaluate(dataset, metric):
 n_epochs = 30
 n_runs = 5
 for (train_sz, test_sz) in [(50,50),(80,20)]:
-    print("\tTrain size:", train_sz, "Test size:", test_sz)
+    print("Train size:", train_sz, "Test size:", test_sz)
 
     for (tokenizer_version, model_version) in [('../home/arg_mining/4epoch_complete/tokenizer', '../home/arg_mining/4epoch_complete/model/'),
                                                #('arg_mining/smlm_pretrained_iter5_0/tokenizer/', 'arg_mining/smlm_pretrained_iter5_0/model/'),
@@ -318,7 +313,7 @@ for (train_sz, test_sz) in [(50,50),(80,20)]:
                                                #('arg_mining/smlm_pretrained_iter7_0/tokenizer/', 'arg_mining/smlm_pretrained_iter7_0/model/'),]:
                                                ('allenai/longformer-base-4096', 'allenai/longformer-base-4096')]:
 
-        print("Tokenizer:", tokenizer_version, "Model:", model_version)
+        print("\tTokenizer:", tokenizer_version, "Model:", model_version)
         
         for run in range(n_runs):
             print(f"\n\n\t\t-------------RUN {run+1}-----------")
@@ -337,7 +332,7 @@ for (train_sz, test_sz) in [(50,50),(80,20)]:
 
             for epoch in range(n_epochs):
                 print(f"\t\t\t------------EPOCH {epoch+1}---------------")
-                evaluate(test_dataset, metric)
                 train(train_dataset)
+                evaluate(test_dataset, metric)
            
             del tokenizer, transformer_model, linear_layer
