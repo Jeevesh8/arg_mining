@@ -16,7 +16,7 @@ def refine(annotations: List[str], keep_data_type: bool=True) -> List[Tuple[str,
                corresponding to the component in the .txt file.
         
         And a list of tuples of form (relation type, arg1 id, arg2 id), where:
-            1. relation type is one of ["support", "contradicts", "parts_of_same"]
+            1. relation type is one of ["supports", "contradicts", "parts_of_same"]
             2. arg1 id and arg2 id are the ids of the components as specified in .ann 
                files.
     
@@ -35,7 +35,7 @@ def refine(annotations: List[str], keep_data_type: bool=True) -> List[Tuple[str,
             if rel_type=="semantically_same":
                 rel_type = "parts_of_same"
             
-            if rel_type not in ["support", "contradicts", "parts_of_same"]:
+            if rel_type not in ["supports", "contradicts", "parts_of_same"]:
                 raise ValueError("Relation type not recognized:", rel_type)
             
             comp1, comp2 = comp1.split(":")[1], comp2.split(":")[1]
