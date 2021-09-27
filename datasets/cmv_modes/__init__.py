@@ -110,9 +110,7 @@ def get_op_wise_split(filelist: List[str]) -> Dict[str, List[str]]:
 def load_dataset(
     cmv_modes_dir: str = None,
     mask_tokens: Optional[List[str]] = None,
-    tokenizer : Optional[transformers.PreTrainedTokenizer] = BertTokenizer.from_pretrained('bert-base-cased',
-                                                                                          bos_token="[CLS]",
-                                                                                          eos_token="[SEP]"),
+    tokenizer : Optional[transformers.PreTrainedTokenizer] = None,
     train_sz: float = 100,
     valid_sz: float = 0,
     test_sz: float = 0,
@@ -142,7 +140,10 @@ def load_dataset(
     if cmv_modes_dir is None:
         subprocess.call(shlex.split("git clone https://github.com/chridey/change-my-view-modes"))
         cmv_modes_dir = os.path.join(os.getcwd(), "change-my-view-modes/v2.0/")
-
+    if tokenizer is None:
+        tokenizer = BertTokenizer.from_pretrained('bert-base-cased', bos_token="[CLS]", eos_token="[SEP]")
+        tokenizer.add_tokens(data_config["special_tokens"], special_tokens=True)
+    
     splits = get_op_wise_split(glob.glob(os.path.join(cmv_modes_dir, "*/*")))
 
     op_wise_splits_lis = list(splits.values())
