@@ -11,18 +11,36 @@ def refine(annotations: List[str], keep_data_type: bool=True) -> List[Tuple[str,
                         will be in the final list.
     Returns:
         A list of tuples of form (component type, start index, end index), where:
-        1. component type is one of ["background_claim", "own_claim", "data"]
-        2. start_idx and end_idx are the indices denoting the span of characters
-           corresponding to the component in the .txt file.
+            1. component type is one of ["background_claim", "own_claim", "data"]
+            2. start_idx and end_idx are the indices denoting the span of characters
+               corresponding to the component in the .txt file.
+        
+        And a list of tuples of form (relation type, arg1 id, arg2 id), where:
+            1. relation type is one of ["support", "contradicts", "parts_of_same"]
+            2. arg1 id and arg2 id are the ids of the components as specified in .ann 
+               files.
     
-    NOTE: The returned list is sorted in th order of occurance of spans in the 
-          .txt file(i.e., in ascending order of start index)
+    NOTE: The returned list of component types is sorted in th order of occurance of spans 
+          in the  .txt file(i.e., in ascending order of start index)
     """
     refined_annotations = []
+    rel_type_annotations = []
+
     for i, annotation in enumerate(annotations):
         id, info = annotation.split('\t')[0:2]
         
         if id[0]=='R':
+            rel_type, comp1, comp2 = info.split()
+            
+            if rel_type=="semantically_same":
+                rel_type = "parts_of_same"
+            
+            if rel_type not in ["support", "contradicts", "parts_of_same"]:
+                raise ValueError("Relation type not recognized:", rel_type)
+            
+            comp1, comp2 = comp1.split(":")[1], comp2.split(":")[1]
+            rel_type_annotations.append((rel_type, comp1, comp2))
+            
             continue
         
         if not keep_data_type and 'claim' not in info.split(' ')[0].split('_'):
@@ -49,27 +67,27 @@ def refine(annotations: List[str], keep_data_type: bool=True) -> List[Tuple[str,
             raise ValueError("Unknown component type: " + 
                              component_type +" in annotation number: "+str(i+1))
         
-        refined_annotations.append((component_type, int(start_idx), int(end_idx)))
+        refined_annotations.append((id, component_type, int(start_idx), int(end_idx)))
         
-    return sorted(refined_annotations, key=lambda annotation: annotation[1])
+    return sorted(refined_annotations, key=lambda annotation: annotation[2]), rel_type_annotations
 
 def add_component_type_tags(paper_str: str, 
                             refined_annotations: List[Tuple[str, int, int]]) -> str:
-    """Adds <comp_type>.*</comp_type> tags around the text in 
+    """Adds <comp_type id="Tn">.*</comp_type> tags around the text in 
     paper_str corresponding to the components present in 
     refined_annotations.
     """
     new_paper_str = ""
     zero_idx = 0
     for annotation in refined_annotations:
-        comp_type, start_idx, end_idx = annotation
+        id, comp_type, start_idx, end_idx = annotation
         start_idx, end_idx = start_idx-zero_idx, end_idx-zero_idx
         #print(start_idx, end_idx)
         whitespace_start_pos = re.search(r"(\s*)$",
                                         paper_str[:start_idx]).start(0)
         #print("whitespace start:", whitespace_start_pos)
         new_paper_str += paper_str[:whitespace_start_pos]
-        new_paper_str += "<"+comp_type+">"
+        new_paper_str += "<"+comp_type+" "+"id=\""+id+"\">"
         new_paper_str += paper_str[whitespace_start_pos:end_idx]
         new_paper_str += "</"+comp_type+">"
 

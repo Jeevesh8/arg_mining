@@ -9,9 +9,17 @@ config = {"arg_components": {"O": 0,
                              "I-D"  : 6,
                                 },
           "max_users": 10,
+          "rel_type_to_id":
+          {
+             "supports":0,
+             "contradicts":1,
+             "parts_of_same":2
+          }
          }
 
-config["pad_for"] = {"arg_components" : config["arg_components"]["O"],}
+config["pad_for"] = {"arg_components" : config["arg_components"]["O"],
+                     "relations" : config["rel_type_to_id"]["supports"],}
+
 
 config["special_tokens"] = ["[NEWLINE]"]
 

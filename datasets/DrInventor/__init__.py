@@ -26,10 +26,10 @@ def data_generator(file_lis: List[Tuple[str, str]],
             paper_str = g.read()
         with open(ann_file) as g:
             annotations = g.readlines()
-        refined_annotations = refine(annotations)
-        new_paper_str = add_component_type_tags(paper_str, refined_annotations)
+        refined_arg_comp_anns, all_rel_type_anns = refine(annotations)
+        new_paper_str = add_component_type_tags(paper_str, refined_arg_comp_anns)
         heading_sections = break_into_sections(new_paper_str, merge_subsecs=(max_len>1024))
-        sub_parts = tokenize_paper(heading_sections, tokenizer, max_len=max_len)
+        sub_parts = tokenize_paper(heading_sections, all_rel_type_anns, tokenizer, max_len=max_len)
         for sub_part in sub_parts:
             yield sub_part
 
@@ -37,20 +37,29 @@ def batched_data_gen(file_lis: List[Tuple[str, str]],
                      tokenizer: transformers.PreTrainedTokenizer,
                      batch_sz: int,
                      pad_to_max: Optional[bool]=False,
-                     max_len: Optional[int]=0,) -> Generator[Tuple[List[List[int]], List[List[int]]], None, None]:
+                     max_len: Optional[int]=0,
+                     max_n_rels: Optional[int]=0,) -> Generator[Tuple[List[List[int]], List[List[int]]], None, None]:
     i=0
-    batched_paper_parts, batched_labels = [],  []
-    for tokenized_paper_part, comp_type_labels in data_generator(file_lis, tokenizer, max_len):
+    batched_paper_parts, batched_labels, batched_rel_anns = [], [], []
+    
+    for tokenized_paper_part, comp_type_labels, rel_anns in data_generator(file_lis, tokenizer, max_len):
+        
         batched_paper_parts.append(tokenized_paper_part)
         batched_labels.append(comp_type_labels)
+        batched_rel_anns.append(rel_anns)
         i += 1
+        
         if i%batch_sz==0:
+            
             if not pad_to_max:
                 max_len = max([len(elem) for elem in batched_paper_parts])
-            yield ([elem+[tokenizer.pad_token_id]*(max_len-len(elem)) for elem in batched_paper_parts],
-                   [elem+[config["pad_for"]["arg_components"]]*(max_len-len(elem)) for elem in batched_labels])
+                max_n_rels = max([len(elem) for elem in batched_rel_anns])
             
-            batched_paper_parts, batched_labels = [],  []
+            yield ([elem+[tokenizer.pad_token_id]*(max_len-len(elem)) for elem in batched_paper_parts],
+                   [elem+[config["pad_for"]["arg_components"]]*(max_len-len(elem)) for elem in batched_labels],
+                   [elem+[(config["pad_for"]["relations"])*3]*(max_n_rels-len(elem)) for elem in batched_rel_anns])
+            
+            batched_paper_parts, batched_labels, batched_rel_anns = [], [], []
 
 
 def load_dataset(dataset_dir: Optional[str] = None,
