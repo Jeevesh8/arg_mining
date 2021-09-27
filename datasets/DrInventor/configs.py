@@ -8,7 +8,6 @@ config = {"arg_components": {"O": 0,
                              "B-D"  : 5,
                              "I-D"  : 6,
                                 },
-          "max_users": 10,
           "rel_type_to_id":
           {
              "supports":0,
