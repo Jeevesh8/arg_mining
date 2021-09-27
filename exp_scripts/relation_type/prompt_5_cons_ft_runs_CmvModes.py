@@ -107,7 +107,7 @@ def get_spans(comp_type_labels, length):
     
     def detect_span(start_idx: int, span_t: str):
         j = start_idx
-        while comp_type_labels[j]==ac_dict[span_t] and j<length:
+        while j<length and comp_type_labels[j]==ac_dict[span_t]:
             j += 1
         end_idx = j
         return start_idx, end_idx
