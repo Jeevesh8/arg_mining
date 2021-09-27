@@ -57,7 +57,7 @@ def batched_data_gen(file_lis: List[Tuple[str, str]],
             
             yield ([elem+[tokenizer.pad_token_id]*(max_len-len(elem)) for elem in batched_paper_parts],
                    [elem+[config["pad_for"]["arg_components"]]*(max_len-len(elem)) for elem in batched_labels],
-                   [elem+[(config["pad_for"]["relations"])*3]*(max_n_rels-len(elem)) for elem in batched_rel_anns])
+                   [elem+[(config["pad_for"]["relations"],)*3]*(max_n_rels-len(elem)) for elem in batched_rel_anns])
             
             batched_paper_parts, batched_labels, batched_rel_anns = [], [], []
 

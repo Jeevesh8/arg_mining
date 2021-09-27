@@ -36,13 +36,13 @@ def get_section_encoding(heading: str,
         tokenized_section += tokenized_component
         
         if re.fullmatch(r"<background_claim id=\"T\d+\">.*</background_claim>", str(component)) is not None:
-            ids_to_ends[component.attrs["id"]] = len(tokenized_component)
+            ids_to_ends[component.attrs["id"]] = len(tokenized_section)
             comp_type_labels += [config["arg_components"]["B-BC"]] + [config["arg_components"]["I-BC"]]*(len(tokenized_component)-1)
         elif re.fullmatch(r"<own_claim id=\"T\d+\">.*</own_claim>", str(component)) is not None:
-            ids_to_ends[component.attrs["id"]] = len(tokenized_component)
+            ids_to_ends[component.attrs["id"]] = len(tokenized_section)
             comp_type_labels += [config["arg_components"]["B-OC"]] + [config["arg_components"]["I-OC"]]*(len(tokenized_component)-1)
         elif re.fullmatch(r"<data id=\"T\d+\">.*</data>", str(component)) is not None:
-            ids_to_ends[component.attrs["id"]] = len(tokenized_component)
+            ids_to_ends[component.attrs["id"]] = len(tokenized_section)
             comp_type_labels += [config["arg_components"]["B-D"]] + [config["arg_components"]["I-D"]]*(len(tokenized_component)-1)
         else:
             comp_type_labels += [config["arg_components"]["O"]]*len(tokenized_component)
@@ -52,16 +52,16 @@ def get_section_encoding(heading: str,
     
     return tokenized_section, comp_type_labels, ids_to_ends
 
-def get_in_section_rels(all_rel_types: List[Tuple[str, str, str]], 
+def get_in_section_rels(all_rel_type_anns: List[Tuple[str, str, str]], 
                         ids_to_ends: Dict[str, int], 
                         max_len: int) -> List[Tuple[int, int, int]]:
     """
     Args:
-        all_rel_types: A list of tuples of form (rel_type, arg1_id, arg2_id)
-        ids_to_ends:   A dictionary mapping id of argumentative compoents
-                       to their end index in some encoding. The keys(ids) are assumed 
-                       to be in order of appearance of corres. components in the encoding.
-        max_len:       The maximum length at which the encoding will be truncated.
+        all_rel_type_anns: A list of tuples of form (rel_type, arg1_id, arg2_id)
+        ids_to_ends:       A dictionary mapping id of argumentative compoents
+                           to their end index in some encoding. The keys(ids) are assumed 
+                           to be in order of appearance of corres. components in the encoding.
+        max_len:           The maximum length at which the encoding will be truncated.
     
     Returns:
         A list of tuples of form (rel_type_id, index of arg1 in the encoding, index of arg2 in the encoding)
@@ -75,16 +75,19 @@ def get_in_section_rels(all_rel_types: List[Tuple[str, str, str]],
     #Component ids ordered according to their appearance in the tokenized section
     ordered_components = list(ids_to_ends.keys())
     
-    for (rel_type, arg1_id, arg2_id) in all_rel_types:
-        if ids_to_ends[arg1_id] <= max_len and ids_to_ends[arg2_id] <= max_len:
-            in_section_rels.append((config["rel_type_to_id"][rel_type],
-                                    ordered_components.index(arg1_id)+1, 
-                                    ordered_components.index(arg2_id)+1))
-    
+    for (rel_type, arg1_id, arg2_id) in all_rel_type_anns:
+        try:
+            if ids_to_ends[arg1_id] <= max_len and ids_to_ends[arg2_id] <= max_len:
+                in_section_rels.append((config["rel_type_to_id"][rel_type],
+                                        ordered_components.index(arg1_id)+1, 
+                                        ordered_components.index(arg2_id)+1))
+        except KeyError:
+            continue
+        
     return in_section_rels
             
 def tokenize_paper(heading_sections: List[Tuple[str, str]],
-                   all_rel_types: List[Tuple[str, str, str]],
+                   all_rel_type_anns: List[Tuple[str, str, str]],
                    tokenizer: transformers.PreTrainedTokenizer,
                    separator_token_id: Optional[int]=None,
                    max_len: int = 4096) -> List[Tuple[List[int],List[int]]]:
@@ -93,7 +96,7 @@ def tokenize_paper(heading_sections: List[Tuple[str, str]],
         heading_sections:      A list of tuples of form (heading, section content) corres. to 
                                the heading and section of a single paper.
         
-        all_rel_types:         A list of tuples of form (rel_type, arg1_id, arg2_id) corres. to 
+        all_rel_type_anns:     A list of tuples of form (rel_type, arg1_id, arg2_id) corres. to 
                                all the relations in the paper whose heading and sections
                                are provided.
 
@@ -136,17 +139,17 @@ def tokenize_paper(heading_sections: List[Tuple[str, str]],
         ids_to_ends = {k: v-1+len(tokenized_sub_part) for k, v in ids_to_ends.items()}
 
         if (len(tokenized_sub_part)!=1 and
-            len(tokenized_sub_part)+len(tokenized_section)+2>=max_len):             #+1 for eos_token, +1 for separator_token_id
+            len(tokenized_sub_part)+len(tokenized_section)+2>max_len):             #+1 for eos_token, +1 for separator_token_id
             
             tokenized_sub_part = tokenized_sub_part[:max_len-1]
             tokenized_sub_part.append(tokenizer.eos_token_id)
             sub_part_labels = sub_part_labels[:max_len-1]
             sub_part_labels.append(config["arg_components"]["O"])
         
-            rel_anns = get_in_section_rels(all_rel_types, paper_ids_to_ends, max_len)
+            rel_anns = get_in_section_rels(all_rel_type_anns, paper_ids_to_ends, max_len)
             sub_parts.append((tokenized_sub_part, sub_part_labels, rel_anns))
             
-            tokenized_sub_part, sub_part_labels = [tokenizer.bos_token_id], [config["arg_components"]["O"]]
+            tokenized_sub_part, sub_part_labels, paper_ids_to_ends = [tokenizer.bos_token_id], [config["arg_components"]["O"]], {}
 
         paper_ids_to_ends.update(ids_to_ends)
         tokenized_sub_part += tokenized_section + [separator_token_id]
@@ -155,7 +158,7 @@ def tokenize_paper(heading_sections: List[Tuple[str, str]],
     if len(tokenized_sub_part)>1:
         tokenized_sub_part[:max_len-1].append(tokenizer.eos_token_id)
         sub_part_labels[:max_len-1].append(config["arg_components"]["O"])
-        rel_anns = get_in_section_rels(all_rel_types, paper_ids_to_ends, max_len)
+        rel_anns = get_in_section_rels(all_rel_type_anns, paper_ids_to_ends, max_len)
         sub_parts.append((tokenized_sub_part, sub_part_labels, rel_anns))
     
     return sub_parts
