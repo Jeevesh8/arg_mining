@@ -1,6 +1,8 @@
 from typing import List, Tuple
 import re
 
+from spacy.lang.en import English
+
 class krip_alpha():
     """A module for computing sentence level Krippendorff's Alpha,
     for argumentative components  annotated at the token level. Must use
@@ -10,6 +12,11 @@ class krip_alpha():
         """See self.compute_metric() for what each of these data actually mean.
         """
         self.tokenizer = tokenizer
+        self.special_token_ids = ([tokenizer.convert_tokens_to_ids(elem) for elem in tokenizer.special_tokens_map.values()]+
+                                  [elem for elem in tokenizer.get_added_vocab().values()])
+        self.nlp = English()
+        self.nlp.add_pipe('sentencizer')
+
         self.pred_has_claim = 0
         self.ref_has_claim = 0
         self.pred_has_premise = 0
@@ -40,52 +47,51 @@ class krip_alpha():
             of token_ids corresponding to a sentence in a thread. 
         """
         threads_lis = []
-
         for i, thread in enumerate(threads):
-            sentence = []
             threads_lis.append([])
-            for j, token_id in enumerate(thread):
-                if token_id==self.tokenizer.pad_token_id:
-                    break
-                
-                sentence.append(token_id)
-                token = self.tokenizer.convert_ids_to_tokens(token_id)
-                #print("appended token:", token)
-
-                next_token = 'None' if j==len(thread) else self.tokenizer.convert_ids_to_tokens(thread[j+1])
-
-                if (token.count('.')+token.count('?')+token.count('!')>=1 and 
-                    next_token.count('.')+next_token.count('?')+next_token.count('!')==0):
-
-                    threads_lis[i].append(sentence)
-                    #print("Sample sentence: ", self.tokenizer.decode(sentence))
-                    sentence = []
-                
-                elif re.findall(r"\[USER\d+\]|\[UNU\]", token)!=[]:
-                    prev_part = self.tokenizer.decode(sentence[:-1])[1:-1]
-                    if re.search(r'[a-zA-Z]', prev_part) is not None:
-                        threads_lis[i].append(sentence[:-1])
-                        #print("Sample sentence just befor user token:", self.tokenizer.decode(sentence[:-1]))
-                        sentence = [sentence[-1]]
+            thread = [elem for elem in thread if elem!=self.tokenizer.pad_token_id]
+            txt_thread = self.tokenizer.decode(thread)
+#            print("txt thread:", txt_thread)
+            sentences = [sent.text for sent in self.nlp(txt_thread).sents]
+            sentence_no, char_no = 0, 0
+            prev_idx = 0
+            for j, token in enumerate(thread):
+                txt_token = self.tokenizer.convert_ids_to_tokens(token)
+#                print("Txt token:", txt_token)
+                txt_token = txt_token.replace("Ġ", " ")
+                if txt_token.startswith("##"):
+                    txt_token = txt_token[2:]
+                for ch in txt_token:
+                    if char_no>=len(sentences[sentence_no]):
+                        threads_lis[-1].append(thread[prev_idx:j])
+                        prev_idx = j
+                        char_no = 0
+                        sentence_no += 1
+                    
+                    if ch==sentences[sentence_no][char_no]:
+                        char_no += 1
+                    elif ch==" ":
+                        continue
+                    elif sentences[sentence_no][char_no]==" ":
+                        while char_no<len(sentences[sentence_no]) and sentences[sentence_no][char_no]==" ":
+                            char_no += 1
+                        if ch==sentences[sentence_no][char_no]:
+                            char_no += 1
+                        else:
+                            raise ValueError("Mismatch even after adjesting spaces")
                     else:
-                        k=len(sentence)-2
-                        while k>=0 and sentence[k]==self.tokenizer.convert_tokens_to_ids('Ġ'):
-                            k-=1
-                        sentence = sentence[k+1:]
-                        threads_lis[i][-1] += sentence[:k]
-                        #print("Sample sentence just befor user token:", self.tokenizer.decode(threads_lis[i][-1]))
-                
-            has_rem_token = False
-            for elem in sentence:
-                if (elem!=self.tokenizer.convert_tokens_to_ids('Ġ') and
-                    elem!=self.tokenizer.eos_token_id):
-                    has_rem_token = True
-                    break
-            
-            if has_rem_token:
-                threads_lis[i].append(sentence)
-                #print("Sample sentence at end of thread: ", self.tokenizer.decode(sentence))
-                sentence = []
+                        raise ValueError("Mismatch between sentences obtained from tokenizer.decode() token "+
+                                txt_token+" and spacy sentence: "+sentences[sentence_no]+" .Unmatched characters:("+ch+","+
+                                sentences[sentence_no][char_no]+")")
+
+                if token in self.special_token_ids:
+                    while char_no<len(sentences[sentence_no]) and sentences[sentence_no][char_no]==" ":
+                        char_no += 1
+
+            if prev_idx<len(thread):
+                threads_lis[-1].append(thread[prev_idx:])
+#            for sent in threads_lis[-1]:
+#                print("Sentence:", self.tokenizer.decode(sent))
 
         return threads_lis
 
@@ -121,6 +127,9 @@ class krip_alpha():
         references(ref_sentence) provided for a particular sentence, in some 
         thread.
         """
+        if len(pred_sentence)<=1:
+            return
+
         self.total_sentences += 1
         
         if 'B-C' in pred_sentence:
