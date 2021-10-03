@@ -14,7 +14,6 @@ from allennlp.modules.conditional_random_field import ConditionalRandomField as 
 
 from arg_mining.datasets.cmv_modes import load_dataset, data_config
 
-metric = krip_alpha()
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
@@ -293,6 +292,8 @@ for (tokenizer_version, model_version) in [('bert-base-cased', 'bert-base-cased'
             train_dataset, _, test_dataset = get_datasets(train_sz, test_sz)
             train_dataset = [elem for elem in train_dataset]
             test_dataset = [elem for elem in test_dataset]
+            
+            metric = krip_alpha(tokenizer)
 
             for epoch in range(n_epochs):
                 print(f"\t\t\t------------EPOCH {epoch+1}---------------")

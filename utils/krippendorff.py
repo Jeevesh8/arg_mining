@@ -6,9 +6,10 @@ class krip_alpha():
     for argumentative components  annotated at the token level. Must use
     labels ["B-C", "B-P"].
     """
-    def __init__(self) -> None:
+    def __init__(self, tokenizer)-> None:
         """See self.compute_metric() for what each of these data actually mean.
         """
+        self.tokenizer = tokenizer
         self.pred_has_claim = 0
         self.ref_has_claim = 0
         self.pred_has_premise = 0
@@ -44,46 +45,46 @@ class krip_alpha():
             sentence = []
             threads_lis.append([])
             for j, token_id in enumerate(thread):
-                if token_id==tokenizer.pad_token_id:
+                if token_id==self.tokenizer.pad_token_id:
                     break
                 
                 sentence.append(token_id)
-                token = tokenizer.convert_ids_to_tokens(token_id)
+                token = self.tokenizer.convert_ids_to_tokens(token_id)
                 #print("appended token:", token)
 
-                next_token = 'None' if j==len(thread) else tokenizer.convert_ids_to_tokens(thread[j+1])
+                next_token = 'None' if j==len(thread) else self.tokenizer.convert_ids_to_tokens(thread[j+1])
 
                 if (token.count('.')+token.count('?')+token.count('!')>=1 and 
                     next_token.count('.')+next_token.count('?')+next_token.count('!')==0):
 
                     threads_lis[i].append(sentence)
-                    #print("Sample sentence: ", tokenizer.decode(sentence))
+                    #print("Sample sentence: ", self.tokenizer.decode(sentence))
                     sentence = []
                 
                 elif re.findall(r"\[USER\d+\]|\[UNU\]", token)!=[]:
-                    prev_part = tokenizer.decode(sentence[:-1])[1:-1]
+                    prev_part = self.tokenizer.decode(sentence[:-1])[1:-1]
                     if re.search(r'[a-zA-Z]', prev_part) is not None:
                         threads_lis[i].append(sentence[:-1])
-                        #print("Sample sentence just befor user token:", tokenizer.decode(sentence[:-1]))
+                        #print("Sample sentence just befor user token:", self.tokenizer.decode(sentence[:-1]))
                         sentence = [sentence[-1]]
                     else:
                         k=len(sentence)-2
-                        while k>=0 and sentence[k]==tokenizer.convert_tokens_to_ids('Ġ'):
+                        while k>=0 and sentence[k]==self.tokenizer.convert_tokens_to_ids('Ġ'):
                             k-=1
                         sentence = sentence[k+1:]
                         threads_lis[i][-1] += sentence[:k]
-                        #print("Sample sentence just befor user token:", tokenizer.decode(threads_lis[i][-1]))
+                        #print("Sample sentence just befor user token:", self.tokenizer.decode(threads_lis[i][-1]))
                 
             has_rem_token = False
             for elem in sentence:
-                if (elem!=tokenizer.convert_tokens_to_ids('Ġ') and
-                    elem!=tokenizer.eos_token_id):
+                if (elem!=self.tokenizer.convert_tokens_to_ids('Ġ') and
+                    elem!=self.tokenizer.eos_token_id):
                     has_rem_token = True
                     break
             
             if has_rem_token:
                 threads_lis[i].append(sentence)
-                #print("Sample sentence at end of thread: ", tokenizer.decode(sentence))
+                #print("Sample sentence at end of thread: ", self.tokenizer.decode(sentence))
                 sentence = []
 
         return threads_lis
@@ -218,4 +219,4 @@ class krip_alpha():
             print("\tSentences having claim in only one of reference or prediction:", self.claim_wise_disagreement)
             print("\tSentences having premise in both reference and prediction:", self.premise_wise_agreement)
             print("\tSentences having premise in only one of reference or prediction:", self.premise_wise_disagreement)
-        self.__init__()
+        self.__init__(self.tokenizer)
