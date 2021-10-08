@@ -10,25 +10,26 @@ def get_runwise_data(output_file):
     split = 1 if "80-20" in args.title else 2
     with open(output_file) as f:
         data = f.read().split('Train size')[split]
-        for run_data in data.split('RUN')[1:]:
-            for epoch_data in run_data.split('EPOCH')[1:]:
-                
-                
+                    
     run_epoch_wise_data = []
-    for run_no, run_data in enumerate(data.split('RUN')[1:]):
+    for _run_no, run_data in enumerate(data.split('RUN')[1:]):
         run_epoch_wise_data.append([])
         for epoch_no, epoch_data in enumerate(run_data.split('EPOCH')[1:]):
             
             try:
                 if 'krippendorff alpha' in args.title.lower():
                     if "claim" in args.title.lower():
-                        f1 = re.findall(r"Sentence level Krippendorff's alpha for Claims:  0.(\d\d\d)|(\d\d)", epoch_data)[0]
+                        f1 = re.findall(r"Sentence level Krippendorff's alpha for Claims:  0.(\d\d\d|\d\d)", epoch_data)[0]
                     elif "premise" in args.title.lower():
-                        f1 = re.findall(r"Sentence level Krippendorff's alpha for Premises:  0.(\d\d\d)|(\d\d)", epoch_data)[0]
+                        f1 = re.findall(r"Sentence level Krippendorff's alpha for Premises:  0.(\d\d\d|\d\d)", epoch_data)[0]
+                    else:
+                      print("Neither Claim nor Premise found in title. Please specify one.")
+                      exit(1)
                 elif 'prompt' in args.title.lower():
-                    f1 = re.findall(r'\'weighted_avg\'.*\'f1\': 0.(\d\d\d)|(\d\d)', epoch_data)[0]
+                    f1 = re.findall(r'\'weighted_avg\'.*\'f1\': 0.(\d\d\d|\d\d)', epoch_data)[0]
                 else:
-                    f1 = re.findall(r'overall_f1.*: 0.(\d\d\d)|(\d\d)', epoch_data)[0]
+                    f1 = re.findall(r'overall_f1.*: 0.(\d\d\d|\d\d)', epoch_data)[0]
+                print(f1)
                 f1 = int(f1)/(10**len(f1))
                 run_epoch_wise_data[-1].append(f1)
             
@@ -77,7 +78,7 @@ if __name__=="__main__":
     means = []
     stds = []
     for filename in args.in_files:
-        mean_lis, std_lis = get_mean_and_error(get_runwise_data(filename))2
+        mean_lis, std_lis = get_mean_and_error(get_runwise_data(filename))
         means.append(mean_lis)
         stds.append(std_lis)
     
@@ -89,12 +90,15 @@ if __name__=="__main__":
     print("Mean scores for files provided, over the last", args.avg_over,"runs, in order:")
     
     for mean_lis, name in zip(means, args.names):
-        print("\t", "Score for:", name, ":", mean(mean_lis[:args.avg_over]))
+        print("\t", "Score for", name, ":", mean(mean_lis[-args.avg_over:]))
 
     fig, ax = plt.subplots()
     
     for mean_lis, label in zip(means, args.names):
         ax.plot(mean_lis, label=label)
+    
+    if args.human_perf != 0:
+        ax.plot([args.human_perf]*len(means[0]), label="Human Performance")
     
     ax.legend(loc='lower right')
 
