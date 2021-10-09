@@ -74,6 +74,7 @@ for elem in sorted_utt_texts:
 print("Number of threads in dataset:", dataset_len)
 
 def random_mask(encoding, tokenizer):
+    encoding = np.array(encoding)
     masked_encoding = encoding.copy()
     rand_vals = np.random.default_rng().uniform(size=encoding.shape)
     
@@ -84,9 +85,9 @@ def random_mask(encoding, tokenizer):
     for token_id in special_toks:
         specail_toks_mask[encoding==token_id] = 1
     
-    encoding[np.logical_and(rand_vals<0.15, np.logical_not(specail_toks_mask))] = tokenizer.mask_token_id
+    masked_encoding[np.logical_and(rand_vals<0.15, np.logical_not(specail_toks_mask))] = tokenizer.mask_token_id
     
-    return encoding, masked_encoding
+    return encoding.tolist(), masked_encoding.tolist()
 
 def tokenized_ids_generator(start=0, end=100):
     for i, utt_text in enumerate(sorted_utt_texts):
