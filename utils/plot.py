@@ -25,7 +25,7 @@ def get_runwise_data(output_file):
                     else:
                       print("Neither Claim nor Premise found in title. Please specify one.")
                       exit(1)
-                elif 'prompt' in args.title.lower():
+                elif 'relation' in args.title.lower():
                     f1 = re.findall(r'\'weighted_avg\'.*\'f1\': 0.(\d\d\d|\d\d)', epoch_data)[0]
                 else:
                     f1 = re.findall(r'overall_f1.*: 0.(\d\d\d|\d\d)', epoch_data)[0]
@@ -73,6 +73,7 @@ if __name__=="__main__":
     parser.add_argument("--avg_over", type=int, default=5, help = "The mean scores printed are averaged over this many last scores.")
     parser.add_argument("--title", type=str, default="", help="Title of the plot.", required=True)
     parser.add_argument("--human_perf", type=float, default=0.0, help="If provided, human performance is also plotted.")
+    parser.add_argument("--majority_class", type=float, default=0.0, help="If provided, the majority class is also plotted.")
     args = parser.parse_args()
 
     means = []
@@ -99,6 +100,8 @@ if __name__=="__main__":
     
     if args.human_perf != 0:
         ax.plot([args.human_perf]*len(means[0]), label="Human Performance")
+    if args.majority_class != 0:
+        ax.plot([args.majority_class]*len(means[0]), label="Majority Class")
     
     ax.legend(loc='lower right')
 
@@ -111,7 +114,7 @@ if __name__=="__main__":
     
     if 'krippendorff alpha' in args.title.lower():
         plt.ylabel("Sentence Level Krippendorff Alpha")
-    elif 'prompt' in args.title.lower():
+    elif 'relation' in args.title.lower():
         plt.ylabel("Weighted f1")
     else:
         plt.ylabel("Overall f1")
