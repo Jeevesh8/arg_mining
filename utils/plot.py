@@ -26,9 +26,14 @@ def get_runwise_data(output_file):
                       print("Neither Claim nor Premise found in title. Please specify one.")
                       exit(1)
                 elif 'relation' in args.title.lower():
-                    f1 = re.findall(r'\'weighted_avg\'.*\'f1\': 0.(\d\d\d|\d\d)', epoch_data)[0]
+                    f1 = re.findall(r'\'weighted_avg\'.*?\'f1\': 0.(\d\d\d|\d\d)', epoch_data)[0]
                 else:
-                    f1 = re.findall(r'overall_f1.*: 0.(\d\d\d|\d\d)', epoch_data)[0]
+                    if 'claim' in args.title.lower():
+                        f1 = re.findall(r'\'C\':.*?\'f1\': 0.(\d\d\d|\d\d)', epoch_data)[0]
+                    elif 'premise' in args.title.lower():
+                        f1 = re.findall(r'\'P\':.*?\'f1\': 0.(\d\d\d|\d\d)', epoch_data)[0]
+                    else:
+                        f1 = re.findall(r'overall_f1.*?: 0.(\d\d\d|\d\d)', epoch_data)[0]
                 print(f1)
                 f1 = int(f1)/(10**len(f1))
                 run_epoch_wise_data[-1].append(f1)
@@ -117,7 +122,12 @@ if __name__=="__main__":
     elif 'relation' in args.title.lower():
         plt.ylabel("Weighted f1")
     else:
-        plt.ylabel("Overall f1")
+        if 'claim' in args.title.lower():
+            plt.ylabel("Claim f1")
+        if 'premise' in args.title.lower():
+            plt.ylabel("Premise f1")
+        else:
+            plt.ylabel("Overall f1")
     
     plt.title(args.title)
 
