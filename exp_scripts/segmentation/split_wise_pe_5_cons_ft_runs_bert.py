@@ -176,8 +176,8 @@ n_epochs = 30
 n_runs = 5
 
 for (tokenizer_version, model_version) in [('bert-base-cased', 'bert-base-cased'),
-                                           ('arg_mining/smlm_pretrained_iter2_0/tokenizer', 'arg_mining/smlm_pretrained_iter2_0/model'),
-                                           ('arg_mining/smlm_pretrained_iter4_0/tokenizer', 'arg_mining/smlm_pretrained_iter4_0/model'),]:
+                                           ('../arg_m/arg_mining/smlm_pretrained_iter2_0/tokenizer', '../arg_m/arg_mining/smlm_pretrained_iter2_0/model'),
+                                           ('../arg_m/arg_mining/smlm_pretrained_iter4_0/tokenizer', '../arg_m/arg_mining/smlm_pretrained_iter4_0/model'),]:
 
     print("Tokenizer:", tokenizer_version, "Model:", model_version)
 
@@ -185,25 +185,22 @@ for (tokenizer_version, model_version) in [('bert-base-cased', 'bert-base-cased'
 
         print("\tData split:", data_split)
 
-        for run in range(n_runs):
-            print(f"\n\n\t\t-------------RUN {run+1}-----------")
+        tokenizer, transformer_model = get_tok_model(tokenizer_version, model_version)
 
-            tokenizer, transformer_model = get_tok_model(tokenizer_version, model_version)
+        linear_layer, crf_layer = get_crf_head()
 
-            linear_layer, crf_layer = get_crf_head()
+        optimizer = optim.Adam(params = chain(transformer_model.parameters(),
+                                              linear_layer.parameters(), 
+                                              crf_layer.parameters()),
+                                lr = 2e-5,)
 
-            optimizer = optim.Adam(params = chain(transformer_model.parameters(),
-                                      linear_layer.parameters(),
-                                      crf_layer.parameters()),
-                                   lr = 2e-5,)
+        train_dataset, test_dataset = get_datasets(data_split)
+        train_dataset = [elem for elem in train_dataset]
+        test_dataset = [elem for elem in test_dataset]
 
-            train_dataset, test_dataset = get_datasets(data_split)
-            train_dataset = [elem for elem in train_dataset]
-            test_dataset = [elem for elem in test_dataset]
+        for epoch in range(n_epochs):
+            print(f"\t\t\t------------EPOCH {epoch+1}---------------")
+            train(train_dataset)
+            evaluate(test_dataset, metric)
 
-            for epoch in range(n_epochs):
-                print(f"\t\t\t------------EPOCH {epoch+1}---------------")
-                train(train_dataset)
-                evaluate(test_dataset, metric)
-
-            del tokenizer, transformer_model, linear_layer, crf_layer
+        del tokenizer, transformer_model, linear_layer, crf_layer
