@@ -61,7 +61,7 @@ def get_crf_head():
     return linear_layer, crf_layer
 
 
-cross_entropy_layer = nn.CrossEntropyLoss(weight=torch.tensor([1.1817, 4.2080, 1.5416, 3.6709, 0.8234],
+cross_entropy_layer = nn.CrossEntropyLoss(weight=torch.tensor([1.1817, 4.6086, 1.9365, 3.6709, 0.8234, 5.31659, 2.66169],
                                                                         device=device), reduction='none')
 
 """### Loss and Prediction Function"""
@@ -177,8 +177,7 @@ n_epochs = 30
 n_runs = 5
 
 for (tokenizer_version, model_version) in [('bert-base-cased', 'bert-base-cased'),
-                                           ('../arg_m/arg_mining/smlm_pretrained_iter2_0/tokenizer', '../arg_m/arg_mining/smlm_pretrained_iter2_0/model'),
-                                           ('../arg_m/arg_mining/smlm_pretrained_iter4_0/tokenizer', '../arg_m/arg_mining/smlm_pretrained_iter4_0/model'),]:
+                                           ('../arg_m/arg_mining/smlm_pretrained_iter5_0/tokenizer', '../arg_m/arg_mining/smlm_pretrained_iter5_0/model'),]:
 
     print("Tokenizer:", tokenizer_version, "Model:", model_version)
 
