@@ -165,8 +165,9 @@ def evaluate(dataset, metric):
                     for i, labels in enumerate(comp_type_labels.cpu().tolist())
                 ]
             
-            metric.add_batch(predictions=preds, 
-                            references=refs,)
+            for (pred, ref) in zip(preds, refs):
+                metric.add_batch(predictions=pred, 
+                                 references=ref,)
                             #tokenized_threads=tokenized_threads.cpu().tolist())
         
     print("\t\t\t\t", metric.compute())
