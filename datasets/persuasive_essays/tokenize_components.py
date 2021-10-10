@@ -11,6 +11,8 @@ def comp_type_from_tag(comp_tag):
         return 'O' 
     if 'Premise' in comp_tag:
         return 'P'
+    if 'Major' in comp_tag and config["all_classes"]:
+        return 'MC'
     return 'C'
 
 def get_comp_wise_essays(data_file: str) -> List[List[Tuple[str, str]]]:
