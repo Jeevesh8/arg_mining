@@ -30,9 +30,6 @@ def get_tok_model(tokenizer_version, model_version):
         tokenizer.add_tokens(data_config["special_tokens"])
     if model_version=='roberta-base':
         transformer_model.resize_token_embeddings(len(tokenizer))
-    print("CLS token:", tokenizer.cls_token_id)
-    print("SEP token:", tokenizer.sep_token_id)
-    print("EOS token:", tokenizer.eos_token_id)
     return tokenizer, transformer_model
 
 """#### Load in discourse markers"""
@@ -107,11 +104,11 @@ def generate_prompts(tokenized_thread, comp_type_labels, refers_to_and_type):
         from_start_idx, from_end_idx = spans_lis[link_from-1]
         to_start_idx, to_end_idx = spans_lis[link_to-1]
         
-        prompt = np.concatenate(np.array([tokenizer.cls_token_id]),
-                                tokenized_thread[to_start_idx:to_end_idx],
-                                np.array([tokenizer.sep_token_id]),
-                                tokenized_thread[from_start_idx:from_end_idx],
-                                np.array([tokenizer.eos_token_id]))
+        prompt = np.concatenate([np.array([tokenizer.cls_token_id]),
+                                 tokenized_thread[to_start_idx:to_end_idx],
+                                 np.array([tokenizer.sep_token_id]),
+                                 tokenized_thread[from_start_idx:from_end_idx],
+                                 np.array([tokenizer.eos_token_id])])
         
         yield (prompt, rel_type)
 
@@ -166,13 +163,12 @@ def compute(batch: Tuple[torch.Tensor, torch.Tensor, torch.Tensor],
         Either the predicted relations(if preds is True), or the loss value 
         summed over all samples of the batch (if preds is False).
     """
-    prompt_threads, rel_type_labels, global_attention_mask = batch
+    prompt_threads, rel_type_labels = batch
     
     pad_mask = torch.where(prompt_threads!=tokenizer.pad_token_id, 1, 0)
     
     hidden_state = transformer_model(input_ids=prompt_threads,
-                                     attention_mask=pad_mask,
-                                     global_attention_mask=global_attention_mask).last_hidden_state
+                                     attention_mask=pad_mask,).last_hidden_state
     
     hidden_state = hidden_state[prompt_threads==tokenizer.cls_token_id]
     hidden_state = hidden_state.reshape(-1, 1, hidden_state.shape[-1])
@@ -197,17 +193,12 @@ def train(dataset):
                                                     get_prompt_generator(dataset, 
                                                                          batch_size=data_config["batch_size"])()):
         
-        global_attention_mask = torch.tensor(get_global_attention_mask(prompt_threads),
-                                             device=device, dtype=torch.int32)
-        
         #Cast to PyTorch tensor
         prompt_threads = torch.tensor(prompt_threads, device=device, dtype=torch.long)
         rel_type_labels = torch.tensor(rel_type_labels, device=device, dtype=torch.long)
-        global_attention_mask = torch.squeeze(global_attention_mask, dim=0)
         
         loss = compute((prompt_threads,
-                        rel_type_labels,
-                        global_attention_mask))/data_config["batch_size"]
+                        rel_type_labels,))/data_config["batch_size"]
 
         print("Loss:", loss)
         
@@ -227,17 +218,13 @@ def evaluate(dataset, metric):
         for prompt_threads, rel_type_labels in get_prompt_generator(dataset,
                                                                     batch_size=data_config["batch_size"])():
             print("Evaluating") 
-            global_attention_mask = torch.tensor(get_global_attention_mask(prompt_threads), 
-                                                 device=device)
-            
+
             #Cast to PyTorch tensor
             prompt_threads = torch.tensor(prompt_threads, device=device, dtype=torch.long)
             rel_type_labels = torch.tensor(rel_type_labels, device=device, dtype=torch.long)
-            global_attention_mask = torch.squeeze(global_attention_mask, dim=0)
             
             preds = compute((prompt_threads,
-                             rel_type_labels,
-                             global_attention_mask),
+                             rel_type_labels,),
                             preds=True)
             
             preds = [int_to_labels[pred.item()] for pred in preds]
