@@ -110,7 +110,7 @@ def generate_prompts(tokenized_thread, comp_type_labels, refers_to_and_type):
                                  tokenized_thread[from_start_idx:from_end_idx],
                                  np.array([tokenizer.eos_token_id])])
         
-        yield (prompt, rel_type)
+        yield (prompt.tolist(), rel_type)
 
 def get_prompt_generator(dataset, batch_size, shuffle=True):
     prompt_dataset = []
@@ -125,7 +125,7 @@ def get_prompt_generator(dataset, batch_size, shuffle=True):
                                             comp_type_labels, 
                                             refers_to_and_type):
                 
-            prompt_dataset += [elem for elem in generate_prompts(sample_tokenized_thread, 
+            prompt_dataset += [elem for elem in generate_prompts(sample_tokenized_thread,
                                                                 sample_comp_type_labels,
                                                                 sample_refers_to_and_type)]
     if shuffle:
@@ -138,7 +138,13 @@ def get_prompt_generator(dataset, batch_size, shuffle=True):
             batch_of_prompts.append(prompt)
             rel_type_labels.append(rel_type)
             if len(batch_of_prompts)==batch_size:
+                max_len = min(max([len(prompt) for prompt in batch_of_prompts]), tokenizer.model_max_length)
+                
+                batch_of_prompts = [prompt[:max_len]+[tokenizer.pad_token_id]*(max_len-len(prompt)) 
+                                    for prompt in batch_of_prompts]
+                
                 yield np.array(batch_of_prompts, dtype=np.int32), np.array(rel_type_labels, dtype=np.int32)
+                
                 batch_of_prompts, rel_type_labels = [], []
     
     return prompt_dataset_gen
