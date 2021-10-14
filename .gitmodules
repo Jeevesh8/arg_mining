@@ -1,0 +1,6 @@
+[submodule "baselines/segmentation/naacl18-multitask_argument_mining"]
+	path = baselines/segmentation/naacl18-multitask_argument_mining
+	url = https://github.com/UKPLab/naacl18-multitask_argument_mining
+[submodule "baselines/segmentation/emnlp2017-bilstm-cnn-crf"]
+	path = baselines/segmentation/emnlp2017-bilstm-cnn-crf
+	url = https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf
