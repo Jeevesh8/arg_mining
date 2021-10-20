@@ -46,11 +46,11 @@ embeddings, mappings, data = loadDatasetPickle(pickleFile)
 
 params = {'classifier': ['CRF'], 'LSTM-Size': [100], 'dropout': (0.25, 0.25),
          'customClassifier': {'cmv_modes2': ['Softmax']},
-          'earlyStopping': 50, 'charLSTMSize': 256, 'maxCharLength': 256,
+          'earlyStopping': 40, 'charLSTMSize': 256, 'maxCharLength': 256,
           'miniBatchSize': 8}
 
 model = BiLSTM(params)
 model.setMappings(mappings, embeddings)
 model.setDataset(datasets, data)
 model.modelSavePath = "models/[ModelName]_[DevScore]_[TestScore]_[Epoch].h5"
-model.fit(epochs=100)
+model.fit(epochs=40)
