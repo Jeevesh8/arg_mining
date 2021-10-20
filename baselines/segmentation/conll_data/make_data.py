@@ -2,6 +2,7 @@
 import argparse
 import os, random
 from shutil import copyfile, rmtree
+from typing import Dict
 
 from bs4 import BeautifulSoup
 
@@ -26,15 +27,8 @@ def get_thread_ids_to_filenames(root_folder="./v2.0/"):
     
     return thread_ids_to_filenames
 
-if __name__=="__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--train_sz", required=True, type=int, help="Percentags of threads to use for train set.")
-    parser.add_argument("--test_sz", required=True, type=int, help="Percentage of threds in test set.")
-    parser.add_argument("--data_folder", default="./", help="The folder that has negative/ and positive/ subfolders having threads.")
-    parser.add_argument("--save_folder", default="", help="Folder to store final data.")
-    parser.add_argument("--shuffle", action="store_true", help="If this flag is provided, data is shuffled before making train-test split. \
-                                                                Hence giving a random train-test split.")
-    args = parser.parse_args()
+def main(args) -> Dict[str, str]:
+    out_folders = {}
     
     assert args.train_sz + args.test_sz == 100, "Train and test size should sum to 100."
 
@@ -47,6 +41,7 @@ if __name__=="__main__":
         if os.path.isdir(os.path.join(args.data_folder, args.save_folder, split)):
             rmtree(os.path.join(args.save_folder, split))
         os.makedirs(os.path.join(args.save_folder, split), exist_ok=True)
+        out_folders[split] = os.path.join(args.save_folder, split)
     
 
     op_wise_threads_lis = [elem for elem in thread_ids_to_filenames.values()]
@@ -68,3 +63,19 @@ if __name__=="__main__":
     
     #Make dummy validation folder
     copyfile(filename, os.path.join(args.save_folder, "valid", filename.split('/')[-2]+'_'+filename.split('/')[-1]))
+    return out_folders
+
+def get_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--train_sz", required=True, type=float, help="Percentags of threads to use for train set.")
+    parser.add_argument("--test_sz", required=True, type=float, help="Percentage of threds in test set.")
+    parser.add_argument("--data_folder", default="./", help="The folder that has negative/ and positive/ subfolders having threads.")
+    parser.add_argument("--save_folder", default="", help="Folder to store final data.")
+    parser.add_argument("--shuffle", action="store_true", help="If this flag is provided, data is shuffled before making train-test split. \
+                                                                Hence giving a random train-test split.")
+    return parser
+
+if __name__=="__main__":
+    parser = get_parser()
+    args = parser.parse_args()
+    main(args)

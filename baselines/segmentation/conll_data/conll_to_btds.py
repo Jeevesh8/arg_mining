@@ -82,14 +82,15 @@ def add_cols(str_lis : List[str], components: List[Tuple[int, str]], args) -> Li
 
     return new_str_lis
 
-if __name__=='__main__':
+def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--read_file', type=str, help='The file having the CoNLL format data.')
     parser.add_argument('--write_file', type=str, help='The location where the script should write the new file with added columns.')
     parser.add_argument('--remove_line_no', action='store_true', help='If this flag is provided, the line numbers are remmoved.')
     parser.add_argument('--remove_relations', action='store_true', help='If this flag is provided, the relation distance and ')
-    args = parser.parse_args()
+    return parser
 
+def main(args):
     added_cols_strs = []
     essay_lis = []
     with open(args.read_file, 'r') as f:
@@ -109,3 +110,8 @@ if __name__=='__main__':
     with open(args.write_file, 'w') as f:
         for elem in added_cols_strs:
             f.write(elem)
+    
+if __name__=='__main__':
+    parser = get_parser()
+    args = parser.parse_args()
+    main(args)

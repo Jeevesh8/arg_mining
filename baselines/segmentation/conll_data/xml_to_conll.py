@@ -185,16 +185,15 @@ def build_CoNLL(parsed_xml: bs4.BeautifulSoup, thread_wise: bool=True):
 
 str_to_write = []
 
-if __name__=='__main__':
-    
+def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--folder', type=str, help='Folder having the .xml files of AMPERSAND data.')
     parser.add_argument('--post_wise', action='store_true', 
                         help='if this flag is provided, then the inter-comment relations will be ignored and data will be constructed in a post-by-post format.')
     parser.add_argument('--write_file', type=str, help='Filename where the script should write the data in CoNLL format.')
-    
-    args = parser.parse_args()
-    
+    return parser
+
+def main(args):
     for f in os.listdir(args.folder):
         filename = os.path.join(args.folder, f)
         if os.path.isfile(filename) and filename.endswith('.xml'):
@@ -202,7 +201,15 @@ if __name__=='__main__':
                 xml_str = g.read()
             parsed_xml = BeautifulSoup(str(BeautifulSoup(xml_str, "lxml")), "xml")
             build_CoNLL(parsed_xml, not args.post_wise)
-
+    
+    os.makedirs(os.path.dirname(args.write_file), exist_ok=True)
     with open(args.write_file, 'w') as f:
         for elem in str_to_write[1:]:
             f.write(elem+'\n' if not elem.endswith('\n') else elem)
+
+if __name__=='__main__':
+    parser = get_parser()
+    
+    args = parser.parse_args()
+    
+    main(args)
