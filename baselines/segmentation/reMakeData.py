@@ -55,7 +55,7 @@ if __name__=="__main__":
     parser.add_argument("--test_sz", type=int, default=20)
     parser.add_argument("--data_folder", type=str, default="./change-my-view-modes/v2.0/")
     parser.add_argument("--save_folder", type=str, default="")
-    parser.add_argument("--shuffle", type=bool, action="store_true")
+    parser.add_argument("--shuffle", action="store_true")
     args = parser.parse_args()
 
     make_data_split(args.train_sz, args.test_sz, args.data_folder, args.save_folder, args.shuffle)

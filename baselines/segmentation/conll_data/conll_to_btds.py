@@ -19,7 +19,7 @@ use the script with the additional flags --remove_line_no and --remove_relations
 
 from typing import List, Tuple
 from collections import Counter
-import argparse
+import argparse, os
 
 def get_components(str_lis: List[str]) -> List[int]:
     """
@@ -106,7 +106,8 @@ def main(args):
             
             else:
                 essay_lis.append(line)
-
+    
+    os.makedirs(os.path.dirname(args.write_file), exist_ok=True)
     with open(args.write_file, 'w') as f:
         for elem in added_cols_strs:
             f.write(elem)
