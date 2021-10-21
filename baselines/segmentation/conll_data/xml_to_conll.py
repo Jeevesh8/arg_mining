@@ -194,6 +194,8 @@ def get_parser():
     return parser
 
 def main(args):
+    global str_to_write
+    str_to_write = []
     for f in os.listdir(args.folder):
         filename = os.path.join(args.folder, f)
         if os.path.isfile(filename) and filename.endswith('.xml'):
