@@ -1,4 +1,5 @@
 import os, shlex, subprocess, argparse
+import shutil
 from pathlib import Path
 
 import conll_data.make_data as make_data
@@ -44,6 +45,12 @@ def make_data_split(train_sz: float=80, test_sz: int=20, data_folder: str="./cha
         conll_to_btds.main(args)
     
     copy1, copy2 = save_folder.strip('/')+'1', save_folder.strip('/')+'2'
+    
+    if os.path.isdir(copy1):
+        shutil.rmtree(copy1)
+    if os.path.isdir(copy2):
+        shutil.rmtree(copy2)
+    
     subprocess.call(shlex.split(f"cp -r {save_folder} {copy1}"))
     subprocess.call(shlex.split(f"cp -r {save_folder} {copy2}"))
     
