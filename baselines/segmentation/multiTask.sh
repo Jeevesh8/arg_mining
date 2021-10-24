@@ -12,8 +12,8 @@ do
 echo "---------RUN $run ------------"
 python3 reMakeData.py --train_sz 80 --test_sz 20 --shuffle
 cd emnlp2017-bilstm-cnn-crf/
-python3 multiTask.py
 trap cleanup EXIT
+python3 multiTask.py
 rm -r pkl/
 mkdir pkl/
 cd ..
