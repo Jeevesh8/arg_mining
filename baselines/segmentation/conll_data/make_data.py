@@ -38,7 +38,7 @@ def main(args) -> Dict[str, str]:
     thread_ids_to_filenames = get_thread_ids_to_filenames(args.data_folder)
     
     for split in ["train", "test", "valid"]:
-        if os.path.isdir(os.path.join(args.data_folder, args.save_folder, split)):
+        if os.path.isdir(os.path.join(args.save_folder, split)):
             rmtree(os.path.join(args.save_folder, split))
         os.makedirs(os.path.join(args.save_folder, split), exist_ok=True)
         out_folders[split] = os.path.join(args.save_folder, split)
