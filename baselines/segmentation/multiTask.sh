@@ -1,5 +1,5 @@
 set -e
-func cleanup() {
+cleanup () {
     echo "Cleaning up..."
     rm -r pkl/
     mkdir pkl/
