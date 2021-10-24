@@ -2,6 +2,8 @@ set -e
 cleanup () {
     echo "Cleaning up..."
     rm -r pkl/
+    rm -r models/
+    mkdir models/
     mkdir pkl/
 }
 
