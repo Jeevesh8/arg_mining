@@ -14,10 +14,16 @@ def get_runwise_data(output_file):
     run_epoch_wise_data = []
     for _run_no, run_data in enumerate(data.split('RUN')[1:]):
         run_epoch_wise_data.append([])
-        for epoch_no, epoch_data in enumerate(run_data.split('EPOCH')[1:]):
+        run_data_lis = run_data.split('EPOCH')[1:]
+        if len(run_data_lis)<=1:
+            run_data_lis = run_data.split('Epoch')[1:]
+        
+        for epoch_no, epoch_data in enumerate(run_data_lis):
             
             try:
-                if 'krippendorff alpha' in args.title.lower():
+                if 'baseline' in output_file.lower():
+                    f1 = re.findall(r"-- cmv_modes1 --\n{.*?'micro avg'.*?'f1-score': 0.(\d\d\d|\d\d)", epoch_data)[0]
+                elif 'krippendorff alpha' in args.title.lower():
                     if "claim" in args.title.lower():
                         f1 = re.findall(r"Sentence level Krippendorff's alpha for Claims:  0.(\d\d\d|\d\d)", epoch_data)[0]
                     elif "premise" in args.title.lower():
