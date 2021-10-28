@@ -16,7 +16,8 @@ def print_preds(tokenized_threads, tokenizer, preds, refs):
                 print("\tClaim:",tokenizer.decode(thread[start_idx:end_idx]))
             elif pred[i]=="B-P":
                 start_idx = i
-                while i< len(pred) and pred[i]=="I-P":
+                i+=1
+                while i<len(pred) and pred[i]=="I-P":
                     i += 1
                 end_idx = i
                 print("\tPremise:", tokenizer.decode(thread[start_idx:end_idx]))
@@ -35,6 +36,7 @@ def print_preds(tokenized_threads, tokenizer, preds, refs):
                 print("\tClaim:", tokenizer.decode(thread[start_idx:end_idx]))
             elif ref[i]=="B-P":
                 start_idx = i
+                i+=1
                 while i<len(ref) and ref[i]=="I-P":
                     i += 1
                 end_idx = i
