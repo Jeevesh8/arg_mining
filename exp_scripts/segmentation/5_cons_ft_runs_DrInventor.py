@@ -138,7 +138,7 @@ def train(dataset):
     
     optimizer.zero_grad()
 
-    for i, (tokenized_sub_parts, comp_type_labels ) in enumerate(dataset):
+    for i, (tokenized_sub_parts, comp_type_labels, _) in enumerate(dataset):
         
         #Cast to PyTorch tensor
         tokenized_sub_parts = torch.tensor(tokenized_sub_parts, device=device)
@@ -162,7 +162,7 @@ def evaluate(dataset, metric):
     int_to_labels = {v:k for k, v in ac_dict.items()}
 
     with torch.no_grad():
-        for tokenized_sub_parts, comp_type_labels in dataset:
+        for tokenized_sub_parts, comp_type_labels, _ in dataset:
             print("Evaluating") 
            
             #Cast to PyTorch tensor

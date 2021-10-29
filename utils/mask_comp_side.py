@@ -44,6 +44,7 @@ def remove_comps(anns: List[List[str]], masked_threads: List[List[int]], mask_to
                 new_ann.extend(get_refined_comp(ann, masked_thread, start_idx, end_idx))
             else:
                 new_ann.append(ann[i])
+                i += 1
         new_anns.append(new_ann)
     
     return new_anns
