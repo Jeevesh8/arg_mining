@@ -43,4 +43,3 @@ def print_preds(tokenized_threads, tokenizer, preds, refs):
                 print("\tPremise:(", start_idx, end_idx, ")", tokenizer.decode(thread[start_idx:end_idx]))
             else:
                 i += 1
-            

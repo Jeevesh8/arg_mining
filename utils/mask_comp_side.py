@@ -5,6 +5,49 @@ import numpy as np
 
 from arg_mining.datasets.cmv_modes import data_config
 
+def remove_comps(anns: List[List[str]], masked_threads: List[List[int]], mask_token_id: int, dm_range: int, with_dms: bool):
+    """Removes components annotated near masked tokens in masked_threads, if with_dms=True,
+    else removes components not near masked tokens in masked_threads."""
+    
+    def get_refined_comp(ann, start_idx, end_idx):
+        if (mask_token_id in masked_thread[start_idx-dm_range:start_idx+dm_range] or
+            mask_token_id in masked_thread[end_idx-dm_range:end_idx+dm_range]):
+            if with_dms:
+                return ann[start_idx:end_idx]
+            else:
+                return ["O"]*(end_idx-start_idx)
+        else:
+            if with_dms:
+                return ["O"]*(end_idx-start_idx)
+            else:
+                return ann[start_idx:end_idx]
+    
+    new_anns = []
+    for ann, masked_thread in zip(anns, masked_threads):
+        assert len(ann) == len(masked_thread)
+        new_ann = []
+        i=0
+        while i<len(ann):
+            if ann[i]=="B-C":
+                start_idx = i
+                i += 1
+                while i<len(ann) and ann[i]=="I-C":
+                    i += 1
+                end_idx = i
+                new_ann.extend(get_refined_comp(ann, start_idx, end_idx))
+            elif ann[i]=="B-P":
+                start_idx = i
+                i+=1
+                while i<len(ann) and ann[i]=="I-P":
+                    i += 1
+                end_idx = i
+                new_ann.extend(get_refined_comp(ann, start_idx, end_idx))
+            else:
+                new_ann.append(ann[i])
+        new_anns.append(new_ann)
+    
+    return new_anns
+        
 def get_masked_data_lists(dataset, 
                           tokenizer,
                           left: bool=True) -> Tuple[List[List[int]], List[List[int]]]:
