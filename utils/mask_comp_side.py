@@ -9,7 +9,7 @@ def remove_comps(anns: List[List[str]], masked_threads: List[List[int]], mask_to
     """Removes components annotated near masked tokens in masked_threads, if with_dms=True,
     else removes components not near masked tokens in masked_threads."""
     
-    def get_refined_comp(ann, start_idx, end_idx):
+    def get_refined_comp(ann, masked_thread, start_idx, end_idx):
         if (mask_token_id in masked_thread[start_idx-dm_range:start_idx+dm_range] or
             mask_token_id in masked_thread[end_idx-dm_range:end_idx+dm_range]):
             if with_dms:
@@ -34,14 +34,14 @@ def remove_comps(anns: List[List[str]], masked_threads: List[List[int]], mask_to
                 while i<len(ann) and ann[i]=="I-C":
                     i += 1
                 end_idx = i
-                new_ann.extend(get_refined_comp(ann, start_idx, end_idx))
+                new_ann.extend(get_refined_comp(ann, masked_thread, start_idx, end_idx))
             elif ann[i]=="B-P":
                 start_idx = i
                 i+=1
                 while i<len(ann) and ann[i]=="I-P":
                     i += 1
                 end_idx = i
-                new_ann.extend(get_refined_comp(ann, start_idx, end_idx))
+                new_ann.extend(get_refined_comp(ann, masked_thread, start_idx, end_idx))
             else:
                 new_ann.append(ann[i])
         new_anns.append(new_ann)
