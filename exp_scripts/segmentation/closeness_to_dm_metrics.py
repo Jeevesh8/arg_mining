@@ -43,7 +43,7 @@ def get_datasets(train_sz, test_sz):
     train_dataset, valid_dataset, test_dataset = load_dataset(tokenizer=tokenizer,
                                                               train_sz=train_sz,
                                                               test_sz=test_sz,
-                                                              shuffle=True,
+                                                              shuffle=False,
                                                               mask_tokens=discourse_markers,)
     return train_dataset, valid_dataset, test_dataset
 
@@ -281,15 +281,14 @@ def evaluate(dataset, metric):
 
 n_epochs = 25
 n_runs = 1
+    
+for (train_sz, test_sz) in [(80,20),(50,50)]:
+    print("\tTrain size:", train_sz, "Test size:", test_sz)
+    
+    for (tokenizer_version, model_version) in [("allenai/longformer-base-4096", "allenai/longformer-base-4096"),
+                                               ("../home/arg_mining/4epoch_complete", "../home/arg_mining/4epoch_complete")]:
 
-for (tokenizer_version, model_version) in [("allenai/longformer-base-4096", "allenai/longformer-base-4096"),
-                                           ("../home/arg_mining/4epoch_complete", "../home/arg_mining/4epoch_complete")]:
-
-    print("Tokenizer:", tokenizer_version, "Model:", model_version)
-
-    for (train_sz, test_sz) in [(80,20),(50,50)]:
-
-        print("\tTrain size:", train_sz, "Test size:", test_sz)
+        print("Tokenizer:", tokenizer_version, "Model:", model_version)
 
         for run in range(n_runs):
             print(f"\n\n\t\t-------------RUN {run+1}-----------")
