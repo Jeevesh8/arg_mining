@@ -1,5 +1,5 @@
 import os, shlex, subprocess, argparse
-import shutil
+import shutil, random
 from pathlib import Path
 
 import conll_data.make_data as make_data
@@ -56,6 +56,52 @@ def make_data_split(train_sz: float=80, test_sz: int=20, data_folder: str="./cha
     
     return None
 
+def read_naacl_dataset(dataset):
+    naacl_data_dir = "./naacl18-multitask_argument_mining/dataSplits/fullData"
+    all_data = [[]]
+    for split in ["train", "dev", "test"]:
+        with open(os.path.join(naacl_data_dir, dataset, split+".txt"), "r") as f:
+            for i, line in enumerate(f.readlines()):
+                if line.strip()=="" and i!=0:
+                    all_data[-1].append(line)
+                    all_data.append([])
+                else:
+                    all_data[-1].append(line)
+        if not all_data[-1][-1].endswith("\n"):
+            all_data[-1][-1] += "\n"
+        
+    print("Read", len(all_data), "sentences from:", dataset, "dataset")
+    return all_data
+
+def make_naacl_data_splits(train_sz, shuffle):
+    if not os.path.isdir("./naacl18-multitask_argument_mining/"):
+        raise ValueError("Can't find naacl18-multitask_argument_mining directory.")
+    
+    for dataset in ["essays", "hotel", "news", "var", "web", "wiki"]:
+        
+        all_data = read_naacl_dataset(dataset)
+        if shuffle:
+            random.shuffle(all_data)
+        data_dir = os.path.join("./emnlp2017-bilstm-cnn-crf/data/", dataset)
+        
+        if os.path.isdir(data_dir):
+            shutil.rmtree(data_dir)
+        
+        os.makedirs(data_dir)
+        
+        train_data = all_data[:(train_sz*len(all_data))//100]
+        test_data = all_data[(train_sz*len(all_data))//100:]
+        
+        with open(os.path.join(data_dir, "train.txt"), "w") as f:
+            f.writelines(train_data)
+        
+        with open(os.path.join(data_dir, "test.txt"), "w") as f:
+            f.writelines(test_data)
+        
+        with open(os.path.join(data_dir, "dev.txt"), "w") as f:
+            f.writelines(all_data[-1])
+    return None
+
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--train_sz", type=float, default=80)
@@ -63,6 +109,11 @@ if __name__=="__main__":
     parser.add_argument("--data_folder", type=str, default="./change-my-view-modes/v2.0/")
     parser.add_argument("--save_folder", type=str, default="")
     parser.add_argument("--shuffle", action="store_true")
+    parser.add_argument("--multi_data", action="store_true")
     args = parser.parse_args()
-
+    
+    assert args.train_sz+args.test_sz==100, "train_sz+test_sz must be 100"
+    
     make_data_split(args.train_sz, args.test_sz, args.data_folder, args.save_folder, args.shuffle)
+    if args.multi_data:
+        make_naacl_data_splits(args.train_sz, args.shuffle)
