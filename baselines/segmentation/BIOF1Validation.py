@@ -1,6 +1,6 @@
 from __future__ import print_function
 import logging
-from seqeval.metrics import classification_report
+from seqeval.metrics import classification_report, accuracy_score
 """
 Computes the F1 score on BIO tagged data
 
@@ -66,7 +66,7 @@ def compute_f1(predictions, correct, idx2Label, correctBIOErrors='No', encodingS
             
                     
     print(classification_report(label_correct, label_pred, output_dict=True))
-          
+    print("Token level accuracy:", accuracy_score(y_true=label_correct, y_pred=label_pred))      
     checkBIOEncoding(label_pred, correctBIOErrors)
 
     prec = compute_precision(label_pred, label_correct)
