@@ -1,3 +1,4 @@
+--Train size: 80 Test size: 20--
 ---------RUN 1 ------------
 Generate new embeddings files for a dataset
 Read file: komninos_english_embeddings.gz

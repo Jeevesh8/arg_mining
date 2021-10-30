@@ -10,19 +10,20 @@ def get_runwise_data(output_file):
     split = 1 if "80-20" in args.title else 2
     with open(output_file) as f:
         data = f.read().split('Train size')[split]
-                    
+
+    epoch_style="EPOCH"                
     run_epoch_wise_data = []
     for _run_no, run_data in enumerate(data.split('RUN')[1:]):
         run_epoch_wise_data.append([])
-        run_data_lis = run_data.split('EPOCH')[1:]
+        run_data_lis = run_data.split(epoch_style)[1:]
         if len(run_data_lis)<=1:
             run_data_lis = run_data.split('Epoch')[1:]
-        
+            epoch_style = "Epoch"
         for epoch_no, epoch_data in enumerate(run_data_lis):
             
             try:
                 if 'baseline' in output_file.lower():
-                    f1 = re.findall(r"-- cmv_modes1 --\n{.*?'micro avg'.*?'f1-score': 0.(\d\d\d|\d\d)", epoch_data)[0]
+                    f1 = re.findall(re.compile(r"-- cmv_modes1 --.*?Dev-Data.*?{.*?'micro avg'.*?'f1-score': 0.(\d\d\d|\d\d)", re.DOTALL), epoch_data)[0]
                 elif 'krippendorff alpha' in args.title.lower():
                     if "claim" in args.title.lower():
                         f1 = re.findall(r"Sentence level Krippendorff's alpha for Claims:  0.(\d\d\d|\d\d)", epoch_data)[0]
@@ -45,7 +46,7 @@ def get_runwise_data(output_file):
                 run_epoch_wise_data[-1].append(f1)
             
             except IndexError:
-                if epoch_no!=len(run_data.split('EPOCH')[1:])-1:
+                if epoch_no!=len(run_data.split(epoch_style)[1:])-1:
                     run_epoch_wise_data[-1].append(0.0)
                 else:
                     print("Error: Could not find F1 score in output file.")
