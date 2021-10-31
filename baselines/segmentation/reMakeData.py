@@ -61,10 +61,12 @@ def read_naacl_dataset(dataset):
     all_data = [[]]
     for split in ["train", "dev", "test"]:
         with open(os.path.join(naacl_data_dir, dataset, split+".txt"), "r") as f:
-            for i, line in enumerate(f.readlines()):
+            file_lines = f.readlines()
+            for i, line in enumerate(file_lines):
                 if line.strip()=="" and i!=0:
                     all_data[-1].append(line)
-                    all_data.append([])
+                    if i!=len(file_lines)-1:
+                        all_data.append([])
                 else:
                     all_data[-1].append(line)
         if not all_data[-1][-1].endswith("\n"):

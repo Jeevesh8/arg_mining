@@ -8,14 +8,45 @@ do
     fi
     for COMP_TYPE in "C" "P"
     do 
-        for METRIC in "precision" "recall" "f1"
+        for METRIC in "precision" "recall" "f1-score"
         do
-            REGEX="'$COMP_TYPE':.*?'$METRIC': 0.(\d+)";
+            REGEX="-- cmv_modes1 --.*?Dev-Data.*?{.*?'$COMP_TYPE'.*?'$METRIC': 0.(\d+)";
             echo $REGEX;
-            python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes --names "roberta-base" "sMLM Roberta" --regexp "$REGEX" --split $SPLIT;
+            python3 last_n_means.py --in_files ../logs/out_multiTask_baseline \
+                                    --names "LSTM-MTL" --regexp "$REGEX" --split $SPLIT --dotall;
         done
     done
+    REGEX="-- cmv_modes1 --.*?Dev-Data.*?{.*?'micro avg'.*?'f1-score': 0.(\d+)";
+    echo $REGEX;
+    python3 last_n_means.py --in_files ../logs/out_multiTask_baseline \
+                            --names "LSTM-MTL" --regexp "$REGEX" --split $SPLIT --dotall;
 done
+
+
+
+#for SPLIT in 1 2
+#do
+#    if [[ $SPLIT -eq 1 ]];
+#    then
+#        echo "--------80-20 split---------";
+#    else
+#        echo "--------50-50 split---------";
+#    fi
+#    for COMP_TYPE in "C" "P"
+#    do 
+#        for METRIC in "precision" "recall" "f1"
+#        do
+#            REGEX="'$COMP_TYPE':.*?'$METRIC': 0.(\d+)";
+#            echo $REGEX;
+#            python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes \
+#                                    --names "roberta-base" "sMLM Roberta" --regexp "$REGEX" --split $SPLIT;
+#        done
+#            REGEX="'overall_f1': 0.(\d+)";
+#            echo $REGEX;
+#            python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes \
+#                                    --names "roberta-base" "sMLM Roberta" --regexp "$REGEX" --split $SPLIT;
+#    done
+#done
 
 
 #REGEX="'C':.*?'precision': 0.(\d+)"

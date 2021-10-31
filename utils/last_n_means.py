@@ -13,10 +13,18 @@ def get_runwise_data(output_file):
     run_epoch_wise_data = []
     for _run_no, run_data in enumerate(data.split('RUN')[1:]):
         run_epoch_wise_data.append([])
-        for epoch_no, epoch_data in enumerate(run_data.split('EPOCH')[1:]):
-            
+        
+        splitted_run_data = run_data.split('EPOCH')[1:]
+        if len(splitted_run_data) <= 1:
+            splitted_run_data = run_data.split('Epoch')[1:]
+        
+        for epoch_no, epoch_data in enumerate(splitted_run_data):
             try:
-                regex = re.compile(args.regexp)
+                if args.dotall:
+                    regex = re.compile(args.regexp, re.DOTALL)
+                else:
+                    regex = re.compile(args.regexp)
+
                 f1 = re.findall(regex, epoch_data)[0]
                 print(f1)
                 f1 = int(f1)/(10**len(f1))
@@ -61,6 +69,7 @@ if __name__=="__main__":
     parser.add_argument("--avg_over", type=int, default=5, help = "The mean scores printed are averaged over this many last scores.")
     parser.add_argument("--regexp", type=str, required=True, help="Regular expression to search for scores. ")
     parser.add_argument("--split", type=int, default=1, help="Index of split to choose, after splitting the data in a file on \"Train size\"")
+    parser.add_argument("--dotall", action="store_true", help="Use the dotall flag in the regular expression.")
     args = parser.parse_args()
 
     means = []
