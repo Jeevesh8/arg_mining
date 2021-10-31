@@ -69,10 +69,10 @@ def read_naacl_dataset(dataset):
                         all_data.append([])
                 else:
                     all_data[-1].append(line)
-        if split!="test":
-            all_data.append([])
         if not all_data[-1][-1].endswith("\n"):
             all_data[-1][-1] += "\n"
+        if split!="test":
+            all_data.append([])
         
     print("Read", len(all_data), "sentences from:", dataset, "dataset")
     return all_data
