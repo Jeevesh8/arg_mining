@@ -1,87 +1,107 @@
-REGEX="'C':.*?'precision': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
+for SPLIT in 1 2
+do
+    if [[ $SPLIT -eq 1 ]];
+    then
+        echo "--------80-20 split---------";
+    else
+        echo "--------50-50 split---------";
+    fi
+    for COMP_TYPE in "C" "P"
+    do 
+        for METRIC in "precision" "recall" "f1"
+        do
+            REGEX="'$COMP_TYPE':.*?'$METRIC': 0.(\d+)";
+            echo $REGEX;
+            python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes --names "roberta-base" "sMLM Roberta" --regexp "$REGEX" --split $SPLIT;
+        done
+    done
+done
 
-REGEX="'C':.*?'recall': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-REGEX="'C':.*?'f1': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
+#REGEX="'C':.*?'precision': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-REGEX="'P':.*?'precision': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
+#REGEX="'C':.*?'recall': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-REGEX="'P':.*?'recall': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
+#REGEX="'C':.*?'f1': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-REGEX="'P':.*?'f1': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
+#REGEX="'P':.*?'precision': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-REGEX="'overall_f1': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
+#REGEX="'P':.*?'recall': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-echo "-----------------50-50 split-------------"
-REGEX="'C':.*?'precision': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+#REGEX="'P':.*?'f1': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-REGEX="'C':.*?'recall': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+#REGEX="'overall_f1': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 1
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 1
 
-REGEX="'C':.*?'f1': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+#echo "-----------------50-50 split-------------"
+#REGEX="'C':.*?'precision': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
 
-REGEX="'P':.*?'precision': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+#REGEX="'C':.*?'recall': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
 
-REGEX="'P':.*?'recall': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+#REGEX="'C':.*?'f1': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
 
-REGEX="'P':.*?'f1': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+#REGEX="'P':.*?'precision': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
 
-REGEX="'overall_f1': 0.(\d+)"
-echo $REGEX
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
-python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+#REGEX="'P':.*?'recall': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+
+#REGEX="'P':.*?'f1': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
+
+#REGEX="'overall_f1': 0.(\d+)"
+#echo $REGEX
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_base_cased --names "bert-base-cased" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_bert_ckpt4 --names "bert sMLM ckpt-4" --regexp "$REGEX" --split 2
+#python3 last_n_means.py --in_files ../logs/out_5cons_runs_da_bert_ckpt4 --names "da-bert" --regexp "$REGEX" --split 2
 
 
 #REGEX="'precision':.*?'parts_of_same': 0.(\d+)"
