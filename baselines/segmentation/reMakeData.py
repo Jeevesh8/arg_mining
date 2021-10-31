@@ -106,7 +106,7 @@ def make_naacl_data_splits(train_sz, shuffle):
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--train_sz", type=float, default=80)
+    parser.add_argument("--train_sz", type=int, default=80)
     parser.add_argument("--test_sz", type=int, default=20)
     parser.add_argument("--data_folder", type=str, default="./change-my-view-modes/v2.0/")
     parser.add_argument("--save_folder", type=str, default="")
