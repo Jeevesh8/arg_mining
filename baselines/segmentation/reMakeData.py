@@ -65,10 +65,12 @@ def read_naacl_dataset(dataset):
             for i, line in enumerate(file_lines):
                 if line.strip()=="" and i!=0:
                     all_data[-1].append(line)
-                    if not(split=="test" and i==len(file_lines)-1):
+                    if i!=len(file_lines)-1:
                         all_data.append([])
                 else:
                     all_data[-1].append(line)
+        if split!="test":
+            all_data.append([])
         if not all_data[-1][-1].endswith("\n"):
             all_data[-1][-1] += "\n"
         
