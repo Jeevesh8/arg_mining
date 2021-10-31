@@ -94,6 +94,9 @@ def make_naacl_data_splits(train_sz, shuffle):
         train_data = all_data[:(train_sz*len(all_data))//100]
         test_data = all_data[(train_sz*len(all_data))//100:]
         
+        train_data = [line for line in sublist for sublist in train_data]
+        test_data = [line for line in sublist for sublist in test_data]
+
         with open(os.path.join(data_dir, "train.txt"), "w") as f:
             f.writelines(train_data)
         
