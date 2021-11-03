@@ -2,25 +2,71 @@ for SPLIT in 1 2
 do
     if [[ $SPLIT -eq 1 ]];
     then
-        echo "--------80-20 split---------";
+        echo "--------80-20 split----------";
     else
-        echo "--------50-50 split---------";
+        echo "--------50-50 split----------";
     fi
-    for COMP_TYPE in "C" "P"
-    do 
-        for METRIC in "precision" "recall" "f1-score"
-        do
-            REGEX="-- cmv_modes1 --.*?Dev-Data.*?{.*?'$COMP_TYPE'.*?'$METRIC': 0.(\d+)";
-            echo $REGEX;
-            python3 last_n_means.py --in_files ../logs/out_multiTask_baseline \
-                                    --names "LSTM-MTL" --regexp "$REGEX" --split $SPLIT --dotall;
-        done
-    done
-    REGEX="-- cmv_modes1 --.*?Dev-Data.*?{.*?'micro avg'.*?'f1-score': 0.(\d+)";
+    REGEX="'overall_accuracy': 0.(\d+)";
     echo $REGEX;
-    python3 last_n_means.py --in_files ../logs/out_multiTask_baseline \
-                            --names "LSTM-MTL" --regexp "$REGEX" --split $SPLIT --dotall;
+    python3 last_n_means.py --in_files ../logs/out_cw_5cons_runs_base_lf ../logs/out_smlm_lf_ckpt4_CmvModes_comp_pred_comment_lvl \
+                            ../logs/out_smlm_lf256_CmvModes_comp_pred_comment_lvl ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes \
+                           ../logs/out_5cons_runs_cw_bert_base_cased ../logs/out_5cons_runs_cw_bert_ckpt4 \
+                            --names "cw-base-LF" "cw-sMLM-LF" "cw-sMLM-256-LF" "base-roberta" "sMLM-Roberta" "bert-base-cased" "sMLM-BERT" --regexp "$REGEX" --split $SPLIT;
+    python3 last_n_means.py --in_files ../logs/out_5cons_runs_base_lf_CmvModes_Global ../logs/out_5cons_runs_ckpt_4_CmvModes \
+                                       ../logs/out_smlm_lf256_CmvModes_comp_pred_thread_lvl ../logs/out_5cons_runs_base_lf_256attWindow \
+                            --names "base-LF" "sMLM-LF" "sMLM-256-LF" "Base-LF-256" --regexp "$REGEX" --split $SPLIT;
+    REGEX="-- cmv_modes1 --.*?Dev-Data.*?Token level accuracy: 0.(\d+)";
+    echo $REGEX;
+    python3 last_n_means.py --in_files ../logs/out_multiData_baseline ../logs/out_multiTask_baseline --names "LSTM-MData" "LSTM-MTask" --regexp  "$REGEX" --split $SPLIT --dotall;
 done
+
+#for SPLIT in 1 2
+#do
+#    if [[ $SPLIT -eq 1 ]];
+#    then
+#        echo "--------80-20 split---------";
+#    else
+#        echo "--------50-50 split---------";
+#    fi
+#    for COMP_TYPE in "C" "P"
+#    do 
+#        for METRIC in "precision" "recall" "f1-score"
+#        do
+#            REGEX="-- cmv_modes1 --.*?Dev-Data.*?{.*?'$COMP_TYPE'.*?'$METRIC': 0.(\d+)";
+#            echo $REGEX;
+#            python3 last_n_means.py --in_files ../logs/out_multiData_baseline \
+#                                    --names "LSTM-MData" --regexp "$REGEX" --split $SPLIT --dotall;
+#        done
+#    done
+#    REGEX="-- cmv_modes1 --.*?Dev-Data.*?{.*?'micro avg'.*?'f1-score': 0.(\d+)";
+#    echo $REGEX;
+#    python3 last_n_means.py --in_files ../logs/out_multiData_baseline \
+#                            --names "LSTM-MData" --regexp "$REGEX" --split $SPLIT --dotall;
+#done
+
+#for SPLIT in 1 2
+#do
+#    if [[ $SPLIT -eq 1 ]];
+#    then
+#        echo "--------80-20 split---------";
+#    else
+#        echo "--------50-50 split---------";
+#    fi
+#    for COMP_TYPE in "C" "P"
+#    do 
+#        for METRIC in "precision" "recall" "f1"
+#        do
+#            REGEX="'$COMP_TYPE':.*?'$METRIC': 0.(\d+)";
+#            echo $REGEX;
+#           python3 last_n_means.py --in_files ../logs/out_smlm_lf_ckpt4_CmvModes_comp_pred_comment_lvl \
+#                                    --names "sMLM-512-LF" --regexp "$REGEX" --split $SPLIT;
+#        done
+#   done
+#   REGEX="'overall_f1': 0.(\d+)";
+#   echo $REGEX;
+#   python3 last_n_means.py --in_files ../logs/out_smlm_lf_ckpt4_CmvModes_comp_pred_comment_lvl \
+#                           --names "sMLM-512-LF" --regexp "$REGEX" --split $SPLIT;
+#done
 
 
 
@@ -41,11 +87,11 @@ done
 #            python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes \
 #                                    --names "roberta-base" "sMLM Roberta" --regexp "$REGEX" --split $SPLIT;
 #        done
-#            REGEX="'overall_f1': 0.(\d+)";
-#            echo $REGEX;
-#            python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes \
-#                                    --names "roberta-base" "sMLM Roberta" --regexp "$REGEX" --split $SPLIT;
 #    done
+#    REGEX="'overall_f1': 0.(\d+)";
+#    echo $REGEX;
+#    python3 last_n_means.py --in_files ../logs/out_5cons_runs_cw_base_roberta ../logs/smlm_roberta_comp_pred_CmvModes \
+#                            --names "roberta-base" "sMLM Roberta" --regexp "$REGEX" --split $SPLIT;
 #done
 
 
