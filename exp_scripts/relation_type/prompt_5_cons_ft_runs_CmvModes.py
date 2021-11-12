@@ -98,9 +98,6 @@ def get_global_attention_mask(tokenized_threads: np.ndarray) -> np.ndarray:
     0 elsewhere.
     """
     mask = np.zeros_like(tokenized_threads)
-    for user_token in user_tokens:
-        user_token_id = tokenizer.encode(user_token)[1:-1]
-        mask = np.where(tokenized_threads==user_token_id, 1, mask)
     return np.array(mask, dtype=bool)
 
 def get_spans(comp_type_labels, length):
