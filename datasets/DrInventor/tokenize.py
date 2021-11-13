@@ -156,8 +156,10 @@ def tokenize_paper(heading_sections: List[Tuple[str, str]],
         sub_part_labels += comp_type_labels + [config["arg_components"]["O"]]
     
     if len(tokenized_sub_part)>1:
-        tokenized_sub_part[:max_len-1].append(tokenizer.eos_token_id)
-        sub_part_labels[:max_len-1].append(config["arg_components"]["O"])
+        tokenized_sub_part = tokenized_sub_part[:max_len-1]
+        tokenized_sub_part.append(tokenizer.eos_token_id)
+        sub_part_labels = sub_part_labels[:max_len-1]
+        sub_part_labels.append(config["arg_components"]["O"])
         rel_anns = get_in_section_rels(all_rel_type_anns, paper_ids_to_ends, max_len)
         sub_parts.append((tokenized_sub_part, sub_part_labels, rel_anns))
     
