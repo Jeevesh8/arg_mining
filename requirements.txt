@@ -4,3 +4,8 @@ transformers
 datasets
 flax
 allennlp
+jsonlist
+lxml
+beautifulsoup4
+scikit-learn
+seqeval

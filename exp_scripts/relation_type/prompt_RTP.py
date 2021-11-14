@@ -310,7 +310,7 @@ def main(args):
 
 
 def get_parser():
-    parser = argparse.ArgumentParser(description="Token level, comment wise Argument Component Span Detection and Classification on CMV Modes dataset.")
+    parser = argparse.ArgumentParser(description="Prompting Relation Type Prediction for Longformer based models on CMV Modes dataset.")
     parser.add_argument("--pretrained", default="allenai/longformer-base-4096", help="Path to folder having pretrained weights, or the version of pretrained model to load.")
     parser.add_argument("--n_epochs", default=30, type=int, help="Number of epochs to train.")
     parser.add_argument("--n_runs", default=5, type=int, help="Number of runs to train.")
