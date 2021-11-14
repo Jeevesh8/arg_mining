@@ -311,7 +311,7 @@ def main(args):
 
 def get_parser():
     parser = argparse.ArgumentParser(description="Token level, comment wise Argument Component Span Detection and Classification on CMV Modes dataset.")
-    parser.add_argument("--model_type", delfault="bert", choices=["bert", "roberta", "longformer"], help="Pretrained model of which the model is an instance of.")
+    parser.add_argument("--model_type", default="bert", choices=["bert", "roberta", "longformer"], help="Pretrained model of which the model is an instance of.")
     parser.add_argument("--pretrained", default="bert-base-cased", help="Path to folder having pretrained weights, or the version of pretrained model to load.")
     parser.add_argument("--n_epochs", default=30, type=int, help="Number of epochs to train.")
     parser.add_argument("--n_runs", default=5, type=int, help="Number of runs to train.")
