@@ -25,14 +25,12 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 def get_tok_model(args, tokenizer_version, model_version):
     if args.model_type=="bert":
-        tokenizer = BertTokenizer.from_pretrained(tokenizer_version,
+        tokenizer = BertTokenizer.from_pretrained('bert-base-uncased',
                                                   bos_token = "[CLS]",
                                                   eos_token = "[SEP]",)
-        transformer_model = BertModel.from_pretrained(model_version).to(device)
-        if tokenizer_version=='bert-base-cased':
-            tokenizer.add_tokens(data_config["special_tokens"])
-        if model_version=='bert-base-cased':
-            transformer_model.resize_token_embeddings(len(tokenizer))
+        model_state_dict = torch.load(model_version)
+        transformer_model = BertModel.from_pretrained('bert-base-uncased', 
+                                                      state_dict=model_state_dict).to(device)
         return tokenizer, transformer_model
     
     elif args.model_type=="roberta":
