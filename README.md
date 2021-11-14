@@ -1,2 +1,3 @@
 # Argument Mining
-Collection of Argument Mining Related Tools developed Till Now(DataLoaders, Models etc.)
+
+To run experiments, copy the corresponding file from ``exo_scripts/`` and run it.
