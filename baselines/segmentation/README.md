@@ -9,6 +9,8 @@ pip install seqeval
 
 # Train and Evaluate Baseline
 
+Clone the repo using ``git clone --recursive`` to make sure submodules are also cloned.
+
 ## Multi-Task LSTM
 ```
 bash multiTask.sh > out_file
