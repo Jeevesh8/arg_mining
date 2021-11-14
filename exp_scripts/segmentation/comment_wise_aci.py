@@ -14,6 +14,9 @@ from allennlp.modules.conditional_random_field import ConditionalRandomField as 
 from arg_mining.datasets.cmv_modes import load_dataset, data_config
 from arg_mining.utils.misc import get_model_tok_version
 
+metric = load_metric('seqeval')
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    
 def get_tok_model(args, tokenizer_version, model_version):
     if args.model_type == "bert":
         tokenizer = BertTokenizer.from_pretrained(tokenizer_version,
@@ -272,9 +275,7 @@ def evaluate(dataset, metric):
 
         
 def main(args):
-    global metric, device, discourse_markers
-    metric = load_metric('seqeval')
-    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    global discourse_markers
     with open(args.dm_file) as f:
         discourse_markers = [dm.strip() for dm in f.readlines()]
     
