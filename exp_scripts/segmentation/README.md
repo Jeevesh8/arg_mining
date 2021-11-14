@@ -16,3 +16,5 @@ python3 thread_wise_aci.py --model_type [bert|roberta|longformer] --pretrained [
                            --dm_file <Path to Discourse Markers>
 ```
 where ``[PRETRAINED_MODEL]`` is same as before. 
+
+**NOTE:** Only base versions of bert(``bert-base-cased``), roberta(``roberta-base``), and longformer(``allenai/longformer-base-4096``) and our pre-trained models are supported currently.
