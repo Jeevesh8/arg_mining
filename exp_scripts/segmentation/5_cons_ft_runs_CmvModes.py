@@ -1,3 +1,4 @@
+# Thread Level ACI on CMV Modes dataset. Change Models to load, splits to check in loops at bottom.
 import warnings
 warnings.filterwarnings('ignore')
 

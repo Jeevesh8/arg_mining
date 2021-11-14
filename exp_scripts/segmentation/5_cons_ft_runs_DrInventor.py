@@ -1,3 +1,4 @@
+# ACI on Dr. Inventor with Longformer. Change the models to load and split sizes in the loops at bottom. 
 import warnings
 warnings.filterwarnings('ignore')
 
