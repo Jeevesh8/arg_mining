@@ -262,7 +262,7 @@ def main(args):
         print("\tTrain size:", train_sz, "Test size:", test_sz)
         for run in range(args.n_runs):
             print(f"\n\n\t\t-------------RUN {run+1}-----------")
-            tokenizer, transformer_model = get_tok_model(tokenizer_version, model_version)
+            tokenizer, transformer_model = get_tok_model(args, tokenizer_version, model_version)
             linear_layer = get_rel_head()
             optimizer = optim.Adam(params = chain(transformer_model.parameters(),
                                                   linear_layer.parameters(),),
