@@ -9,7 +9,11 @@ pip install seqeval
 
 # Train and Evaluate Baseline
 
-Clone the repo using ``git clone --recursive`` to make sure submodules are also cloned.
+Clone the repo using ``git clone --recursive`` to make sure submodules are also cloned. Or clone the baseline repos in this directory using:
+```
+git clone http://github.com/UKPLab/naacl18-multitask_argument_mining
+git clone https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf
+```
 
 ## Multi-Task LSTM
 ```
