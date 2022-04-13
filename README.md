@@ -1,5 +1,7 @@
 # Argument Mining
 
+Code for the ACL 2022 paper: [Can Unsupervised Knowledge Transfer from Social Discussions Help Argument Mining?](https://arxiv.org/abs/2203.12881)
+
 To run experiments, copy the corresponding file from ``exp_scripts/`` into the folder containing this repo and run the script from there. 
 See ``README.md`` files within for further instructions.
 
